@@ -1,0 +1,6 @@
+-- @path MM=/SmallUML/model/smalluml.ecore
+-- @path MM1=/UML/model/uml.ecore
+
+module Small2UML;
+create OUT : MM1 from IN : MM;
+

@@ -1,0 +1,7 @@
+@namespace(uri="http://www.univ-nantes.fr/smalluml", prefix="smalluml")
+
+package smalluml;
+
+class Class  {
+	attr String name;
+}
