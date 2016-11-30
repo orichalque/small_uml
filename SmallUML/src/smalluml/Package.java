@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link smalluml.Package#getClass_ <em>Class</em>}</li>
  *   <li>{@link smalluml.Package#getRelation <em>Relation</em>}</li>
+ *   <li>{@link smalluml.Package#getPackage <em>Package</em>}</li>
  * </ul>
  *
  * @see smalluml.SmallumlPackage#getPackage()
@@ -53,5 +54,21 @@ public interface Package extends NamedElement {
 	 * @generated
 	 */
 	EList<Relation> getRelation();
+
+	/**
+	 * Returns the value of the '<em><b>Package</b></em>' containment reference list.
+	 * The list contents are of type {@link smalluml.Package}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Package</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Package</em>' containment reference list.
+	 * @see smalluml.SmallumlPackage#getPackage_Package()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Package> getPackage();
 
 } // Package

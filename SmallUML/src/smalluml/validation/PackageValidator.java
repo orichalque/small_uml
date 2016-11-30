@@ -19,4 +19,6 @@ public interface PackageValidator {
 
 	boolean validateClass(EList<smalluml.Class> value);
 	boolean validateRelation(EList<Relation> value);
+
+	boolean validatePackage(EList<smalluml.Package> value);
 }

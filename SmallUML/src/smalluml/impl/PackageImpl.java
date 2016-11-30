@@ -27,6 +27,7 @@ import smalluml.SmallumlPackage;
  * <ul>
  *   <li>{@link smalluml.impl.PackageImpl#getClass_ <em>Class</em>}</li>
  *   <li>{@link smalluml.impl.PackageImpl#getRelation <em>Relation</em>}</li>
+ *   <li>{@link smalluml.impl.PackageImpl#getPackage <em>Package</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,6 +52,16 @@ public class PackageImpl extends NamedElementImpl implements smalluml.Package {
 	 * @ordered
 	 */
 	protected EList<Relation> relation;
+
+	/**
+	 * The cached value of the '{@link #getPackage() <em>Package</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPackage()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<smalluml.Package> package_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,6 +111,18 @@ public class PackageImpl extends NamedElementImpl implements smalluml.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<smalluml.Package> getPackage() {
+		if (package_ == null) {
+			package_ = new EObjectContainmentEList<smalluml.Package>(smalluml.Package.class, this, SmallumlPackage.PACKAGE__PACKAGE);
+		}
+		return package_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -107,6 +130,8 @@ public class PackageImpl extends NamedElementImpl implements smalluml.Package {
 				return ((InternalEList<?>)getClass_()).basicRemove(otherEnd, msgs);
 			case SmallumlPackage.PACKAGE__RELATION:
 				return ((InternalEList<?>)getRelation()).basicRemove(otherEnd, msgs);
+			case SmallumlPackage.PACKAGE__PACKAGE:
+				return ((InternalEList<?>)getPackage()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -123,6 +148,8 @@ public class PackageImpl extends NamedElementImpl implements smalluml.Package {
 				return getClass_();
 			case SmallumlPackage.PACKAGE__RELATION:
 				return getRelation();
+			case SmallumlPackage.PACKAGE__PACKAGE:
+				return getPackage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -144,6 +171,10 @@ public class PackageImpl extends NamedElementImpl implements smalluml.Package {
 				getRelation().clear();
 				getRelation().addAll((Collection<? extends Relation>)newValue);
 				return;
+			case SmallumlPackage.PACKAGE__PACKAGE:
+				getPackage().clear();
+				getPackage().addAll((Collection<? extends smalluml.Package>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -162,6 +193,9 @@ public class PackageImpl extends NamedElementImpl implements smalluml.Package {
 			case SmallumlPackage.PACKAGE__RELATION:
 				getRelation().clear();
 				return;
+			case SmallumlPackage.PACKAGE__PACKAGE:
+				getPackage().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -178,6 +212,8 @@ public class PackageImpl extends NamedElementImpl implements smalluml.Package {
 				return class_ != null && !class_.isEmpty();
 			case SmallumlPackage.PACKAGE__RELATION:
 				return relation != null && !relation.isEmpty();
+			case SmallumlPackage.PACKAGE__PACKAGE:
+				return package_ != null && !package_.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

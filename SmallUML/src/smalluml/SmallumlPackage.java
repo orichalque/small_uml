@@ -799,13 +799,22 @@ public interface SmallumlPackage extends EPackage {
 	int PACKAGE__RELATION = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Package</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__PACKAGE = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int PACKAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Package</em>' class.
@@ -1165,6 +1174,17 @@ public interface SmallumlPackage extends EPackage {
 	EReference getPackage_Relation();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link smalluml.Package#getPackage <em>Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Package</em>'.
+	 * @see smalluml.Package#getPackage()
+	 * @see #getPackage()
+	 * @generated
+	 */
+	EReference getPackage_Package();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1484,6 +1504,14 @@ public interface SmallumlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PACKAGE__RELATION = eINSTANCE.getPackage_Relation();
+
+		/**
+		 * The meta object literal for the '<em><b>Package</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PACKAGE__PACKAGE = eINSTANCE.getPackage_Package();
 
 	}
 

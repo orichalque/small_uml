@@ -56,3 +56,4 @@ Package smalluml <http://www.univ-nantes.fr/smalluml>
   Class Package -> NamedElement
     Reference class : Class<<0..*>>
     Reference relation : Relation<<0..*>>
+    Reference package : Package<<0..*>>

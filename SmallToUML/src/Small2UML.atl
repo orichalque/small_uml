@@ -1,6 +1,25 @@
--- @path MM=/SmallUML/model/smalluml.ecore
--- @path MM1=/UML/model/uml.ecore
+-- @path SUML=/SmallUML/model/smalluml.ecore
+-- @path UML=/UML/model/uml.ecore
 
 module Small2UML;
-create OUT : MM1 from IN : MM;
+create OUT : UML from IN : SUML;
+
+rule package {
+	from
+		input_name : SUML!Package
+	to 
+		output_name : UML!Package (			
+			name <- input_name.name,
+			ownedElement <- input_name.class.union(input_name.relation)			
+		)
+}
+
+rule class {
+	from
+		input_name : SUML!Class
+	to 
+		output_name : UML!Class (
+			name <- input_name.name			
+		)
+}
 
