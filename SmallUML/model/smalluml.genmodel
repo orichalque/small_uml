@@ -46,6 +46,7 @@
     <genClasses ecoreClass="smalluml.ecore#//Package">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Package/class"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Package/relation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Package/package"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

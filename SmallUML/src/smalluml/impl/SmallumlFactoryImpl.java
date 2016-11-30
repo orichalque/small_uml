@@ -15,7 +15,6 @@ import smalluml.Bool;
 import smalluml.Composition;
 import smalluml.Enumeration;
 import smalluml.Method;
-import smalluml.NamedElement;
 import smalluml.Parameter;
 import smalluml.Real;
 import smalluml.Reference;
@@ -68,7 +67,6 @@ public class SmallumlFactoryImpl extends EFactoryImpl implements SmallumlFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case SmallumlPackage.NAMED_ELEMENT: return createNamedElement();
 			case SmallumlPackage.CLASS: return createClass();
 			case SmallumlPackage.ATTRIBUTE: return createAttribute();
 			case SmallumlPackage.STRING: return createString();
@@ -86,16 +84,6 @@ public class SmallumlFactoryImpl extends EFactoryImpl implements SmallumlFactory
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NamedElement createNamedElement() {
-		NamedElementImpl namedElement = new NamedElementImpl();
-		return namedElement;
 	}
 
 	/**
