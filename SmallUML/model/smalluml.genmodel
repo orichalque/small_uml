@@ -5,8 +5,47 @@
     complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>smalluml.ecore</foreignModel>
   <genPackages prefix="Smalluml" disposableProviderFactory="true" ecorePackage="smalluml.ecore#/">
+    <genClasses ecoreClass="smalluml.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//NamedElement/name"/>
+    </genClasses>
     <genClasses ecoreClass="smalluml.ecore#//Class">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Class/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Class/method"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Class/attribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Class/super"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Class/role"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Attribute/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="smalluml.ecore#//Type"/>
+    <genClasses ecoreClass="smalluml.ecore#//String"/>
+    <genClasses ecoreClass="smalluml.ecore#//Integer"/>
+    <genClasses ecoreClass="smalluml.ecore#//Bool"/>
+    <genClasses ecoreClass="smalluml.ecore#//Real"/>
+    <genClasses ecoreClass="smalluml.ecore#//UnlimitedNatural"/>
+    <genClasses ecoreClass="smalluml.ecore#//Method">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Method/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Method/returnType"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Parameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Parameter/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="smalluml.ecore#//Relation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Relation/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Relation/upperBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Relation/lowerBound"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Role">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Role/relation"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Enumeration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Enumeration/value"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Composition"/>
+    <genClasses ecoreClass="smalluml.ecore#//Reference"/>
+    <genClasses ecoreClass="smalluml.ecore#//Package">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Package/class"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Package/relation"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
