@@ -1,6 +1,81 @@
--- @path MM=/SmallUML/model/smalluml.ecore
--- @path MM1=/UML/model/uml.ecore
+-- @path SUML=/SmallUML/model/smalluml.ecore
+-- @path UML=/UML/model/uml.ecore
+-- @path TYPE=/UML/model/types.ecore
 
 module Small2UML;
-create OUT : MM1 from IN : MM;
+create  OUT1 : TYPE, OUT : UML from IN : SUML;
+
+rule namedElem{
+	from
+		x : SUML!NamedElement
+	to 
+		y : UML!NamedElement (
+			qualifiedName <- x.name
+		)
+}
+
+rule abstractType {
+	from
+		x : SUML!Type
+	to 
+		y : UML!Type ()
+}
+
+rule boolean {
+	from
+		x : SUML!Bool
+	to 
+		--y : TYPE!Boolean ()
+		-- comment acceder aux types ?
+}
+
+rule parameter {
+	from
+		x : SUML!Parameter
+	to 
+		y : UML!Parameter (
+			type <- x.type	
+		)
+}
+
+rule method {
+	from
+		x : SUML!Method
+	to 
+		y : UML!Operation (
+			type <- x.returnType,
+			ownedParameter <- x.parameter
+		)
+}
+rule attribute {
+	from
+		x : SUML!Attribute
+	to 
+		y : UML!Property (
+			type <- x.type
+		)
+}
+
+rule class {
+	from
+		x : SUML!Class
+	to 
+		y : UML!Class (
+			ownedAttribute <- x.attribute,
+			ownedOperation <- x.method,
+			extension <- x.super
+			-- role ?
+		)
+}
+
+rule enumeration {
+	from
+		x : SUML!Enumeration
+	to 
+		y : UML!Enumeration (
+			ownedLiteral <- x.value
+		)
+}
+
+--role, relation, ref, compo, package
 
