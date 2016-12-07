@@ -25,8 +25,32 @@ rule boolean {
 	from
 		x : SUML!Bool
 	to 
-		--y : TYPE!Boolean ()
-		-- comment acceder aux types ?
+		y : TYPE!"TYPE::Boolean" ()
+}
+
+rule string {
+	from
+		x : SUML!"SUML::String"
+	to 
+		y : TYPE!"TYPE::String" ()
+}
+rule integer {
+	from
+		x : SUML!"SUML::Integer"
+	to 
+		y : TYPE!"TYPE::Integer" ()
+}
+rule real {
+	from
+		x : SUML!"SUML::Real"
+	to 
+		y : TYPE!"TYPE::Real" ()
+}
+rule unlimitedNatural {
+	from
+		x : SUML!UnlimitedNatural
+	to 
+		y : TYPE!UnlimitedNatural ()
 }
 
 rule parameter {
