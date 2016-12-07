@@ -14,37 +14,37 @@ rule namedElem{
 		)
 }
 
-rule abstractType {
-	from
-		x : SUML!Type
-	to 
-		y : UML!Type ()
-}
+--rule abstractType {
+--	from
+--		x : SUML!Type
+--	to 
+--		y : UML!Type ()
+--}
 
 rule boolean {
 	from
 		x : SUML!Bool
 	to 
-		y : TYPE!"TYPE::Boolean" ()
+		y : TYPE!"types::Boolean" ()
 }
 
 rule string {
 	from
-		x : SUML!"SUML::String"
+		x : SUML!"smalluml::String"
 	to 
-		y : TYPE!"TYPE::String" ()
+		y : TYPE!"types::String" ()
 }
 rule integer {
 	from
-		x : SUML!"SUML::Integer"
+		x : SUML!"smalluml::Integer"
 	to 
-		y : TYPE!"TYPE::Integer" ()
+		y : TYPE!"types::Integer" ()
 }
 rule real {
 	from
-		x : SUML!"SUML::Real"
+		x : SUML!"smalluml::Real"
 	to 
-		y : TYPE!"TYPE::Real" ()
+		y : TYPE!"types::Real" ()
 }
 rule unlimitedNatural {
 	from
