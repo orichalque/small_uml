@@ -4,22 +4,110 @@
 module Small2UML;
 create OUT : UML from IN : SUML;
 
+lazy rule namedElem{
+	from
+		x : SUML!NamedElement
+	to 
+		y : UML!NamedElement (
+			qualifiedName <- x.name
+		)
+}
+
+--rule abstractType {
+--	from
+--		x : SUML!Type
+--	to 
+--		y : UML!Type ()
+--}
+
+rule boolean {
+	from
+		x : SUML!Bool
+	to 
+		y : TYPE!"types::Boolean" ()
+}
+
+rule string {
+	from
+		x : SUML!"smalluml::String"
+	to 
+		y : TYPE!"types::String" ()
+}
+rule integer {
+	from
+		x : SUML!"smalluml::Integer"
+	to 
+		y : TYPE!"types::Integer" ()
+}
+rule real {
+	from
+		x : SUML!"smalluml::Real"
+	to 
+		y : TYPE!"types::Real" ()
+}
+rule unlimitedNatural {
+	from
+		x : SUML!UnlimitedNatural
+	to 
+		y : TYPE!UnlimitedNatural ()
+}
+
+rule parameter {
+	from
+		x : SUML!Parameter
+	to 
+		y : UML!Parameter (
+			type <- x.type	
+		)
+}
+
+rule method {
+	from
+		x : SUML!Method
+	to 
+		y : UML!Operation (
+			type <- x.returnType,
+			ownedParameter <- x.parameter
+		)
+}
+rule attribute {
+	from
+		x : SUML!Attribute
+	to 
+		y : UML!Property (
+			type <- x.type
+		)
+}
+
+rule class {
+	from
+		x : SUML!Class
+	to 
+		y : UML!Class (
+			ownedAttribute <- x.attribute,
+			ownedOperation <- x.method,
+			extension <- x.super
+			-- role ?
+		)
+}
+
+rule enumeration {
+	from
+		x : SUML!Enumeration
+	to 
+		y : UML!Enumeration (
+			ownedLiteral <- x.value
+		)
+}
+
 rule package {
 	from
 		input_name : SUML!Package
 	to 
 		output_name : UML!Package (			
 			name <- input_name.name,
-			ownedElement <- input_name.class.union(input_name.relation)			
+			ownedElement <- input_name.class.union(input_name.relation)	
 		)
 }
-
-rule class {
-	from
-		input_name : SUML!Class
-	to 
-		output_name : UML!Class (
-			name <- input_name.name			
-		)
-}
+--role, relation, ref, compo, package
 
