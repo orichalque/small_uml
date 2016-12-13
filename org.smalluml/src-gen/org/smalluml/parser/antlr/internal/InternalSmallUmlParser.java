@@ -210,7 +210,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==Package||LA1_0==Class||LA1_0==LeftParenthesis||LA1_0==PlusSign||LA1_0==Colon||LA1_0==RULE_ID||LA1_0==RULE_STRING) ) {
+                if ( (LA1_0==Package||LA1_0==Class||LA1_0==LeftParenthesis||LA1_0==PlusSign||LA1_0==RULE_ID||LA1_0==RULE_STRING) ) {
                     alt1=1;
                 }
 
@@ -899,32 +899,30 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClass"
-    // InternalSmallUmlParser.g:336:1: ruleClass returns [EObject current=null] : ( () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? otherlv_5= LeftCurlyBracket (this_BEGIN_6= RULE_BEGIN )? ( ( (lv_method_7_0= ruleMethod ) ) | ( (lv_attribute_8_0= ruleAttribute ) ) )* (this_END_9= RULE_END )? otherlv_10= RightCurlyBracket ) ;
+    // InternalSmallUmlParser.g:336:1: ruleClass returns [EObject current=null] : ( () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? (this_BEGIN_5= RULE_BEGIN ( ( (lv_method_6_0= ruleMethod ) ) | ( (lv_attribute_7_0= ruleAttribute ) ) )* this_END_8= RULE_END )? ) ;
     public final EObject ruleClass() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
-        Token otherlv_5=null;
-        Token this_BEGIN_6=null;
-        Token this_END_9=null;
-        Token otherlv_10=null;
+        Token this_BEGIN_5=null;
+        Token this_END_8=null;
         AntlrDatatypeRuleToken lv_name_2_0 = null;
 
-        EObject lv_method_7_0 = null;
+        EObject lv_method_6_0 = null;
 
-        EObject lv_attribute_8_0 = null;
+        EObject lv_attribute_7_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:342:2: ( ( () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? otherlv_5= LeftCurlyBracket (this_BEGIN_6= RULE_BEGIN )? ( ( (lv_method_7_0= ruleMethod ) ) | ( (lv_attribute_8_0= ruleAttribute ) ) )* (this_END_9= RULE_END )? otherlv_10= RightCurlyBracket ) )
-            // InternalSmallUmlParser.g:343:2: ( () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? otherlv_5= LeftCurlyBracket (this_BEGIN_6= RULE_BEGIN )? ( ( (lv_method_7_0= ruleMethod ) ) | ( (lv_attribute_8_0= ruleAttribute ) ) )* (this_END_9= RULE_END )? otherlv_10= RightCurlyBracket )
+            // InternalSmallUmlParser.g:342:2: ( ( () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? (this_BEGIN_5= RULE_BEGIN ( ( (lv_method_6_0= ruleMethod ) ) | ( (lv_attribute_7_0= ruleAttribute ) ) )* this_END_8= RULE_END )? ) )
+            // InternalSmallUmlParser.g:343:2: ( () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? (this_BEGIN_5= RULE_BEGIN ( ( (lv_method_6_0= ruleMethod ) ) | ( (lv_attribute_7_0= ruleAttribute ) ) )* this_END_8= RULE_END )? )
             {
-            // InternalSmallUmlParser.g:343:2: ( () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? otherlv_5= LeftCurlyBracket (this_BEGIN_6= RULE_BEGIN )? ( ( (lv_method_7_0= ruleMethod ) ) | ( (lv_attribute_8_0= ruleAttribute ) ) )* (this_END_9= RULE_END )? otherlv_10= RightCurlyBracket )
-            // InternalSmallUmlParser.g:344:3: () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? otherlv_5= LeftCurlyBracket (this_BEGIN_6= RULE_BEGIN )? ( ( (lv_method_7_0= ruleMethod ) ) | ( (lv_attribute_8_0= ruleAttribute ) ) )* (this_END_9= RULE_END )? otherlv_10= RightCurlyBracket
+            // InternalSmallUmlParser.g:343:2: ( () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? (this_BEGIN_5= RULE_BEGIN ( ( (lv_method_6_0= ruleMethod ) ) | ( (lv_attribute_7_0= ruleAttribute ) ) )* this_END_8= RULE_END )? )
+            // InternalSmallUmlParser.g:344:3: () otherlv_1= Class ( (lv_name_2_0= ruleEString ) ) (otherlv_3= Extends ( ( ruleEString ) ) )? (this_BEGIN_5= RULE_BEGIN ( ( (lv_method_6_0= ruleMethod ) ) | ( (lv_attribute_7_0= ruleAttribute ) ) )* this_END_8= RULE_END )?
             {
             // InternalSmallUmlParser.g:344:3: ()
             // InternalSmallUmlParser.g:345:4: 
@@ -1021,24 +1019,143 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,LeftCurlyBracket,FOLLOW_8); 
+            // InternalSmallUmlParser.g:396:3: (this_BEGIN_5= RULE_BEGIN ( ( (lv_method_6_0= ruleMethod ) ) | ( (lv_attribute_7_0= ruleAttribute ) ) )* this_END_8= RULE_END )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            			newLeafNode(otherlv_5, grammarAccess.getClassAccess().getLeftCurlyBracketKeyword_4());
-            		
-            // InternalSmallUmlParser.g:400:3: (this_BEGIN_6= RULE_BEGIN )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
-
-            if ( (LA6_0==RULE_BEGIN) ) {
-                alt6=1;
+            if ( (LA7_0==RULE_BEGIN) ) {
+                alt7=1;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // InternalSmallUmlParser.g:401:4: this_BEGIN_6= RULE_BEGIN
+                    // InternalSmallUmlParser.g:397:4: this_BEGIN_5= RULE_BEGIN ( ( (lv_method_6_0= ruleMethod ) ) | ( (lv_attribute_7_0= ruleAttribute ) ) )* this_END_8= RULE_END
                     {
-                    this_BEGIN_6=(Token)match(input,RULE_BEGIN,FOLLOW_9); 
+                    this_BEGIN_5=(Token)match(input,RULE_BEGIN,FOLLOW_8); 
 
-                    				newLeafNode(this_BEGIN_6, grammarAccess.getClassAccess().getBEGINTerminalRuleCall_5());
+                    				newLeafNode(this_BEGIN_5, grammarAccess.getClassAccess().getBEGINTerminalRuleCall_4_0());
+                    			
+                    // InternalSmallUmlParser.g:401:4: ( ( (lv_method_6_0= ruleMethod ) ) | ( (lv_attribute_7_0= ruleAttribute ) ) )*
+                    loop6:
+                    do {
+                        int alt6=3;
+                        int LA6_0 = input.LA(1);
+
+                        if ( (LA6_0==PlusSign) ) {
+                            int LA6_2 = input.LA(2);
+
+                            if ( (LA6_2==RULE_STRING) ) {
+                                int LA6_3 = input.LA(3);
+
+                                if ( (LA6_3==LeftParenthesis) ) {
+                                    alt6=1;
+                                }
+                                else if ( (LA6_3==Colon) ) {
+                                    alt6=2;
+                                }
+
+
+                            }
+                            else if ( (LA6_2==RULE_ID) ) {
+                                int LA6_4 = input.LA(3);
+
+                                if ( (LA6_4==LeftParenthesis) ) {
+                                    alt6=1;
+                                }
+                                else if ( (LA6_4==Colon) ) {
+                                    alt6=2;
+                                }
+
+
+                            }
+
+
+                        }
+
+
+                        switch (alt6) {
+                    	case 1 :
+                    	    // InternalSmallUmlParser.g:402:5: ( (lv_method_6_0= ruleMethod ) )
+                    	    {
+                    	    // InternalSmallUmlParser.g:402:5: ( (lv_method_6_0= ruleMethod ) )
+                    	    // InternalSmallUmlParser.g:403:6: (lv_method_6_0= ruleMethod )
+                    	    {
+                    	    // InternalSmallUmlParser.g:403:6: (lv_method_6_0= ruleMethod )
+                    	    // InternalSmallUmlParser.g:404:7: lv_method_6_0= ruleMethod
+                    	    {
+
+                    	    							newCompositeNode(grammarAccess.getClassAccess().getMethodMethodParserRuleCall_4_1_0_0());
+                    	    						
+                    	    pushFollow(FOLLOW_8);
+                    	    lv_method_6_0=ruleMethod();
+
+                    	    state._fsp--;
+
+
+                    	    							if (current==null) {
+                    	    								current = createModelElementForParent(grammarAccess.getClassRule());
+                    	    							}
+                    	    							add(
+                    	    								current,
+                    	    								"method",
+                    	    								lv_method_6_0,
+                    	    								"org.smalluml.SmallUml.Method");
+                    	    							afterParserOrEnumRuleCall();
+                    	    						
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+                    	case 2 :
+                    	    // InternalSmallUmlParser.g:422:5: ( (lv_attribute_7_0= ruleAttribute ) )
+                    	    {
+                    	    // InternalSmallUmlParser.g:422:5: ( (lv_attribute_7_0= ruleAttribute ) )
+                    	    // InternalSmallUmlParser.g:423:6: (lv_attribute_7_0= ruleAttribute )
+                    	    {
+                    	    // InternalSmallUmlParser.g:423:6: (lv_attribute_7_0= ruleAttribute )
+                    	    // InternalSmallUmlParser.g:424:7: lv_attribute_7_0= ruleAttribute
+                    	    {
+
+                    	    							newCompositeNode(grammarAccess.getClassAccess().getAttributeAttributeParserRuleCall_4_1_1_0());
+                    	    						
+                    	    pushFollow(FOLLOW_8);
+                    	    lv_attribute_7_0=ruleAttribute();
+
+                    	    state._fsp--;
+
+
+                    	    							if (current==null) {
+                    	    								current = createModelElementForParent(grammarAccess.getClassRule());
+                    	    							}
+                    	    							add(
+                    	    								current,
+                    	    								"attribute",
+                    	    								lv_attribute_7_0,
+                    	    								"org.smalluml.SmallUml.Attribute");
+                    	    							afterParserOrEnumRuleCall();
+                    	    						
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop6;
+                        }
+                    } while (true);
+
+                    this_END_8=(Token)match(input,RULE_END,FOLLOW_2); 
+
+                    				newLeafNode(this_END_8, grammarAccess.getClassAccess().getENDTerminalRuleCall_4_2());
                     			
 
                     }
@@ -1046,150 +1163,6 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSmallUmlParser.g:406:3: ( ( (lv_method_7_0= ruleMethod ) ) | ( (lv_attribute_8_0= ruleAttribute ) ) )*
-            loop7:
-            do {
-                int alt7=3;
-                int LA7_0 = input.LA(1);
-
-                if ( (LA7_0==PlusSign) ) {
-                    int LA7_2 = input.LA(2);
-
-                    if ( (LA7_2==RULE_STRING) ) {
-                        int LA7_3 = input.LA(3);
-
-                        if ( (LA7_3==LeftParenthesis) ) {
-                            alt7=1;
-                        }
-                        else if ( (LA7_3==Colon) ) {
-                            alt7=2;
-                        }
-
-
-                    }
-                    else if ( (LA7_2==RULE_ID) ) {
-                        int LA7_4 = input.LA(3);
-
-                        if ( (LA7_4==Colon) ) {
-                            alt7=2;
-                        }
-                        else if ( (LA7_4==LeftParenthesis) ) {
-                            alt7=1;
-                        }
-
-
-                    }
-
-
-                }
-
-
-                switch (alt7) {
-            	case 1 :
-            	    // InternalSmallUmlParser.g:407:4: ( (lv_method_7_0= ruleMethod ) )
-            	    {
-            	    // InternalSmallUmlParser.g:407:4: ( (lv_method_7_0= ruleMethod ) )
-            	    // InternalSmallUmlParser.g:408:5: (lv_method_7_0= ruleMethod )
-            	    {
-            	    // InternalSmallUmlParser.g:408:5: (lv_method_7_0= ruleMethod )
-            	    // InternalSmallUmlParser.g:409:6: lv_method_7_0= ruleMethod
-            	    {
-
-            	    						newCompositeNode(grammarAccess.getClassAccess().getMethodMethodParserRuleCall_6_0_0());
-            	    					
-            	    pushFollow(FOLLOW_9);
-            	    lv_method_7_0=ruleMethod();
-
-            	    state._fsp--;
-
-
-            	    						if (current==null) {
-            	    							current = createModelElementForParent(grammarAccess.getClassRule());
-            	    						}
-            	    						add(
-            	    							current,
-            	    							"method",
-            	    							lv_method_7_0,
-            	    							"org.smalluml.SmallUml.Method");
-            	    						afterParserOrEnumRuleCall();
-            	    					
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // InternalSmallUmlParser.g:427:4: ( (lv_attribute_8_0= ruleAttribute ) )
-            	    {
-            	    // InternalSmallUmlParser.g:427:4: ( (lv_attribute_8_0= ruleAttribute ) )
-            	    // InternalSmallUmlParser.g:428:5: (lv_attribute_8_0= ruleAttribute )
-            	    {
-            	    // InternalSmallUmlParser.g:428:5: (lv_attribute_8_0= ruleAttribute )
-            	    // InternalSmallUmlParser.g:429:6: lv_attribute_8_0= ruleAttribute
-            	    {
-
-            	    						newCompositeNode(grammarAccess.getClassAccess().getAttributeAttributeParserRuleCall_6_1_0());
-            	    					
-            	    pushFollow(FOLLOW_9);
-            	    lv_attribute_8_0=ruleAttribute();
-
-            	    state._fsp--;
-
-
-            	    						if (current==null) {
-            	    							current = createModelElementForParent(grammarAccess.getClassRule());
-            	    						}
-            	    						add(
-            	    							current,
-            	    							"attribute",
-            	    							lv_attribute_8_0,
-            	    							"org.smalluml.SmallUml.Attribute");
-            	    						afterParserOrEnumRuleCall();
-            	    					
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop7;
-                }
-            } while (true);
-
-            // InternalSmallUmlParser.g:447:3: (this_END_9= RULE_END )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0==RULE_END) ) {
-                alt8=1;
-            }
-            switch (alt8) {
-                case 1 :
-                    // InternalSmallUmlParser.g:448:4: this_END_9= RULE_END
-                    {
-                    this_END_9=(Token)match(input,RULE_END,FOLLOW_10); 
-
-                    				newLeafNode(this_END_9, grammarAccess.getClassAccess().getENDTerminalRuleCall_7());
-                    			
-
-                    }
-                    break;
-
-            }
-
-            otherlv_10=(Token)match(input,RightCurlyBracket,FOLLOW_2); 
-
-            			newLeafNode(otherlv_10, grammarAccess.getClassAccess().getRightCurlyBracketKeyword_8());
-            		
 
             }
 
@@ -1213,7 +1186,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAttribute"
-    // InternalSmallUmlParser.g:461:1: entryRuleAttribute returns [EObject current=null] : iv_ruleAttribute= ruleAttribute EOF ;
+    // InternalSmallUmlParser.g:451:1: entryRuleAttribute returns [EObject current=null] : iv_ruleAttribute= ruleAttribute EOF ;
     public final EObject entryRuleAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -1221,8 +1194,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:461:50: (iv_ruleAttribute= ruleAttribute EOF )
-            // InternalSmallUmlParser.g:462:2: iv_ruleAttribute= ruleAttribute EOF
+            // InternalSmallUmlParser.g:451:50: (iv_ruleAttribute= ruleAttribute EOF )
+            // InternalSmallUmlParser.g:452:2: iv_ruleAttribute= ruleAttribute EOF
             {
              newCompositeNode(grammarAccess.getAttributeRule()); 
             pushFollow(FOLLOW_1);
@@ -1249,7 +1222,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAttribute"
-    // InternalSmallUmlParser.g:468:1: ruleAttribute returns [EObject current=null] : (otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) ) ) ;
+    // InternalSmallUmlParser.g:458:1: ruleAttribute returns [EObject current=null] : (otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) ) ) ;
     public final EObject ruleAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -1264,26 +1237,26 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:474:2: ( (otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) ) ) )
-            // InternalSmallUmlParser.g:475:2: (otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) ) )
+            // InternalSmallUmlParser.g:464:2: ( (otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) ) ) )
+            // InternalSmallUmlParser.g:465:2: (otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) ) )
             {
-            // InternalSmallUmlParser.g:475:2: (otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) ) )
-            // InternalSmallUmlParser.g:476:3: otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) )
+            // InternalSmallUmlParser.g:465:2: (otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) ) )
+            // InternalSmallUmlParser.g:466:3: otherlv_0= PlusSign ( (lv_name_1_0= ruleEString ) ) otherlv_2= Colon ( (lv_type_3_0= ruleType ) )
             {
             otherlv_0=(Token)match(input,PlusSign,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getAttributeAccess().getPlusSignKeyword_0());
             		
-            // InternalSmallUmlParser.g:480:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalSmallUmlParser.g:481:4: (lv_name_1_0= ruleEString )
+            // InternalSmallUmlParser.g:470:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalSmallUmlParser.g:471:4: (lv_name_1_0= ruleEString )
             {
-            // InternalSmallUmlParser.g:481:4: (lv_name_1_0= ruleEString )
-            // InternalSmallUmlParser.g:482:5: lv_name_1_0= ruleEString
+            // InternalSmallUmlParser.g:471:4: (lv_name_1_0= ruleEString )
+            // InternalSmallUmlParser.g:472:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getAttributeAccess().getNameEStringParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_9);
             lv_name_1_0=ruleEString();
 
             state._fsp--;
@@ -1305,15 +1278,15 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,Colon,FOLLOW_12); 
+            otherlv_2=(Token)match(input,Colon,FOLLOW_10); 
 
             			newLeafNode(otherlv_2, grammarAccess.getAttributeAccess().getColonKeyword_2());
             		
-            // InternalSmallUmlParser.g:503:3: ( (lv_type_3_0= ruleType ) )
-            // InternalSmallUmlParser.g:504:4: (lv_type_3_0= ruleType )
+            // InternalSmallUmlParser.g:493:3: ( (lv_type_3_0= ruleType ) )
+            // InternalSmallUmlParser.g:494:4: (lv_type_3_0= ruleType )
             {
-            // InternalSmallUmlParser.g:504:4: (lv_type_3_0= ruleType )
-            // InternalSmallUmlParser.g:505:5: lv_type_3_0= ruleType
+            // InternalSmallUmlParser.g:494:4: (lv_type_3_0= ruleType )
+            // InternalSmallUmlParser.g:495:5: lv_type_3_0= ruleType
             {
 
             					newCompositeNode(grammarAccess.getAttributeAccess().getTypeTypeParserRuleCall_3_0());
@@ -1363,7 +1336,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMethod"
-    // InternalSmallUmlParser.g:526:1: entryRuleMethod returns [EObject current=null] : iv_ruleMethod= ruleMethod EOF ;
+    // InternalSmallUmlParser.g:516:1: entryRuleMethod returns [EObject current=null] : iv_ruleMethod= ruleMethod EOF ;
     public final EObject entryRuleMethod() throws RecognitionException {
         EObject current = null;
 
@@ -1371,8 +1344,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:526:47: (iv_ruleMethod= ruleMethod EOF )
-            // InternalSmallUmlParser.g:527:2: iv_ruleMethod= ruleMethod EOF
+            // InternalSmallUmlParser.g:516:47: (iv_ruleMethod= ruleMethod EOF )
+            // InternalSmallUmlParser.g:517:2: iv_ruleMethod= ruleMethod EOF
             {
              newCompositeNode(grammarAccess.getMethodRule()); 
             pushFollow(FOLLOW_1);
@@ -1399,7 +1372,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethod"
-    // InternalSmallUmlParser.g:533:1: ruleMethod returns [EObject current=null] : ( () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )? ) ;
+    // InternalSmallUmlParser.g:523:1: ruleMethod returns [EObject current=null] : ( () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )? ) ;
     public final EObject ruleMethod() throws RecognitionException {
         EObject current = null;
 
@@ -1421,14 +1394,14 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:539:2: ( ( () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )? ) )
-            // InternalSmallUmlParser.g:540:2: ( () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )? )
+            // InternalSmallUmlParser.g:529:2: ( ( () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )? ) )
+            // InternalSmallUmlParser.g:530:2: ( () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )? )
             {
-            // InternalSmallUmlParser.g:540:2: ( () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )? )
-            // InternalSmallUmlParser.g:541:3: () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )?
+            // InternalSmallUmlParser.g:530:2: ( () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )? )
+            // InternalSmallUmlParser.g:531:3: () otherlv_1= PlusSign ( (lv_name_2_0= ruleEString ) ) otherlv_3= LeftParenthesis ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )? otherlv_7= RightParenthesis (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )?
             {
-            // InternalSmallUmlParser.g:541:3: ()
-            // InternalSmallUmlParser.g:542:4: 
+            // InternalSmallUmlParser.g:531:3: ()
+            // InternalSmallUmlParser.g:532:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1442,16 +1415,16 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getMethodAccess().getPlusSignKeyword_1());
             		
-            // InternalSmallUmlParser.g:552:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalSmallUmlParser.g:553:4: (lv_name_2_0= ruleEString )
+            // InternalSmallUmlParser.g:542:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalSmallUmlParser.g:543:4: (lv_name_2_0= ruleEString )
             {
-            // InternalSmallUmlParser.g:553:4: (lv_name_2_0= ruleEString )
-            // InternalSmallUmlParser.g:554:5: lv_name_2_0= ruleEString
+            // InternalSmallUmlParser.g:543:4: (lv_name_2_0= ruleEString )
+            // InternalSmallUmlParser.g:544:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getMethodAccess().getNameEStringParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_11);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -1473,31 +1446,31 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,LeftParenthesis,FOLLOW_14); 
+            otherlv_3=(Token)match(input,LeftParenthesis,FOLLOW_12); 
 
             			newLeafNode(otherlv_3, grammarAccess.getMethodAccess().getLeftParenthesisKeyword_3());
             		
-            // InternalSmallUmlParser.g:575:3: ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalSmallUmlParser.g:565:3: ( ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )* )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA10_0==RULE_ID||LA10_0==RULE_STRING) ) {
-                alt10=1;
+            if ( (LA9_0==RULE_ID||LA9_0==RULE_STRING) ) {
+                alt9=1;
             }
-            switch (alt10) {
+            switch (alt9) {
                 case 1 :
-                    // InternalSmallUmlParser.g:576:4: ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )*
+                    // InternalSmallUmlParser.g:566:4: ( (lv_parameter_4_0= ruleParameter ) ) (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )*
                     {
-                    // InternalSmallUmlParser.g:576:4: ( (lv_parameter_4_0= ruleParameter ) )
-                    // InternalSmallUmlParser.g:577:5: (lv_parameter_4_0= ruleParameter )
+                    // InternalSmallUmlParser.g:566:4: ( (lv_parameter_4_0= ruleParameter ) )
+                    // InternalSmallUmlParser.g:567:5: (lv_parameter_4_0= ruleParameter )
                     {
-                    // InternalSmallUmlParser.g:577:5: (lv_parameter_4_0= ruleParameter )
-                    // InternalSmallUmlParser.g:578:6: lv_parameter_4_0= ruleParameter
+                    // InternalSmallUmlParser.g:567:5: (lv_parameter_4_0= ruleParameter )
+                    // InternalSmallUmlParser.g:568:6: lv_parameter_4_0= ruleParameter
                     {
 
                     						newCompositeNode(grammarAccess.getMethodAccess().getParameterParameterParserRuleCall_4_0_0());
                     					
-                    pushFollow(FOLLOW_15);
+                    pushFollow(FOLLOW_13);
                     lv_parameter_4_0=ruleParameter();
 
                     state._fsp--;
@@ -1519,35 +1492,35 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalSmallUmlParser.g:595:4: (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )*
-                    loop9:
+                    // InternalSmallUmlParser.g:585:4: (otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) ) )*
+                    loop8:
                     do {
-                        int alt9=2;
-                        int LA9_0 = input.LA(1);
+                        int alt8=2;
+                        int LA8_0 = input.LA(1);
 
-                        if ( (LA9_0==Comma) ) {
-                            alt9=1;
+                        if ( (LA8_0==Comma) ) {
+                            alt8=1;
                         }
 
 
-                        switch (alt9) {
+                        switch (alt8) {
                     	case 1 :
-                    	    // InternalSmallUmlParser.g:596:5: otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) )
+                    	    // InternalSmallUmlParser.g:586:5: otherlv_5= Comma ( (lv_parameter_6_0= ruleParameter ) )
                     	    {
                     	    otherlv_5=(Token)match(input,Comma,FOLLOW_3); 
 
                     	    					newLeafNode(otherlv_5, grammarAccess.getMethodAccess().getCommaKeyword_4_1_0());
                     	    				
-                    	    // InternalSmallUmlParser.g:600:5: ( (lv_parameter_6_0= ruleParameter ) )
-                    	    // InternalSmallUmlParser.g:601:6: (lv_parameter_6_0= ruleParameter )
+                    	    // InternalSmallUmlParser.g:590:5: ( (lv_parameter_6_0= ruleParameter ) )
+                    	    // InternalSmallUmlParser.g:591:6: (lv_parameter_6_0= ruleParameter )
                     	    {
-                    	    // InternalSmallUmlParser.g:601:6: (lv_parameter_6_0= ruleParameter )
-                    	    // InternalSmallUmlParser.g:602:7: lv_parameter_6_0= ruleParameter
+                    	    // InternalSmallUmlParser.g:591:6: (lv_parameter_6_0= ruleParameter )
+                    	    // InternalSmallUmlParser.g:592:7: lv_parameter_6_0= ruleParameter
                     	    {
 
                     	    							newCompositeNode(grammarAccess.getMethodAccess().getParameterParameterParserRuleCall_4_1_1_0());
                     	    						
-                    	    pushFollow(FOLLOW_15);
+                    	    pushFollow(FOLLOW_13);
                     	    lv_parameter_6_0=ruleParameter();
 
                     	    state._fsp--;
@@ -1574,7 +1547,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop9;
+                    	    break loop8;
                         }
                     } while (true);
 
@@ -1584,34 +1557,30 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,RightParenthesis,FOLLOW_16); 
+            otherlv_7=(Token)match(input,RightParenthesis,FOLLOW_14); 
 
             			newLeafNode(otherlv_7, grammarAccess.getMethodAccess().getRightParenthesisKeyword_5());
             		
-            // InternalSmallUmlParser.g:625:3: (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // InternalSmallUmlParser.g:615:3: (otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) ) )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA11_0==Colon) ) {
-                int LA11_1 = input.LA(2);
-
-                if ( ((LA11_1>=UnlimitedNatural && LA11_1<=Integer)||LA11_1==String||(LA11_1>=Bool && LA11_1<=Real)) ) {
-                    alt11=1;
-                }
+            if ( (LA10_0==Colon) ) {
+                alt10=1;
             }
-            switch (alt11) {
+            switch (alt10) {
                 case 1 :
-                    // InternalSmallUmlParser.g:626:4: otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) )
+                    // InternalSmallUmlParser.g:616:4: otherlv_8= Colon ( (lv_returnType_9_0= ruleType ) )
                     {
-                    otherlv_8=(Token)match(input,Colon,FOLLOW_12); 
+                    otherlv_8=(Token)match(input,Colon,FOLLOW_10); 
 
                     				newLeafNode(otherlv_8, grammarAccess.getMethodAccess().getColonKeyword_6_0());
                     			
-                    // InternalSmallUmlParser.g:630:4: ( (lv_returnType_9_0= ruleType ) )
-                    // InternalSmallUmlParser.g:631:5: (lv_returnType_9_0= ruleType )
+                    // InternalSmallUmlParser.g:620:4: ( (lv_returnType_9_0= ruleType ) )
+                    // InternalSmallUmlParser.g:621:5: (lv_returnType_9_0= ruleType )
                     {
-                    // InternalSmallUmlParser.g:631:5: (lv_returnType_9_0= ruleType )
-                    // InternalSmallUmlParser.g:632:6: lv_returnType_9_0= ruleType
+                    // InternalSmallUmlParser.g:621:5: (lv_returnType_9_0= ruleType )
+                    // InternalSmallUmlParser.g:622:6: lv_returnType_9_0= ruleType
                     {
 
                     						newCompositeNode(grammarAccess.getMethodAccess().getReturnTypeTypeParserRuleCall_6_1_0());
@@ -1667,7 +1636,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParameter"
-    // InternalSmallUmlParser.g:654:1: entryRuleParameter returns [EObject current=null] : iv_ruleParameter= ruleParameter EOF ;
+    // InternalSmallUmlParser.g:644:1: entryRuleParameter returns [EObject current=null] : iv_ruleParameter= ruleParameter EOF ;
     public final EObject entryRuleParameter() throws RecognitionException {
         EObject current = null;
 
@@ -1675,8 +1644,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:654:50: (iv_ruleParameter= ruleParameter EOF )
-            // InternalSmallUmlParser.g:655:2: iv_ruleParameter= ruleParameter EOF
+            // InternalSmallUmlParser.g:644:50: (iv_ruleParameter= ruleParameter EOF )
+            // InternalSmallUmlParser.g:645:2: iv_ruleParameter= ruleParameter EOF
             {
              newCompositeNode(grammarAccess.getParameterRule()); 
             pushFollow(FOLLOW_1);
@@ -1703,7 +1672,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParameter"
-    // InternalSmallUmlParser.g:661:1: ruleParameter returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) ) ) ;
+    // InternalSmallUmlParser.g:651:1: ruleParameter returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) ) ) ;
     public final EObject ruleParameter() throws RecognitionException {
         EObject current = null;
 
@@ -1717,22 +1686,22 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:667:2: ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) ) ) )
-            // InternalSmallUmlParser.g:668:2: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) ) )
+            // InternalSmallUmlParser.g:657:2: ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) ) ) )
+            // InternalSmallUmlParser.g:658:2: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) ) )
             {
-            // InternalSmallUmlParser.g:668:2: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) ) )
-            // InternalSmallUmlParser.g:669:3: ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) )
+            // InternalSmallUmlParser.g:658:2: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) ) )
+            // InternalSmallUmlParser.g:659:3: ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon ( (lv_type_2_0= ruleType ) )
             {
-            // InternalSmallUmlParser.g:669:3: ( (lv_name_0_0= ruleEString ) )
-            // InternalSmallUmlParser.g:670:4: (lv_name_0_0= ruleEString )
+            // InternalSmallUmlParser.g:659:3: ( (lv_name_0_0= ruleEString ) )
+            // InternalSmallUmlParser.g:660:4: (lv_name_0_0= ruleEString )
             {
-            // InternalSmallUmlParser.g:670:4: (lv_name_0_0= ruleEString )
-            // InternalSmallUmlParser.g:671:5: lv_name_0_0= ruleEString
+            // InternalSmallUmlParser.g:660:4: (lv_name_0_0= ruleEString )
+            // InternalSmallUmlParser.g:661:5: lv_name_0_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getParameterAccess().getNameEStringParserRuleCall_0_0());
             				
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_9);
             lv_name_0_0=ruleEString();
 
             state._fsp--;
@@ -1754,15 +1723,15 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,Colon,FOLLOW_12); 
+            otherlv_1=(Token)match(input,Colon,FOLLOW_10); 
 
             			newLeafNode(otherlv_1, grammarAccess.getParameterAccess().getColonKeyword_1());
             		
-            // InternalSmallUmlParser.g:692:3: ( (lv_type_2_0= ruleType ) )
-            // InternalSmallUmlParser.g:693:4: (lv_type_2_0= ruleType )
+            // InternalSmallUmlParser.g:682:3: ( (lv_type_2_0= ruleType ) )
+            // InternalSmallUmlParser.g:683:4: (lv_type_2_0= ruleType )
             {
-            // InternalSmallUmlParser.g:693:4: (lv_type_2_0= ruleType )
-            // InternalSmallUmlParser.g:694:5: lv_type_2_0= ruleType
+            // InternalSmallUmlParser.g:683:4: (lv_type_2_0= ruleType )
+            // InternalSmallUmlParser.g:684:5: lv_type_2_0= ruleType
             {
 
             					newCompositeNode(grammarAccess.getParameterAccess().getTypeTypeParserRuleCall_2_0());
@@ -1812,7 +1781,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComposition"
-    // InternalSmallUmlParser.g:715:1: entryRuleComposition returns [EObject current=null] : iv_ruleComposition= ruleComposition EOF ;
+    // InternalSmallUmlParser.g:705:1: entryRuleComposition returns [EObject current=null] : iv_ruleComposition= ruleComposition EOF ;
     public final EObject entryRuleComposition() throws RecognitionException {
         EObject current = null;
 
@@ -1820,8 +1789,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:715:52: (iv_ruleComposition= ruleComposition EOF )
-            // InternalSmallUmlParser.g:716:2: iv_ruleComposition= ruleComposition EOF
+            // InternalSmallUmlParser.g:705:52: (iv_ruleComposition= ruleComposition EOF )
+            // InternalSmallUmlParser.g:706:2: iv_ruleComposition= ruleComposition EOF
             {
              newCompositeNode(grammarAccess.getCompositionRule()); 
             pushFollow(FOLLOW_1);
@@ -1848,7 +1817,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComposition"
-    // InternalSmallUmlParser.g:722:1: ruleComposition returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( ( ruleEString ) ) ) ;
+    // InternalSmallUmlParser.g:712:1: ruleComposition returns [EObject current=null] : ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( (lv_target_4_0= ruleRole ) ) ) ;
     public final EObject ruleComposition() throws RecognitionException {
         EObject current = null;
 
@@ -1856,83 +1825,107 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         AntlrDatatypeRuleToken lv_name_0_0 = null;
 
+        EObject lv_source_2_0 = null;
+
+        EObject lv_target_4_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:728:2: ( ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( ( ruleEString ) ) ) )
-            // InternalSmallUmlParser.g:729:2: ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( ( ruleEString ) ) )
+            // InternalSmallUmlParser.g:718:2: ( ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( (lv_target_4_0= ruleRole ) ) ) )
+            // InternalSmallUmlParser.g:719:2: ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( (lv_target_4_0= ruleRole ) ) )
             {
-            // InternalSmallUmlParser.g:729:2: ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( ( ruleEString ) ) )
-            // InternalSmallUmlParser.g:730:3: ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:719:2: ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( (lv_target_4_0= ruleRole ) ) )
+            // InternalSmallUmlParser.g:720:3: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= LessThanSignGreaterThanSignHyphenMinusHyphenMinus ( (lv_target_4_0= ruleRole ) )
             {
-            // InternalSmallUmlParser.g:730:3: ( (lv_name_0_0= ruleEString ) )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // InternalSmallUmlParser.g:720:3: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA12_0==RULE_ID||LA12_0==RULE_STRING) ) {
-                alt12=1;
+            if ( (LA11_0==RULE_STRING) ) {
+                int LA11_1 = input.LA(2);
+
+                if ( (LA11_1==Colon) ) {
+                    alt11=1;
+                }
             }
-            switch (alt12) {
+            else if ( (LA11_0==RULE_ID) ) {
+                int LA11_2 = input.LA(2);
+
+                if ( (LA11_2==Colon) ) {
+                    alt11=1;
+                }
+            }
+            switch (alt11) {
                 case 1 :
-                    // InternalSmallUmlParser.g:731:4: (lv_name_0_0= ruleEString )
+                    // InternalSmallUmlParser.g:721:4: ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon
                     {
-                    // InternalSmallUmlParser.g:731:4: (lv_name_0_0= ruleEString )
-                    // InternalSmallUmlParser.g:732:5: lv_name_0_0= ruleEString
+                    // InternalSmallUmlParser.g:721:4: ( (lv_name_0_0= ruleEString ) )
+                    // InternalSmallUmlParser.g:722:5: (lv_name_0_0= ruleEString )
+                    {
+                    // InternalSmallUmlParser.g:722:5: (lv_name_0_0= ruleEString )
+                    // InternalSmallUmlParser.g:723:6: lv_name_0_0= ruleEString
                     {
 
-                    					newCompositeNode(grammarAccess.getCompositionAccess().getNameEStringParserRuleCall_0_0());
-                    				
-                    pushFollow(FOLLOW_11);
+                    						newCompositeNode(grammarAccess.getCompositionAccess().getNameEStringParserRuleCall_0_0_0());
+                    					
+                    pushFollow(FOLLOW_9);
                     lv_name_0_0=ruleEString();
 
                     state._fsp--;
 
 
-                    					if (current==null) {
-                    						current = createModelElementForParent(grammarAccess.getCompositionRule());
-                    					}
-                    					set(
-                    						current,
-                    						"name",
-                    						lv_name_0_0,
-                    						"org.smalluml.SmallUml.EString");
-                    					afterParserOrEnumRuleCall();
-                    				
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getCompositionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"name",
+                    							lv_name_0_0,
+                    							"org.smalluml.SmallUml.EString");
+                    						afterParserOrEnumRuleCall();
+                    					
 
                     }
 
+
+                    }
+
+                    otherlv_1=(Token)match(input,Colon,FOLLOW_15); 
+
+                    				newLeafNode(otherlv_1, grammarAccess.getCompositionAccess().getColonKeyword_0_1());
+                    			
 
                     }
                     break;
 
             }
 
-            otherlv_1=(Token)match(input,Colon,FOLLOW_3); 
-
-            			newLeafNode(otherlv_1, grammarAccess.getCompositionAccess().getColonKeyword_1());
-            		
-            // InternalSmallUmlParser.g:753:3: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:754:4: ( ruleEString )
+            // InternalSmallUmlParser.g:745:3: ( (lv_source_2_0= ruleRole ) )
+            // InternalSmallUmlParser.g:746:4: (lv_source_2_0= ruleRole )
             {
-            // InternalSmallUmlParser.g:754:4: ( ruleEString )
-            // InternalSmallUmlParser.g:755:5: ruleEString
+            // InternalSmallUmlParser.g:746:4: (lv_source_2_0= ruleRole )
+            // InternalSmallUmlParser.g:747:5: lv_source_2_0= ruleRole
             {
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getCompositionRule());
-            					}
+            					newCompositeNode(grammarAccess.getCompositionAccess().getSourceRoleParserRuleCall_1_0());
             				
-
-            					newCompositeNode(grammarAccess.getCompositionAccess().getSourceRoleCrossReference_2_0());
-            				
-            pushFollow(FOLLOW_17);
-            ruleEString();
+            pushFollow(FOLLOW_16);
+            lv_source_2_0=ruleRole();
 
             state._fsp--;
 
 
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getCompositionRule());
+            					}
+            					set(
+            						current,
+            						"source",
+            						lv_source_2_0,
+            						"org.smalluml.SmallUml.Role");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1941,30 +1934,33 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,LessThanSignGreaterThanSignHyphenMinusHyphenMinus,FOLLOW_3); 
+            otherlv_3=(Token)match(input,LessThanSignGreaterThanSignHyphenMinusHyphenMinus,FOLLOW_15); 
 
-            			newLeafNode(otherlv_3, grammarAccess.getCompositionAccess().getLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_3());
+            			newLeafNode(otherlv_3, grammarAccess.getCompositionAccess().getLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_2());
             		
-            // InternalSmallUmlParser.g:773:3: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:774:4: ( ruleEString )
+            // InternalSmallUmlParser.g:768:3: ( (lv_target_4_0= ruleRole ) )
+            // InternalSmallUmlParser.g:769:4: (lv_target_4_0= ruleRole )
             {
-            // InternalSmallUmlParser.g:774:4: ( ruleEString )
-            // InternalSmallUmlParser.g:775:5: ruleEString
+            // InternalSmallUmlParser.g:769:4: (lv_target_4_0= ruleRole )
+            // InternalSmallUmlParser.g:770:5: lv_target_4_0= ruleRole
             {
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getCompositionRule());
-            					}
-            				
-
-            					newCompositeNode(grammarAccess.getCompositionAccess().getTargetRoleCrossReference_4_0());
+            					newCompositeNode(grammarAccess.getCompositionAccess().getTargetRoleParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_2);
-            ruleEString();
+            lv_target_4_0=ruleRole();
 
             state._fsp--;
 
 
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getCompositionRule());
+            					}
+            					set(
+            						current,
+            						"target",
+            						lv_target_4_0,
+            						"org.smalluml.SmallUml.Role");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1996,7 +1992,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleReference"
-    // InternalSmallUmlParser.g:793:1: entryRuleReference returns [EObject current=null] : iv_ruleReference= ruleReference EOF ;
+    // InternalSmallUmlParser.g:791:1: entryRuleReference returns [EObject current=null] : iv_ruleReference= ruleReference EOF ;
     public final EObject entryRuleReference() throws RecognitionException {
         EObject current = null;
 
@@ -2004,8 +2000,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:793:50: (iv_ruleReference= ruleReference EOF )
-            // InternalSmallUmlParser.g:794:2: iv_ruleReference= ruleReference EOF
+            // InternalSmallUmlParser.g:791:50: (iv_ruleReference= ruleReference EOF )
+            // InternalSmallUmlParser.g:792:2: iv_ruleReference= ruleReference EOF
             {
              newCompositeNode(grammarAccess.getReferenceRule()); 
             pushFollow(FOLLOW_1);
@@ -2032,7 +2028,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReference"
-    // InternalSmallUmlParser.g:800:1: ruleReference returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( ( ruleEString ) ) ) ;
+    // InternalSmallUmlParser.g:798:1: ruleReference returns [EObject current=null] : ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( (lv_target_4_0= ruleRole ) ) ) ;
     public final EObject ruleReference() throws RecognitionException {
         EObject current = null;
 
@@ -2040,83 +2036,107 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         AntlrDatatypeRuleToken lv_name_0_0 = null;
 
+        EObject lv_source_2_0 = null;
+
+        EObject lv_target_4_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:806:2: ( ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( ( ruleEString ) ) ) )
-            // InternalSmallUmlParser.g:807:2: ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( ( ruleEString ) ) )
+            // InternalSmallUmlParser.g:804:2: ( ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( (lv_target_4_0= ruleRole ) ) ) )
+            // InternalSmallUmlParser.g:805:2: ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( (lv_target_4_0= ruleRole ) ) )
             {
-            // InternalSmallUmlParser.g:807:2: ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( ( ruleEString ) ) )
-            // InternalSmallUmlParser.g:808:3: ( (lv_name_0_0= ruleEString ) )? otherlv_1= Colon ( ( ruleEString ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:805:2: ( ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( (lv_target_4_0= ruleRole ) ) )
+            // InternalSmallUmlParser.g:806:3: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )? ( (lv_source_2_0= ruleRole ) ) otherlv_3= HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ( (lv_target_4_0= ruleRole ) )
             {
-            // InternalSmallUmlParser.g:808:3: ( (lv_name_0_0= ruleEString ) )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // InternalSmallUmlParser.g:806:3: ( ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_ID||LA13_0==RULE_STRING) ) {
-                alt13=1;
+            if ( (LA12_0==RULE_STRING) ) {
+                int LA12_1 = input.LA(2);
+
+                if ( (LA12_1==Colon) ) {
+                    alt12=1;
+                }
             }
-            switch (alt13) {
+            else if ( (LA12_0==RULE_ID) ) {
+                int LA12_2 = input.LA(2);
+
+                if ( (LA12_2==Colon) ) {
+                    alt12=1;
+                }
+            }
+            switch (alt12) {
                 case 1 :
-                    // InternalSmallUmlParser.g:809:4: (lv_name_0_0= ruleEString )
+                    // InternalSmallUmlParser.g:807:4: ( (lv_name_0_0= ruleEString ) ) otherlv_1= Colon
                     {
-                    // InternalSmallUmlParser.g:809:4: (lv_name_0_0= ruleEString )
-                    // InternalSmallUmlParser.g:810:5: lv_name_0_0= ruleEString
+                    // InternalSmallUmlParser.g:807:4: ( (lv_name_0_0= ruleEString ) )
+                    // InternalSmallUmlParser.g:808:5: (lv_name_0_0= ruleEString )
+                    {
+                    // InternalSmallUmlParser.g:808:5: (lv_name_0_0= ruleEString )
+                    // InternalSmallUmlParser.g:809:6: lv_name_0_0= ruleEString
                     {
 
-                    					newCompositeNode(grammarAccess.getReferenceAccess().getNameEStringParserRuleCall_0_0());
-                    				
-                    pushFollow(FOLLOW_11);
+                    						newCompositeNode(grammarAccess.getReferenceAccess().getNameEStringParserRuleCall_0_0_0());
+                    					
+                    pushFollow(FOLLOW_9);
                     lv_name_0_0=ruleEString();
 
                     state._fsp--;
 
 
-                    					if (current==null) {
-                    						current = createModelElementForParent(grammarAccess.getReferenceRule());
-                    					}
-                    					set(
-                    						current,
-                    						"name",
-                    						lv_name_0_0,
-                    						"org.smalluml.SmallUml.EString");
-                    					afterParserOrEnumRuleCall();
-                    				
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getReferenceRule());
+                    						}
+                    						set(
+                    							current,
+                    							"name",
+                    							lv_name_0_0,
+                    							"org.smalluml.SmallUml.EString");
+                    						afterParserOrEnumRuleCall();
+                    					
 
                     }
 
+
+                    }
+
+                    otherlv_1=(Token)match(input,Colon,FOLLOW_15); 
+
+                    				newLeafNode(otherlv_1, grammarAccess.getReferenceAccess().getColonKeyword_0_1());
+                    			
 
                     }
                     break;
 
             }
 
-            otherlv_1=(Token)match(input,Colon,FOLLOW_3); 
-
-            			newLeafNode(otherlv_1, grammarAccess.getReferenceAccess().getColonKeyword_1());
-            		
-            // InternalSmallUmlParser.g:831:3: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:832:4: ( ruleEString )
+            // InternalSmallUmlParser.g:831:3: ( (lv_source_2_0= ruleRole ) )
+            // InternalSmallUmlParser.g:832:4: (lv_source_2_0= ruleRole )
             {
-            // InternalSmallUmlParser.g:832:4: ( ruleEString )
-            // InternalSmallUmlParser.g:833:5: ruleEString
+            // InternalSmallUmlParser.g:832:4: (lv_source_2_0= ruleRole )
+            // InternalSmallUmlParser.g:833:5: lv_source_2_0= ruleRole
             {
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getReferenceRule());
-            					}
+            					newCompositeNode(grammarAccess.getReferenceAccess().getSourceRoleParserRuleCall_1_0());
             				
-
-            					newCompositeNode(grammarAccess.getReferenceAccess().getSourceRoleCrossReference_2_0());
-            				
-            pushFollow(FOLLOW_18);
-            ruleEString();
+            pushFollow(FOLLOW_17);
+            lv_source_2_0=ruleRole();
 
             state._fsp--;
 
 
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getReferenceRule());
+            					}
+            					set(
+            						current,
+            						"source",
+            						lv_source_2_0,
+            						"org.smalluml.SmallUml.Role");
             					afterParserOrEnumRuleCall();
             				
 
@@ -2125,30 +2145,33 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,HyphenMinusHyphenMinusHyphenMinusGreaterThanSign,FOLLOW_3); 
+            otherlv_3=(Token)match(input,HyphenMinusHyphenMinusHyphenMinusGreaterThanSign,FOLLOW_15); 
 
-            			newLeafNode(otherlv_3, grammarAccess.getReferenceAccess().getHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_3());
+            			newLeafNode(otherlv_3, grammarAccess.getReferenceAccess().getHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_2());
             		
-            // InternalSmallUmlParser.g:851:3: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:852:4: ( ruleEString )
+            // InternalSmallUmlParser.g:854:3: ( (lv_target_4_0= ruleRole ) )
+            // InternalSmallUmlParser.g:855:4: (lv_target_4_0= ruleRole )
             {
-            // InternalSmallUmlParser.g:852:4: ( ruleEString )
-            // InternalSmallUmlParser.g:853:5: ruleEString
+            // InternalSmallUmlParser.g:855:4: (lv_target_4_0= ruleRole )
+            // InternalSmallUmlParser.g:856:5: lv_target_4_0= ruleRole
             {
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getReferenceRule());
-            					}
-            				
-
-            					newCompositeNode(grammarAccess.getReferenceAccess().getTargetRoleCrossReference_4_0());
+            					newCompositeNode(grammarAccess.getReferenceAccess().getTargetRoleParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_2);
-            ruleEString();
+            lv_target_4_0=ruleRole();
 
             state._fsp--;
 
 
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getReferenceRule());
+            					}
+            					set(
+            						current,
+            						"target",
+            						lv_target_4_0,
+            						"org.smalluml.SmallUml.Role");
             					afterParserOrEnumRuleCall();
             				
 
@@ -2180,7 +2203,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRole"
-    // InternalSmallUmlParser.g:871:1: entryRuleRole returns [EObject current=null] : iv_ruleRole= ruleRole EOF ;
+    // InternalSmallUmlParser.g:877:1: entryRuleRole returns [EObject current=null] : iv_ruleRole= ruleRole EOF ;
     public final EObject entryRuleRole() throws RecognitionException {
         EObject current = null;
 
@@ -2188,8 +2211,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:871:45: (iv_ruleRole= ruleRole EOF )
-            // InternalSmallUmlParser.g:872:2: iv_ruleRole= ruleRole EOF
+            // InternalSmallUmlParser.g:877:45: (iv_ruleRole= ruleRole EOF )
+            // InternalSmallUmlParser.g:878:2: iv_ruleRole= ruleRole EOF
             {
              newCompositeNode(grammarAccess.getRoleRule()); 
             pushFollow(FOLLOW_1);
@@ -2216,63 +2239,52 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRole"
-    // InternalSmallUmlParser.g:878:1: ruleRole returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) )? otherlv_2= LeftParenthesis ( ( ruleEString ) ) (otherlv_4= Comma otherlv_5= LeftSquareBracket ( (lv_lowerBound_6_0= ruleEInt ) ) otherlv_7= Comma ( (lv_upperBound_8_0= ruleEInt ) ) otherlv_9= RightSquareBracket )? otherlv_10= RightParenthesis ) ;
+    // InternalSmallUmlParser.g:884:1: ruleRole returns [EObject current=null] : ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= LeftParenthesis ( ( ruleEString ) ) (otherlv_3= Comma otherlv_4= LeftSquareBracket ( (lv_lowerBound_5_0= ruleEInt ) ) otherlv_6= Comma ( (lv_upperBound_7_0= ruleEInt ) ) otherlv_8= RightSquareBracket )? otherlv_9= RightParenthesis ) ;
     public final EObject ruleRole() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_2=null;
+        Token otherlv_1=null;
+        Token otherlv_3=null;
         Token otherlv_4=null;
-        Token otherlv_5=null;
-        Token otherlv_7=null;
+        Token otherlv_6=null;
+        Token otherlv_8=null;
         Token otherlv_9=null;
-        Token otherlv_10=null;
-        AntlrDatatypeRuleToken lv_name_1_0 = null;
+        AntlrDatatypeRuleToken lv_name_0_0 = null;
 
-        AntlrDatatypeRuleToken lv_lowerBound_6_0 = null;
+        AntlrDatatypeRuleToken lv_lowerBound_5_0 = null;
 
-        AntlrDatatypeRuleToken lv_upperBound_8_0 = null;
+        AntlrDatatypeRuleToken lv_upperBound_7_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:884:2: ( ( () ( (lv_name_1_0= ruleEString ) )? otherlv_2= LeftParenthesis ( ( ruleEString ) ) (otherlv_4= Comma otherlv_5= LeftSquareBracket ( (lv_lowerBound_6_0= ruleEInt ) ) otherlv_7= Comma ( (lv_upperBound_8_0= ruleEInt ) ) otherlv_9= RightSquareBracket )? otherlv_10= RightParenthesis ) )
-            // InternalSmallUmlParser.g:885:2: ( () ( (lv_name_1_0= ruleEString ) )? otherlv_2= LeftParenthesis ( ( ruleEString ) ) (otherlv_4= Comma otherlv_5= LeftSquareBracket ( (lv_lowerBound_6_0= ruleEInt ) ) otherlv_7= Comma ( (lv_upperBound_8_0= ruleEInt ) ) otherlv_9= RightSquareBracket )? otherlv_10= RightParenthesis )
+            // InternalSmallUmlParser.g:890:2: ( ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= LeftParenthesis ( ( ruleEString ) ) (otherlv_3= Comma otherlv_4= LeftSquareBracket ( (lv_lowerBound_5_0= ruleEInt ) ) otherlv_6= Comma ( (lv_upperBound_7_0= ruleEInt ) ) otherlv_8= RightSquareBracket )? otherlv_9= RightParenthesis ) )
+            // InternalSmallUmlParser.g:891:2: ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= LeftParenthesis ( ( ruleEString ) ) (otherlv_3= Comma otherlv_4= LeftSquareBracket ( (lv_lowerBound_5_0= ruleEInt ) ) otherlv_6= Comma ( (lv_upperBound_7_0= ruleEInt ) ) otherlv_8= RightSquareBracket )? otherlv_9= RightParenthesis )
             {
-            // InternalSmallUmlParser.g:885:2: ( () ( (lv_name_1_0= ruleEString ) )? otherlv_2= LeftParenthesis ( ( ruleEString ) ) (otherlv_4= Comma otherlv_5= LeftSquareBracket ( (lv_lowerBound_6_0= ruleEInt ) ) otherlv_7= Comma ( (lv_upperBound_8_0= ruleEInt ) ) otherlv_9= RightSquareBracket )? otherlv_10= RightParenthesis )
-            // InternalSmallUmlParser.g:886:3: () ( (lv_name_1_0= ruleEString ) )? otherlv_2= LeftParenthesis ( ( ruleEString ) ) (otherlv_4= Comma otherlv_5= LeftSquareBracket ( (lv_lowerBound_6_0= ruleEInt ) ) otherlv_7= Comma ( (lv_upperBound_8_0= ruleEInt ) ) otherlv_9= RightSquareBracket )? otherlv_10= RightParenthesis
+            // InternalSmallUmlParser.g:891:2: ( ( (lv_name_0_0= ruleEString ) )? otherlv_1= LeftParenthesis ( ( ruleEString ) ) (otherlv_3= Comma otherlv_4= LeftSquareBracket ( (lv_lowerBound_5_0= ruleEInt ) ) otherlv_6= Comma ( (lv_upperBound_7_0= ruleEInt ) ) otherlv_8= RightSquareBracket )? otherlv_9= RightParenthesis )
+            // InternalSmallUmlParser.g:892:3: ( (lv_name_0_0= ruleEString ) )? otherlv_1= LeftParenthesis ( ( ruleEString ) ) (otherlv_3= Comma otherlv_4= LeftSquareBracket ( (lv_lowerBound_5_0= ruleEInt ) ) otherlv_6= Comma ( (lv_upperBound_7_0= ruleEInt ) ) otherlv_8= RightSquareBracket )? otherlv_9= RightParenthesis
             {
-            // InternalSmallUmlParser.g:886:3: ()
-            // InternalSmallUmlParser.g:887:4: 
-            {
+            // InternalSmallUmlParser.g:892:3: ( (lv_name_0_0= ruleEString ) )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            				current = forceCreateModelElement(
-            					grammarAccess.getRoleAccess().getRoleAction_0(),
-            					current);
-            			
-
+            if ( (LA13_0==RULE_ID||LA13_0==RULE_STRING) ) {
+                alt13=1;
             }
-
-            // InternalSmallUmlParser.g:893:3: ( (lv_name_1_0= ruleEString ) )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
-
-            if ( (LA14_0==RULE_ID||LA14_0==RULE_STRING) ) {
-                alt14=1;
-            }
-            switch (alt14) {
+            switch (alt13) {
                 case 1 :
-                    // InternalSmallUmlParser.g:894:4: (lv_name_1_0= ruleEString )
+                    // InternalSmallUmlParser.g:893:4: (lv_name_0_0= ruleEString )
                     {
-                    // InternalSmallUmlParser.g:894:4: (lv_name_1_0= ruleEString )
-                    // InternalSmallUmlParser.g:895:5: lv_name_1_0= ruleEString
+                    // InternalSmallUmlParser.g:893:4: (lv_name_0_0= ruleEString )
+                    // InternalSmallUmlParser.g:894:5: lv_name_0_0= ruleEString
                     {
 
-                    					newCompositeNode(grammarAccess.getRoleAccess().getNameEStringParserRuleCall_1_0());
+                    					newCompositeNode(grammarAccess.getRoleAccess().getNameEStringParserRuleCall_0_0());
                     				
-                    pushFollow(FOLLOW_13);
-                    lv_name_1_0=ruleEString();
+                    pushFollow(FOLLOW_11);
+                    lv_name_0_0=ruleEString();
 
                     state._fsp--;
 
@@ -2283,7 +2295,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
                     					set(
                     						current,
                     						"name",
-                    						lv_name_1_0,
+                    						lv_name_0_0,
                     						"org.smalluml.SmallUml.EString");
                     					afterParserOrEnumRuleCall();
                     				
@@ -2296,15 +2308,15 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,LeftParenthesis,FOLLOW_3); 
+            otherlv_1=(Token)match(input,LeftParenthesis,FOLLOW_3); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getRoleAccess().getLeftParenthesisKeyword_2());
+            			newLeafNode(otherlv_1, grammarAccess.getRoleAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalSmallUmlParser.g:916:3: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:917:4: ( ruleEString )
+            // InternalSmallUmlParser.g:915:3: ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:916:4: ( ruleEString )
             {
-            // InternalSmallUmlParser.g:917:4: ( ruleEString )
-            // InternalSmallUmlParser.g:918:5: ruleEString
+            // InternalSmallUmlParser.g:916:4: ( ruleEString )
+            // InternalSmallUmlParser.g:917:5: ruleEString
             {
 
             					if (current==null) {
@@ -2312,9 +2324,9 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
             					}
             				
 
-            					newCompositeNode(grammarAccess.getRoleAccess().getClassClassCrossReference_3_0());
+            					newCompositeNode(grammarAccess.getRoleAccess().getClassClassCrossReference_2_0());
             				
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_13);
             ruleEString();
 
             state._fsp--;
@@ -2328,36 +2340,36 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSmallUmlParser.g:932:3: (otherlv_4= Comma otherlv_5= LeftSquareBracket ( (lv_lowerBound_6_0= ruleEInt ) ) otherlv_7= Comma ( (lv_upperBound_8_0= ruleEInt ) ) otherlv_9= RightSquareBracket )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalSmallUmlParser.g:931:3: (otherlv_3= Comma otherlv_4= LeftSquareBracket ( (lv_lowerBound_5_0= ruleEInt ) ) otherlv_6= Comma ( (lv_upperBound_7_0= ruleEInt ) ) otherlv_8= RightSquareBracket )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA15_0==Comma) ) {
-                alt15=1;
+            if ( (LA14_0==Comma) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // InternalSmallUmlParser.g:933:4: otherlv_4= Comma otherlv_5= LeftSquareBracket ( (lv_lowerBound_6_0= ruleEInt ) ) otherlv_7= Comma ( (lv_upperBound_8_0= ruleEInt ) ) otherlv_9= RightSquareBracket
+                    // InternalSmallUmlParser.g:932:4: otherlv_3= Comma otherlv_4= LeftSquareBracket ( (lv_lowerBound_5_0= ruleEInt ) ) otherlv_6= Comma ( (lv_upperBound_7_0= ruleEInt ) ) otherlv_8= RightSquareBracket
                     {
-                    otherlv_4=(Token)match(input,Comma,FOLLOW_19); 
+                    otherlv_3=(Token)match(input,Comma,FOLLOW_18); 
 
-                    				newLeafNode(otherlv_4, grammarAccess.getRoleAccess().getCommaKeyword_4_0());
+                    				newLeafNode(otherlv_3, grammarAccess.getRoleAccess().getCommaKeyword_3_0());
                     			
-                    otherlv_5=(Token)match(input,LeftSquareBracket,FOLLOW_20); 
+                    otherlv_4=(Token)match(input,LeftSquareBracket,FOLLOW_19); 
 
-                    				newLeafNode(otherlv_5, grammarAccess.getRoleAccess().getLeftSquareBracketKeyword_4_1());
+                    				newLeafNode(otherlv_4, grammarAccess.getRoleAccess().getLeftSquareBracketKeyword_3_1());
                     			
-                    // InternalSmallUmlParser.g:941:4: ( (lv_lowerBound_6_0= ruleEInt ) )
-                    // InternalSmallUmlParser.g:942:5: (lv_lowerBound_6_0= ruleEInt )
+                    // InternalSmallUmlParser.g:940:4: ( (lv_lowerBound_5_0= ruleEInt ) )
+                    // InternalSmallUmlParser.g:941:5: (lv_lowerBound_5_0= ruleEInt )
                     {
-                    // InternalSmallUmlParser.g:942:5: (lv_lowerBound_6_0= ruleEInt )
-                    // InternalSmallUmlParser.g:943:6: lv_lowerBound_6_0= ruleEInt
+                    // InternalSmallUmlParser.g:941:5: (lv_lowerBound_5_0= ruleEInt )
+                    // InternalSmallUmlParser.g:942:6: lv_lowerBound_5_0= ruleEInt
                     {
 
-                    						newCompositeNode(grammarAccess.getRoleAccess().getLowerBoundEIntParserRuleCall_4_2_0());
+                    						newCompositeNode(grammarAccess.getRoleAccess().getLowerBoundEIntParserRuleCall_3_2_0());
                     					
-                    pushFollow(FOLLOW_21);
-                    lv_lowerBound_6_0=ruleEInt();
+                    pushFollow(FOLLOW_20);
+                    lv_lowerBound_5_0=ruleEInt();
 
                     state._fsp--;
 
@@ -2368,7 +2380,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
                     						set(
                     							current,
                     							"lowerBound",
-                    							lv_lowerBound_6_0,
+                    							lv_lowerBound_5_0,
                     							"org.smalluml.SmallUml.EInt");
                     						afterParserOrEnumRuleCall();
                     					
@@ -2378,21 +2390,21 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,Comma,FOLLOW_20); 
+                    otherlv_6=(Token)match(input,Comma,FOLLOW_19); 
 
-                    				newLeafNode(otherlv_7, grammarAccess.getRoleAccess().getCommaKeyword_4_3());
+                    				newLeafNode(otherlv_6, grammarAccess.getRoleAccess().getCommaKeyword_3_3());
                     			
-                    // InternalSmallUmlParser.g:964:4: ( (lv_upperBound_8_0= ruleEInt ) )
-                    // InternalSmallUmlParser.g:965:5: (lv_upperBound_8_0= ruleEInt )
+                    // InternalSmallUmlParser.g:963:4: ( (lv_upperBound_7_0= ruleEInt ) )
+                    // InternalSmallUmlParser.g:964:5: (lv_upperBound_7_0= ruleEInt )
                     {
-                    // InternalSmallUmlParser.g:965:5: (lv_upperBound_8_0= ruleEInt )
-                    // InternalSmallUmlParser.g:966:6: lv_upperBound_8_0= ruleEInt
+                    // InternalSmallUmlParser.g:964:5: (lv_upperBound_7_0= ruleEInt )
+                    // InternalSmallUmlParser.g:965:6: lv_upperBound_7_0= ruleEInt
                     {
 
-                    						newCompositeNode(grammarAccess.getRoleAccess().getUpperBoundEIntParserRuleCall_4_4_0());
+                    						newCompositeNode(grammarAccess.getRoleAccess().getUpperBoundEIntParserRuleCall_3_4_0());
                     					
-                    pushFollow(FOLLOW_22);
-                    lv_upperBound_8_0=ruleEInt();
+                    pushFollow(FOLLOW_21);
+                    lv_upperBound_7_0=ruleEInt();
 
                     state._fsp--;
 
@@ -2403,7 +2415,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
                     						set(
                     							current,
                     							"upperBound",
-                    							lv_upperBound_8_0,
+                    							lv_upperBound_7_0,
                     							"org.smalluml.SmallUml.EInt");
                     						afterParserOrEnumRuleCall();
                     					
@@ -2413,9 +2425,9 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,RightSquareBracket,FOLLOW_23); 
+                    otherlv_8=(Token)match(input,RightSquareBracket,FOLLOW_22); 
 
-                    				newLeafNode(otherlv_9, grammarAccess.getRoleAccess().getRightSquareBracketKeyword_4_5());
+                    				newLeafNode(otherlv_8, grammarAccess.getRoleAccess().getRightSquareBracketKeyword_3_5());
                     			
 
                     }
@@ -2423,9 +2435,9 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,RightParenthesis,FOLLOW_2); 
+            otherlv_9=(Token)match(input,RightParenthesis,FOLLOW_2); 
 
-            			newLeafNode(otherlv_10, grammarAccess.getRoleAccess().getRightParenthesisKeyword_5());
+            			newLeafNode(otherlv_9, grammarAccess.getRoleAccess().getRightParenthesisKeyword_4());
             		
 
             }
@@ -2450,7 +2462,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleString0"
-    // InternalSmallUmlParser.g:996:1: entryRuleString0 returns [EObject current=null] : iv_ruleString0= ruleString0 EOF ;
+    // InternalSmallUmlParser.g:995:1: entryRuleString0 returns [EObject current=null] : iv_ruleString0= ruleString0 EOF ;
     public final EObject entryRuleString0() throws RecognitionException {
         EObject current = null;
 
@@ -2458,8 +2470,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:996:48: (iv_ruleString0= ruleString0 EOF )
-            // InternalSmallUmlParser.g:997:2: iv_ruleString0= ruleString0 EOF
+            // InternalSmallUmlParser.g:995:48: (iv_ruleString0= ruleString0 EOF )
+            // InternalSmallUmlParser.g:996:2: iv_ruleString0= ruleString0 EOF
             {
              newCompositeNode(grammarAccess.getString0Rule()); 
             pushFollow(FOLLOW_1);
@@ -2486,7 +2498,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleString0"
-    // InternalSmallUmlParser.g:1003:1: ruleString0 returns [EObject current=null] : ( () otherlv_1= String ) ;
+    // InternalSmallUmlParser.g:1002:1: ruleString0 returns [EObject current=null] : ( () otherlv_1= String ) ;
     public final EObject ruleString0() throws RecognitionException {
         EObject current = null;
 
@@ -2496,14 +2508,14 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:1009:2: ( ( () otherlv_1= String ) )
-            // InternalSmallUmlParser.g:1010:2: ( () otherlv_1= String )
+            // InternalSmallUmlParser.g:1008:2: ( ( () otherlv_1= String ) )
+            // InternalSmallUmlParser.g:1009:2: ( () otherlv_1= String )
             {
-            // InternalSmallUmlParser.g:1010:2: ( () otherlv_1= String )
-            // InternalSmallUmlParser.g:1011:3: () otherlv_1= String
+            // InternalSmallUmlParser.g:1009:2: ( () otherlv_1= String )
+            // InternalSmallUmlParser.g:1010:3: () otherlv_1= String
             {
-            // InternalSmallUmlParser.g:1011:3: ()
-            // InternalSmallUmlParser.g:1012:4: 
+            // InternalSmallUmlParser.g:1010:3: ()
+            // InternalSmallUmlParser.g:1011:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2540,7 +2552,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInteger"
-    // InternalSmallUmlParser.g:1026:1: entryRuleInteger returns [EObject current=null] : iv_ruleInteger= ruleInteger EOF ;
+    // InternalSmallUmlParser.g:1025:1: entryRuleInteger returns [EObject current=null] : iv_ruleInteger= ruleInteger EOF ;
     public final EObject entryRuleInteger() throws RecognitionException {
         EObject current = null;
 
@@ -2548,8 +2560,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:1026:48: (iv_ruleInteger= ruleInteger EOF )
-            // InternalSmallUmlParser.g:1027:2: iv_ruleInteger= ruleInteger EOF
+            // InternalSmallUmlParser.g:1025:48: (iv_ruleInteger= ruleInteger EOF )
+            // InternalSmallUmlParser.g:1026:2: iv_ruleInteger= ruleInteger EOF
             {
              newCompositeNode(grammarAccess.getIntegerRule()); 
             pushFollow(FOLLOW_1);
@@ -2576,7 +2588,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInteger"
-    // InternalSmallUmlParser.g:1033:1: ruleInteger returns [EObject current=null] : ( () otherlv_1= Integer ) ;
+    // InternalSmallUmlParser.g:1032:1: ruleInteger returns [EObject current=null] : ( () otherlv_1= Integer ) ;
     public final EObject ruleInteger() throws RecognitionException {
         EObject current = null;
 
@@ -2586,14 +2598,14 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:1039:2: ( ( () otherlv_1= Integer ) )
-            // InternalSmallUmlParser.g:1040:2: ( () otherlv_1= Integer )
+            // InternalSmallUmlParser.g:1038:2: ( ( () otherlv_1= Integer ) )
+            // InternalSmallUmlParser.g:1039:2: ( () otherlv_1= Integer )
             {
-            // InternalSmallUmlParser.g:1040:2: ( () otherlv_1= Integer )
-            // InternalSmallUmlParser.g:1041:3: () otherlv_1= Integer
+            // InternalSmallUmlParser.g:1039:2: ( () otherlv_1= Integer )
+            // InternalSmallUmlParser.g:1040:3: () otherlv_1= Integer
             {
-            // InternalSmallUmlParser.g:1041:3: ()
-            // InternalSmallUmlParser.g:1042:4: 
+            // InternalSmallUmlParser.g:1040:3: ()
+            // InternalSmallUmlParser.g:1041:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2630,7 +2642,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBool"
-    // InternalSmallUmlParser.g:1056:1: entryRuleBool returns [EObject current=null] : iv_ruleBool= ruleBool EOF ;
+    // InternalSmallUmlParser.g:1055:1: entryRuleBool returns [EObject current=null] : iv_ruleBool= ruleBool EOF ;
     public final EObject entryRuleBool() throws RecognitionException {
         EObject current = null;
 
@@ -2638,8 +2650,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:1056:45: (iv_ruleBool= ruleBool EOF )
-            // InternalSmallUmlParser.g:1057:2: iv_ruleBool= ruleBool EOF
+            // InternalSmallUmlParser.g:1055:45: (iv_ruleBool= ruleBool EOF )
+            // InternalSmallUmlParser.g:1056:2: iv_ruleBool= ruleBool EOF
             {
              newCompositeNode(grammarAccess.getBoolRule()); 
             pushFollow(FOLLOW_1);
@@ -2666,7 +2678,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBool"
-    // InternalSmallUmlParser.g:1063:1: ruleBool returns [EObject current=null] : ( () otherlv_1= Bool ) ;
+    // InternalSmallUmlParser.g:1062:1: ruleBool returns [EObject current=null] : ( () otherlv_1= Bool ) ;
     public final EObject ruleBool() throws RecognitionException {
         EObject current = null;
 
@@ -2676,14 +2688,14 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:1069:2: ( ( () otherlv_1= Bool ) )
-            // InternalSmallUmlParser.g:1070:2: ( () otherlv_1= Bool )
+            // InternalSmallUmlParser.g:1068:2: ( ( () otherlv_1= Bool ) )
+            // InternalSmallUmlParser.g:1069:2: ( () otherlv_1= Bool )
             {
-            // InternalSmallUmlParser.g:1070:2: ( () otherlv_1= Bool )
-            // InternalSmallUmlParser.g:1071:3: () otherlv_1= Bool
+            // InternalSmallUmlParser.g:1069:2: ( () otherlv_1= Bool )
+            // InternalSmallUmlParser.g:1070:3: () otherlv_1= Bool
             {
-            // InternalSmallUmlParser.g:1071:3: ()
-            // InternalSmallUmlParser.g:1072:4: 
+            // InternalSmallUmlParser.g:1070:3: ()
+            // InternalSmallUmlParser.g:1071:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2720,7 +2732,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleReal"
-    // InternalSmallUmlParser.g:1086:1: entryRuleReal returns [EObject current=null] : iv_ruleReal= ruleReal EOF ;
+    // InternalSmallUmlParser.g:1085:1: entryRuleReal returns [EObject current=null] : iv_ruleReal= ruleReal EOF ;
     public final EObject entryRuleReal() throws RecognitionException {
         EObject current = null;
 
@@ -2728,8 +2740,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:1086:45: (iv_ruleReal= ruleReal EOF )
-            // InternalSmallUmlParser.g:1087:2: iv_ruleReal= ruleReal EOF
+            // InternalSmallUmlParser.g:1085:45: (iv_ruleReal= ruleReal EOF )
+            // InternalSmallUmlParser.g:1086:2: iv_ruleReal= ruleReal EOF
             {
              newCompositeNode(grammarAccess.getRealRule()); 
             pushFollow(FOLLOW_1);
@@ -2756,7 +2768,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReal"
-    // InternalSmallUmlParser.g:1093:1: ruleReal returns [EObject current=null] : ( () otherlv_1= Real ) ;
+    // InternalSmallUmlParser.g:1092:1: ruleReal returns [EObject current=null] : ( () otherlv_1= Real ) ;
     public final EObject ruleReal() throws RecognitionException {
         EObject current = null;
 
@@ -2766,14 +2778,14 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:1099:2: ( ( () otherlv_1= Real ) )
-            // InternalSmallUmlParser.g:1100:2: ( () otherlv_1= Real )
+            // InternalSmallUmlParser.g:1098:2: ( ( () otherlv_1= Real ) )
+            // InternalSmallUmlParser.g:1099:2: ( () otherlv_1= Real )
             {
-            // InternalSmallUmlParser.g:1100:2: ( () otherlv_1= Real )
-            // InternalSmallUmlParser.g:1101:3: () otherlv_1= Real
+            // InternalSmallUmlParser.g:1099:2: ( () otherlv_1= Real )
+            // InternalSmallUmlParser.g:1100:3: () otherlv_1= Real
             {
-            // InternalSmallUmlParser.g:1101:3: ()
-            // InternalSmallUmlParser.g:1102:4: 
+            // InternalSmallUmlParser.g:1100:3: ()
+            // InternalSmallUmlParser.g:1101:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2810,7 +2822,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUnlimitedNatural"
-    // InternalSmallUmlParser.g:1116:1: entryRuleUnlimitedNatural returns [EObject current=null] : iv_ruleUnlimitedNatural= ruleUnlimitedNatural EOF ;
+    // InternalSmallUmlParser.g:1115:1: entryRuleUnlimitedNatural returns [EObject current=null] : iv_ruleUnlimitedNatural= ruleUnlimitedNatural EOF ;
     public final EObject entryRuleUnlimitedNatural() throws RecognitionException {
         EObject current = null;
 
@@ -2818,8 +2830,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:1116:57: (iv_ruleUnlimitedNatural= ruleUnlimitedNatural EOF )
-            // InternalSmallUmlParser.g:1117:2: iv_ruleUnlimitedNatural= ruleUnlimitedNatural EOF
+            // InternalSmallUmlParser.g:1115:57: (iv_ruleUnlimitedNatural= ruleUnlimitedNatural EOF )
+            // InternalSmallUmlParser.g:1116:2: iv_ruleUnlimitedNatural= ruleUnlimitedNatural EOF
             {
              newCompositeNode(grammarAccess.getUnlimitedNaturalRule()); 
             pushFollow(FOLLOW_1);
@@ -2846,7 +2858,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnlimitedNatural"
-    // InternalSmallUmlParser.g:1123:1: ruleUnlimitedNatural returns [EObject current=null] : ( () otherlv_1= UnlimitedNatural ) ;
+    // InternalSmallUmlParser.g:1122:1: ruleUnlimitedNatural returns [EObject current=null] : ( () otherlv_1= UnlimitedNatural ) ;
     public final EObject ruleUnlimitedNatural() throws RecognitionException {
         EObject current = null;
 
@@ -2856,14 +2868,14 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:1129:2: ( ( () otherlv_1= UnlimitedNatural ) )
-            // InternalSmallUmlParser.g:1130:2: ( () otherlv_1= UnlimitedNatural )
+            // InternalSmallUmlParser.g:1128:2: ( ( () otherlv_1= UnlimitedNatural ) )
+            // InternalSmallUmlParser.g:1129:2: ( () otherlv_1= UnlimitedNatural )
             {
-            // InternalSmallUmlParser.g:1130:2: ( () otherlv_1= UnlimitedNatural )
-            // InternalSmallUmlParser.g:1131:3: () otherlv_1= UnlimitedNatural
+            // InternalSmallUmlParser.g:1129:2: ( () otherlv_1= UnlimitedNatural )
+            // InternalSmallUmlParser.g:1130:3: () otherlv_1= UnlimitedNatural
             {
-            // InternalSmallUmlParser.g:1131:3: ()
-            // InternalSmallUmlParser.g:1132:4: 
+            // InternalSmallUmlParser.g:1130:3: ()
+            // InternalSmallUmlParser.g:1131:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2900,7 +2912,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEnumeration"
-    // InternalSmallUmlParser.g:1146:1: entryRuleEnumeration returns [EObject current=null] : iv_ruleEnumeration= ruleEnumeration EOF ;
+    // InternalSmallUmlParser.g:1145:1: entryRuleEnumeration returns [EObject current=null] : iv_ruleEnumeration= ruleEnumeration EOF ;
     public final EObject entryRuleEnumeration() throws RecognitionException {
         EObject current = null;
 
@@ -2908,8 +2920,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:1146:52: (iv_ruleEnumeration= ruleEnumeration EOF )
-            // InternalSmallUmlParser.g:1147:2: iv_ruleEnumeration= ruleEnumeration EOF
+            // InternalSmallUmlParser.g:1145:52: (iv_ruleEnumeration= ruleEnumeration EOF )
+            // InternalSmallUmlParser.g:1146:2: iv_ruleEnumeration= ruleEnumeration EOF
             {
              newCompositeNode(grammarAccess.getEnumerationRule()); 
             pushFollow(FOLLOW_1);
@@ -2936,7 +2948,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnumeration"
-    // InternalSmallUmlParser.g:1153:1: ruleEnumeration returns [EObject current=null] : (otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket ) ;
+    // InternalSmallUmlParser.g:1152:1: ruleEnumeration returns [EObject current=null] : (otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket ) ;
     public final EObject ruleEnumeration() throws RecognitionException {
         EObject current = null;
 
@@ -2956,13 +2968,13 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:1159:2: ( (otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket ) )
-            // InternalSmallUmlParser.g:1160:2: (otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket )
+            // InternalSmallUmlParser.g:1158:2: ( (otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket ) )
+            // InternalSmallUmlParser.g:1159:2: (otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket )
             {
-            // InternalSmallUmlParser.g:1160:2: (otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket )
-            // InternalSmallUmlParser.g:1161:3: otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket
+            // InternalSmallUmlParser.g:1159:2: (otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket )
+            // InternalSmallUmlParser.g:1160:3: otherlv_0= Enumeration otherlv_1= LeftCurlyBracket otherlv_2= Value otherlv_3= LeftCurlyBracket ( (lv_value_4_0= ruleString0 ) ) (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )* otherlv_7= RightCurlyBracket otherlv_8= RightCurlyBracket
             {
-            otherlv_0=(Token)match(input,Enumeration,FOLLOW_7); 
+            otherlv_0=(Token)match(input,Enumeration,FOLLOW_23); 
 
             			newLeafNode(otherlv_0, grammarAccess.getEnumerationAccess().getEnumerationKeyword_0());
             		
@@ -2970,7 +2982,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getEnumerationAccess().getLeftCurlyBracketKeyword_1());
             		
-            otherlv_2=(Token)match(input,Value,FOLLOW_7); 
+            otherlv_2=(Token)match(input,Value,FOLLOW_23); 
 
             			newLeafNode(otherlv_2, grammarAccess.getEnumerationAccess().getValueKeyword_2());
             		
@@ -2978,11 +2990,11 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getEnumerationAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalSmallUmlParser.g:1177:3: ( (lv_value_4_0= ruleString0 ) )
-            // InternalSmallUmlParser.g:1178:4: (lv_value_4_0= ruleString0 )
+            // InternalSmallUmlParser.g:1176:3: ( (lv_value_4_0= ruleString0 ) )
+            // InternalSmallUmlParser.g:1177:4: (lv_value_4_0= ruleString0 )
             {
-            // InternalSmallUmlParser.g:1178:4: (lv_value_4_0= ruleString0 )
-            // InternalSmallUmlParser.g:1179:5: lv_value_4_0= ruleString0
+            // InternalSmallUmlParser.g:1177:4: (lv_value_4_0= ruleString0 )
+            // InternalSmallUmlParser.g:1178:5: lv_value_4_0= ruleString0
             {
 
             					newCompositeNode(grammarAccess.getEnumerationAccess().getValueString0ParserRuleCall_4_0());
@@ -3009,30 +3021,30 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSmallUmlParser.g:1196:3: (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )*
-            loop16:
+            // InternalSmallUmlParser.g:1195:3: (otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) ) )*
+            loop15:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA16_0==Comma) ) {
-                    alt16=1;
+                if ( (LA15_0==Comma) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt15) {
             	case 1 :
-            	    // InternalSmallUmlParser.g:1197:4: otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) )
+            	    // InternalSmallUmlParser.g:1196:4: otherlv_5= Comma ( (lv_value_6_0= ruleString0 ) )
             	    {
             	    otherlv_5=(Token)match(input,Comma,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_5, grammarAccess.getEnumerationAccess().getCommaKeyword_5_0());
             	    			
-            	    // InternalSmallUmlParser.g:1201:4: ( (lv_value_6_0= ruleString0 ) )
-            	    // InternalSmallUmlParser.g:1202:5: (lv_value_6_0= ruleString0 )
+            	    // InternalSmallUmlParser.g:1200:4: ( (lv_value_6_0= ruleString0 ) )
+            	    // InternalSmallUmlParser.g:1201:5: (lv_value_6_0= ruleString0 )
             	    {
-            	    // InternalSmallUmlParser.g:1202:5: (lv_value_6_0= ruleString0 )
-            	    // InternalSmallUmlParser.g:1203:6: lv_value_6_0= ruleString0
+            	    // InternalSmallUmlParser.g:1201:5: (lv_value_6_0= ruleString0 )
+            	    // InternalSmallUmlParser.g:1202:6: lv_value_6_0= ruleString0
             	    {
 
             	    						newCompositeNode(grammarAccess.getEnumerationAccess().getValueString0ParserRuleCall_5_1_0());
@@ -3064,11 +3076,11 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop15;
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,RightCurlyBracket,FOLLOW_10); 
+            otherlv_7=(Token)match(input,RightCurlyBracket,FOLLOW_27); 
 
             			newLeafNode(otherlv_7, grammarAccess.getEnumerationAccess().getRightCurlyBracketKeyword_6());
             		
@@ -3099,7 +3111,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEInt"
-    // InternalSmallUmlParser.g:1233:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
+    // InternalSmallUmlParser.g:1232:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
     public final String entryRuleEInt() throws RecognitionException {
         String current = null;
 
@@ -3107,8 +3119,8 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSmallUmlParser.g:1233:44: (iv_ruleEInt= ruleEInt EOF )
-            // InternalSmallUmlParser.g:1234:2: iv_ruleEInt= ruleEInt EOF
+            // InternalSmallUmlParser.g:1232:44: (iv_ruleEInt= ruleEInt EOF )
+            // InternalSmallUmlParser.g:1233:2: iv_ruleEInt= ruleEInt EOF
             {
              newCompositeNode(grammarAccess.getEIntRule()); 
             pushFollow(FOLLOW_1);
@@ -3135,7 +3147,7 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEInt"
-    // InternalSmallUmlParser.g:1240:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= HyphenMinus )? this_INT_1= RULE_INT ) ;
+    // InternalSmallUmlParser.g:1239:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= HyphenMinus )? this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleEInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3146,24 +3158,24 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSmallUmlParser.g:1246:2: ( ( (kw= HyphenMinus )? this_INT_1= RULE_INT ) )
-            // InternalSmallUmlParser.g:1247:2: ( (kw= HyphenMinus )? this_INT_1= RULE_INT )
+            // InternalSmallUmlParser.g:1245:2: ( ( (kw= HyphenMinus )? this_INT_1= RULE_INT ) )
+            // InternalSmallUmlParser.g:1246:2: ( (kw= HyphenMinus )? this_INT_1= RULE_INT )
             {
-            // InternalSmallUmlParser.g:1247:2: ( (kw= HyphenMinus )? this_INT_1= RULE_INT )
-            // InternalSmallUmlParser.g:1248:3: (kw= HyphenMinus )? this_INT_1= RULE_INT
+            // InternalSmallUmlParser.g:1246:2: ( (kw= HyphenMinus )? this_INT_1= RULE_INT )
+            // InternalSmallUmlParser.g:1247:3: (kw= HyphenMinus )? this_INT_1= RULE_INT
             {
-            // InternalSmallUmlParser.g:1248:3: (kw= HyphenMinus )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // InternalSmallUmlParser.g:1247:3: (kw= HyphenMinus )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA17_0==HyphenMinus) ) {
-                alt17=1;
+            if ( (LA16_0==HyphenMinus) ) {
+                alt16=1;
             }
-            switch (alt17) {
+            switch (alt16) {
                 case 1 :
-                    // InternalSmallUmlParser.g:1249:4: kw= HyphenMinus
+                    // InternalSmallUmlParser.g:1248:4: kw= HyphenMinus
                     {
-                    kw=(Token)match(input,HyphenMinus,FOLLOW_27); 
+                    kw=(Token)match(input,HyphenMinus,FOLLOW_28); 
 
                     				current.merge(kw);
                     				newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0());
@@ -3206,38 +3218,63 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
 
 
     protected DFA2 dfa2 = new DFA2(this);
-    static final String dfa_1s = "\22\uffff";
-    static final String dfa_2s = "\1\7\1\uffff\1\34\2\20\1\uffff\1\34\1\uffff\2\20\1\4\2\14\5\uffff";
-    static final String dfa_3s = "\1\36\1\uffff\1\36\2\25\1\uffff\1\36\1\uffff\2\25\1\36\2\15\5\uffff";
-    static final String dfa_4s = "\1\uffff\1\1\3\uffff\1\5\1\uffff\1\10\5\uffff\1\2\1\3\1\4\1\7\1\6";
-    static final String dfa_5s = "\22\uffff}>";
-    static final String[] dfa_6s = {
-            "\1\7\2\uffff\1\1\5\uffff\1\5\1\uffff\1\2\2\uffff\1\6\6\uffff\1\4\1\uffff\1\3",
+    static final String dfa_1s = "\51\uffff";
+    static final String dfa_2s = "\23\uffff\1\31\25\uffff";
+    static final String dfa_3s = "\1\7\1\uffff\1\34\2\20\1\34\1\uffff\2\20\1\4\2\21\2\uffff\2\20\1\34\1\uffff\1\26\1\7\2\21\1\24\3\uffff\1\26\1\14\1\35\1\23\2\24\1\35\1\23\1\35\1\27\1\24\1\21\1\35\1\27\1\21";
+    static final String dfa_4s = "\1\36\1\uffff\1\36\2\25\1\36\1\uffff\2\25\1\36\2\23\2\uffff\2\20\1\36\1\uffff\1\26\1\36\2\23\1\35\3\uffff\1\26\1\15\1\35\1\23\3\35\1\23\1\35\1\27\1\35\1\21\1\35\1\27\1\21";
+    static final String dfa_5s = "\1\uffff\1\1\4\uffff\1\10\5\uffff\1\2\1\3\3\uffff\1\4\5\uffff\1\6\1\7\1\5\17\uffff";
+    static final String dfa_6s = "\51\uffff}>";
+    static final String[] dfa_7s = {
+            "\1\6\2\uffff\1\1\5\uffff\1\5\1\uffff\1\2\11\uffff\1\4\1\uffff\1\3",
             "",
-            "\1\11\1\uffff\1\10",
-            "\1\5\4\uffff\1\12",
-            "\1\5\4\uffff\1\12",
+            "\1\10\1\uffff\1\7",
+            "\1\5\4\uffff\1\11",
+            "\1\5\4\uffff\1\11",
+            "\1\13\1\uffff\1\12",
             "",
-            "\1\14\1\uffff\1\13",
-            "",
-            "\1\16\4\uffff\1\15",
-            "\1\16\4\uffff\1\15",
-            "\3\17\2\uffff\1\17\4\uffff\2\17\14\uffff\1\14\1\uffff\1\13",
-            "\1\20\1\21",
-            "\1\20\1\21",
-            "",
-            "",
+            "\1\15\4\uffff\1\14",
+            "\1\15\4\uffff\1\14",
+            "\3\21\2\uffff\1\21\4\uffff\2\21\1\20\13\uffff\1\17\1\uffff\1\16",
+            "\1\23\1\uffff\1\22",
+            "\1\23\1\uffff\1\22",
             "",
             "",
-            ""
+            "\1\20",
+            "\1\20",
+            "\1\25\1\uffff\1\24",
+            "",
+            "\1\26",
+            "\1\31\2\uffff\1\31\1\uffff\1\30\1\27\2\uffff\1\31\1\uffff\1\31\10\uffff\2\31\1\uffff\1\31",
+            "\1\33\1\uffff\1\32",
+            "\1\33\1\uffff\1\32",
+            "\1\34\10\uffff\1\35",
+            "",
+            "",
+            "",
+            "\1\36",
+            "\1\30\1\27",
+            "\1\35",
+            "\1\37",
+            "\1\40\10\uffff\1\41",
+            "\1\42\10\uffff\1\43",
+            "\1\41",
+            "\1\44",
+            "\1\43",
+            "\1\45",
+            "\1\46\10\uffff\1\47",
+            "\1\23",
+            "\1\47",
+            "\1\50",
+            "\1\33"
     };
 
     static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
-    static final char[] dfa_2 = DFA.unpackEncodedStringToUnsignedChars(dfa_2s);
+    static final short[] dfa_2 = DFA.unpackEncodedString(dfa_2s);
     static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
-    static final short[] dfa_4 = DFA.unpackEncodedString(dfa_4s);
+    static final char[] dfa_4 = DFA.unpackEncodedStringToUnsignedChars(dfa_4s);
     static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
-    static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
+    static final short[] dfa_6 = DFA.unpackEncodedString(dfa_6s);
+    static final short[][] dfa_7 = unpackEncodedStringArray(dfa_7s);
 
     class DFA2 extends DFA {
 
@@ -3245,12 +3282,12 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
             this.recognizer = recognizer;
             this.decisionNumber = 2;
             this.eot = dfa_1;
-            this.eof = dfa_1;
-            this.min = dfa_2;
-            this.max = dfa_3;
-            this.accept = dfa_4;
-            this.special = dfa_5;
-            this.transition = dfa_6;
+            this.eof = dfa_2;
+            this.min = dfa_3;
+            this.max = dfa_4;
+            this.accept = dfa_5;
+            this.special = dfa_6;
+            this.transition = dfa_7;
         }
         public String getDescription() {
             return "147:2: (this_Class_0= ruleClass | this_Attribute_1= ruleAttribute | this_Method_2= ruleMethod | this_Parameter_3= ruleParameter | this_Role_4= ruleRole | this_Composition_5= ruleComposition | this_Reference_6= ruleReference | this_Package_7= rulePackage )";
@@ -3262,28 +3299,29 @@ public class InternalSmallUmlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000050000000L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000058250480L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000001000100L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x000000000E040000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x000000000A040000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x000000000000C270L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000050020000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000000000A0000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000020100000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000058050480L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000004000102L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000008040000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x000000000000C270L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000050020000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x00000000000A0000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000050010000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000020100000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000800L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000200L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000002080000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000020000000L});
 
 }

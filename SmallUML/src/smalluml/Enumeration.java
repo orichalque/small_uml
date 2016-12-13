@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Enumeration extends Type {
+public interface Enumeration extends Type, NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference list.
 	 * The list contents are of type {@link smalluml.String}.

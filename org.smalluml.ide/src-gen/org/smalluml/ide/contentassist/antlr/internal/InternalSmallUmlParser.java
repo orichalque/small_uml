@@ -1939,14 +1939,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__EString__Alternatives"
 
 
-    // $ANTLR start "rule__Class__Alternatives_6"
-    // InternalSmallUmlParser.g:649:1: rule__Class__Alternatives_6 : ( ( ( rule__Class__MethodAssignment_6_0 ) ) | ( ( rule__Class__AttributeAssignment_6_1 ) ) );
-    public final void rule__Class__Alternatives_6() throws RecognitionException {
+    // $ANTLR start "rule__Class__Alternatives_4_1"
+    // InternalSmallUmlParser.g:649:1: rule__Class__Alternatives_4_1 : ( ( ( rule__Class__MethodAssignment_4_1_0 ) ) | ( ( rule__Class__AttributeAssignment_4_1_1 ) ) );
+    public final void rule__Class__Alternatives_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:653:1: ( ( ( rule__Class__MethodAssignment_6_0 ) ) | ( ( rule__Class__AttributeAssignment_6_1 ) ) )
+            // InternalSmallUmlParser.g:653:1: ( ( ( rule__Class__MethodAssignment_4_1_0 ) ) | ( ( rule__Class__AttributeAssignment_4_1_1 ) ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1972,11 +1972,11 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
                 else if ( (LA4_1==RULE_ID) ) {
                     int LA4_3 = input.LA(3);
 
-                    if ( (LA4_3==Colon) ) {
-                        alt4=2;
-                    }
-                    else if ( (LA4_3==LeftParenthesis) ) {
+                    if ( (LA4_3==LeftParenthesis) ) {
                         alt4=1;
+                    }
+                    else if ( (LA4_3==Colon) ) {
+                        alt4=2;
                     }
                     else {
                         NoViableAltException nvae =
@@ -2000,24 +2000,24 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             }
             switch (alt4) {
                 case 1 :
-                    // InternalSmallUmlParser.g:654:2: ( ( rule__Class__MethodAssignment_6_0 ) )
+                    // InternalSmallUmlParser.g:654:2: ( ( rule__Class__MethodAssignment_4_1_0 ) )
                     {
-                    // InternalSmallUmlParser.g:654:2: ( ( rule__Class__MethodAssignment_6_0 ) )
-                    // InternalSmallUmlParser.g:655:3: ( rule__Class__MethodAssignment_6_0 )
+                    // InternalSmallUmlParser.g:654:2: ( ( rule__Class__MethodAssignment_4_1_0 ) )
+                    // InternalSmallUmlParser.g:655:3: ( rule__Class__MethodAssignment_4_1_0 )
                     {
-                     before(grammarAccess.getClassAccess().getMethodAssignment_6_0()); 
-                    // InternalSmallUmlParser.g:656:3: ( rule__Class__MethodAssignment_6_0 )
-                    // InternalSmallUmlParser.g:656:4: rule__Class__MethodAssignment_6_0
+                     before(grammarAccess.getClassAccess().getMethodAssignment_4_1_0()); 
+                    // InternalSmallUmlParser.g:656:3: ( rule__Class__MethodAssignment_4_1_0 )
+                    // InternalSmallUmlParser.g:656:4: rule__Class__MethodAssignment_4_1_0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Class__MethodAssignment_6_0();
+                    rule__Class__MethodAssignment_4_1_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getClassAccess().getMethodAssignment_6_0()); 
+                     after(grammarAccess.getClassAccess().getMethodAssignment_4_1_0()); 
 
                     }
 
@@ -2025,24 +2025,24 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // InternalSmallUmlParser.g:660:2: ( ( rule__Class__AttributeAssignment_6_1 ) )
+                    // InternalSmallUmlParser.g:660:2: ( ( rule__Class__AttributeAssignment_4_1_1 ) )
                     {
-                    // InternalSmallUmlParser.g:660:2: ( ( rule__Class__AttributeAssignment_6_1 ) )
-                    // InternalSmallUmlParser.g:661:3: ( rule__Class__AttributeAssignment_6_1 )
+                    // InternalSmallUmlParser.g:660:2: ( ( rule__Class__AttributeAssignment_4_1_1 ) )
+                    // InternalSmallUmlParser.g:661:3: ( rule__Class__AttributeAssignment_4_1_1 )
                     {
-                     before(grammarAccess.getClassAccess().getAttributeAssignment_6_1()); 
-                    // InternalSmallUmlParser.g:662:3: ( rule__Class__AttributeAssignment_6_1 )
-                    // InternalSmallUmlParser.g:662:4: rule__Class__AttributeAssignment_6_1
+                     before(grammarAccess.getClassAccess().getAttributeAssignment_4_1_1()); 
+                    // InternalSmallUmlParser.g:662:3: ( rule__Class__AttributeAssignment_4_1_1 )
+                    // InternalSmallUmlParser.g:662:4: rule__Class__AttributeAssignment_4_1_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Class__AttributeAssignment_6_1();
+                    rule__Class__AttributeAssignment_4_1_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getClassAccess().getAttributeAssignment_6_1()); 
+                     after(grammarAccess.getClassAccess().getAttributeAssignment_4_1_1()); 
 
                     }
 
@@ -2063,7 +2063,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Class__Alternatives_6"
+    // $ANTLR end "rule__Class__Alternatives_4_1"
 
 
     // $ANTLR start "rule__Package__Group__0"
@@ -2434,7 +2434,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( (LA5_0==Package||LA5_0==Class||LA5_0==LeftParenthesis||LA5_0==PlusSign||LA5_0==Colon||LA5_0==RULE_ID||LA5_0==RULE_STRING) ) {
+                if ( (LA5_0==Package||LA5_0==Class||LA5_0==LeftParenthesis||LA5_0==PlusSign||LA5_0==RULE_ID||LA5_0==RULE_STRING) ) {
                     alt5=1;
                 }
 
@@ -2881,22 +2881,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Class__Group__4"
-    // InternalSmallUmlParser.g:940:1: rule__Class__Group__4 : rule__Class__Group__4__Impl rule__Class__Group__5 ;
+    // InternalSmallUmlParser.g:940:1: rule__Class__Group__4 : rule__Class__Group__4__Impl ;
     public final void rule__Class__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:944:1: ( rule__Class__Group__4__Impl rule__Class__Group__5 )
-            // InternalSmallUmlParser.g:945:2: rule__Class__Group__4__Impl rule__Class__Group__5
+            // InternalSmallUmlParser.g:944:1: ( rule__Class__Group__4__Impl )
+            // InternalSmallUmlParser.g:945:2: rule__Class__Group__4__Impl
             {
-            pushFollow(FOLLOW_10);
-            rule__Class__Group__4__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Class__Group__5();
+            rule__Class__Group__4__Impl();
 
             state._fsp--;
 
@@ -2919,21 +2914,42 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Class__Group__4__Impl"
-    // InternalSmallUmlParser.g:952:1: rule__Class__Group__4__Impl : ( LeftCurlyBracket ) ;
+    // InternalSmallUmlParser.g:951:1: rule__Class__Group__4__Impl : ( ( rule__Class__Group_4__0 )? ) ;
     public final void rule__Class__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:956:1: ( ( LeftCurlyBracket ) )
-            // InternalSmallUmlParser.g:957:1: ( LeftCurlyBracket )
+            // InternalSmallUmlParser.g:955:1: ( ( ( rule__Class__Group_4__0 )? ) )
+            // InternalSmallUmlParser.g:956:1: ( ( rule__Class__Group_4__0 )? )
             {
-            // InternalSmallUmlParser.g:957:1: ( LeftCurlyBracket )
-            // InternalSmallUmlParser.g:958:2: LeftCurlyBracket
+            // InternalSmallUmlParser.g:956:1: ( ( rule__Class__Group_4__0 )? )
+            // InternalSmallUmlParser.g:957:2: ( rule__Class__Group_4__0 )?
             {
-             before(grammarAccess.getClassAccess().getLeftCurlyBracketKeyword_4()); 
-            match(input,LeftCurlyBracket,FOLLOW_2); 
-             after(grammarAccess.getClassAccess().getLeftCurlyBracketKeyword_4()); 
+             before(grammarAccess.getClassAccess().getGroup_4()); 
+            // InternalSmallUmlParser.g:958:2: ( rule__Class__Group_4__0 )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
+
+            if ( (LA7_0==RULE_BEGIN) ) {
+                alt7=1;
+            }
+            switch (alt7) {
+                case 1 :
+                    // InternalSmallUmlParser.g:958:3: rule__Class__Group_4__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Class__Group_4__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getClassAccess().getGroup_4()); 
 
             }
 
@@ -2955,372 +2971,15 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Class__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Class__Group__5"
-    // InternalSmallUmlParser.g:967:1: rule__Class__Group__5 : rule__Class__Group__5__Impl rule__Class__Group__6 ;
-    public final void rule__Class__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:971:1: ( rule__Class__Group__5__Impl rule__Class__Group__6 )
-            // InternalSmallUmlParser.g:972:2: rule__Class__Group__5__Impl rule__Class__Group__6
-            {
-            pushFollow(FOLLOW_10);
-            rule__Class__Group__5__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Class__Group__6();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Class__Group__5"
-
-
-    // $ANTLR start "rule__Class__Group__5__Impl"
-    // InternalSmallUmlParser.g:979:1: rule__Class__Group__5__Impl : ( ( RULE_BEGIN )? ) ;
-    public final void rule__Class__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:983:1: ( ( ( RULE_BEGIN )? ) )
-            // InternalSmallUmlParser.g:984:1: ( ( RULE_BEGIN )? )
-            {
-            // InternalSmallUmlParser.g:984:1: ( ( RULE_BEGIN )? )
-            // InternalSmallUmlParser.g:985:2: ( RULE_BEGIN )?
-            {
-             before(grammarAccess.getClassAccess().getBEGINTerminalRuleCall_5()); 
-            // InternalSmallUmlParser.g:986:2: ( RULE_BEGIN )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
-
-            if ( (LA7_0==RULE_BEGIN) ) {
-                alt7=1;
-            }
-            switch (alt7) {
-                case 1 :
-                    // InternalSmallUmlParser.g:986:3: RULE_BEGIN
-                    {
-                    match(input,RULE_BEGIN,FOLLOW_2); 
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getClassAccess().getBEGINTerminalRuleCall_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Class__Group__5__Impl"
-
-
-    // $ANTLR start "rule__Class__Group__6"
-    // InternalSmallUmlParser.g:994:1: rule__Class__Group__6 : rule__Class__Group__6__Impl rule__Class__Group__7 ;
-    public final void rule__Class__Group__6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:998:1: ( rule__Class__Group__6__Impl rule__Class__Group__7 )
-            // InternalSmallUmlParser.g:999:2: rule__Class__Group__6__Impl rule__Class__Group__7
-            {
-            pushFollow(FOLLOW_10);
-            rule__Class__Group__6__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Class__Group__7();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Class__Group__6"
-
-
-    // $ANTLR start "rule__Class__Group__6__Impl"
-    // InternalSmallUmlParser.g:1006:1: rule__Class__Group__6__Impl : ( ( rule__Class__Alternatives_6 )* ) ;
-    public final void rule__Class__Group__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:1010:1: ( ( ( rule__Class__Alternatives_6 )* ) )
-            // InternalSmallUmlParser.g:1011:1: ( ( rule__Class__Alternatives_6 )* )
-            {
-            // InternalSmallUmlParser.g:1011:1: ( ( rule__Class__Alternatives_6 )* )
-            // InternalSmallUmlParser.g:1012:2: ( rule__Class__Alternatives_6 )*
-            {
-             before(grammarAccess.getClassAccess().getAlternatives_6()); 
-            // InternalSmallUmlParser.g:1013:2: ( rule__Class__Alternatives_6 )*
-            loop8:
-            do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
-
-                if ( (LA8_0==PlusSign) ) {
-                    alt8=1;
-                }
-
-
-                switch (alt8) {
-            	case 1 :
-            	    // InternalSmallUmlParser.g:1013:3: rule__Class__Alternatives_6
-            	    {
-            	    pushFollow(FOLLOW_11);
-            	    rule__Class__Alternatives_6();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop8;
-                }
-            } while (true);
-
-             after(grammarAccess.getClassAccess().getAlternatives_6()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Class__Group__6__Impl"
-
-
-    // $ANTLR start "rule__Class__Group__7"
-    // InternalSmallUmlParser.g:1021:1: rule__Class__Group__7 : rule__Class__Group__7__Impl rule__Class__Group__8 ;
-    public final void rule__Class__Group__7() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:1025:1: ( rule__Class__Group__7__Impl rule__Class__Group__8 )
-            // InternalSmallUmlParser.g:1026:2: rule__Class__Group__7__Impl rule__Class__Group__8
-            {
-            pushFollow(FOLLOW_10);
-            rule__Class__Group__7__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Class__Group__8();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Class__Group__7"
-
-
-    // $ANTLR start "rule__Class__Group__7__Impl"
-    // InternalSmallUmlParser.g:1033:1: rule__Class__Group__7__Impl : ( ( RULE_END )? ) ;
-    public final void rule__Class__Group__7__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:1037:1: ( ( ( RULE_END )? ) )
-            // InternalSmallUmlParser.g:1038:1: ( ( RULE_END )? )
-            {
-            // InternalSmallUmlParser.g:1038:1: ( ( RULE_END )? )
-            // InternalSmallUmlParser.g:1039:2: ( RULE_END )?
-            {
-             before(grammarAccess.getClassAccess().getENDTerminalRuleCall_7()); 
-            // InternalSmallUmlParser.g:1040:2: ( RULE_END )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0==RULE_END) ) {
-                alt9=1;
-            }
-            switch (alt9) {
-                case 1 :
-                    // InternalSmallUmlParser.g:1040:3: RULE_END
-                    {
-                    match(input,RULE_END,FOLLOW_2); 
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getClassAccess().getENDTerminalRuleCall_7()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Class__Group__7__Impl"
-
-
-    // $ANTLR start "rule__Class__Group__8"
-    // InternalSmallUmlParser.g:1048:1: rule__Class__Group__8 : rule__Class__Group__8__Impl ;
-    public final void rule__Class__Group__8() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:1052:1: ( rule__Class__Group__8__Impl )
-            // InternalSmallUmlParser.g:1053:2: rule__Class__Group__8__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Class__Group__8__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Class__Group__8"
-
-
-    // $ANTLR start "rule__Class__Group__8__Impl"
-    // InternalSmallUmlParser.g:1059:1: rule__Class__Group__8__Impl : ( RightCurlyBracket ) ;
-    public final void rule__Class__Group__8__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:1063:1: ( ( RightCurlyBracket ) )
-            // InternalSmallUmlParser.g:1064:1: ( RightCurlyBracket )
-            {
-            // InternalSmallUmlParser.g:1064:1: ( RightCurlyBracket )
-            // InternalSmallUmlParser.g:1065:2: RightCurlyBracket
-            {
-             before(grammarAccess.getClassAccess().getRightCurlyBracketKeyword_8()); 
-            match(input,RightCurlyBracket,FOLLOW_2); 
-             after(grammarAccess.getClassAccess().getRightCurlyBracketKeyword_8()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Class__Group__8__Impl"
-
-
     // $ANTLR start "rule__Class__Group_3__0"
-    // InternalSmallUmlParser.g:1075:1: rule__Class__Group_3__0 : rule__Class__Group_3__0__Impl rule__Class__Group_3__1 ;
+    // InternalSmallUmlParser.g:967:1: rule__Class__Group_3__0 : rule__Class__Group_3__0__Impl rule__Class__Group_3__1 ;
     public final void rule__Class__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1079:1: ( rule__Class__Group_3__0__Impl rule__Class__Group_3__1 )
-            // InternalSmallUmlParser.g:1080:2: rule__Class__Group_3__0__Impl rule__Class__Group_3__1
+            // InternalSmallUmlParser.g:971:1: ( rule__Class__Group_3__0__Impl rule__Class__Group_3__1 )
+            // InternalSmallUmlParser.g:972:2: rule__Class__Group_3__0__Impl rule__Class__Group_3__1
             {
             pushFollow(FOLLOW_4);
             rule__Class__Group_3__0__Impl();
@@ -3351,17 +3010,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Class__Group_3__0__Impl"
-    // InternalSmallUmlParser.g:1087:1: rule__Class__Group_3__0__Impl : ( Extends ) ;
+    // InternalSmallUmlParser.g:979:1: rule__Class__Group_3__0__Impl : ( Extends ) ;
     public final void rule__Class__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1091:1: ( ( Extends ) )
-            // InternalSmallUmlParser.g:1092:1: ( Extends )
+            // InternalSmallUmlParser.g:983:1: ( ( Extends ) )
+            // InternalSmallUmlParser.g:984:1: ( Extends )
             {
-            // InternalSmallUmlParser.g:1092:1: ( Extends )
-            // InternalSmallUmlParser.g:1093:2: Extends
+            // InternalSmallUmlParser.g:984:1: ( Extends )
+            // InternalSmallUmlParser.g:985:2: Extends
             {
              before(grammarAccess.getClassAccess().getExtendsKeyword_3_0()); 
             match(input,Extends,FOLLOW_2); 
@@ -3388,14 +3047,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Class__Group_3__1"
-    // InternalSmallUmlParser.g:1102:1: rule__Class__Group_3__1 : rule__Class__Group_3__1__Impl ;
+    // InternalSmallUmlParser.g:994:1: rule__Class__Group_3__1 : rule__Class__Group_3__1__Impl ;
     public final void rule__Class__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1106:1: ( rule__Class__Group_3__1__Impl )
-            // InternalSmallUmlParser.g:1107:2: rule__Class__Group_3__1__Impl
+            // InternalSmallUmlParser.g:998:1: ( rule__Class__Group_3__1__Impl )
+            // InternalSmallUmlParser.g:999:2: rule__Class__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Class__Group_3__1__Impl();
@@ -3421,21 +3080,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Class__Group_3__1__Impl"
-    // InternalSmallUmlParser.g:1113:1: rule__Class__Group_3__1__Impl : ( ( rule__Class__SuperAssignment_3_1 ) ) ;
+    // InternalSmallUmlParser.g:1005:1: rule__Class__Group_3__1__Impl : ( ( rule__Class__SuperAssignment_3_1 ) ) ;
     public final void rule__Class__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1117:1: ( ( ( rule__Class__SuperAssignment_3_1 ) ) )
-            // InternalSmallUmlParser.g:1118:1: ( ( rule__Class__SuperAssignment_3_1 ) )
+            // InternalSmallUmlParser.g:1009:1: ( ( ( rule__Class__SuperAssignment_3_1 ) ) )
+            // InternalSmallUmlParser.g:1010:1: ( ( rule__Class__SuperAssignment_3_1 ) )
             {
-            // InternalSmallUmlParser.g:1118:1: ( ( rule__Class__SuperAssignment_3_1 ) )
-            // InternalSmallUmlParser.g:1119:2: ( rule__Class__SuperAssignment_3_1 )
+            // InternalSmallUmlParser.g:1010:1: ( ( rule__Class__SuperAssignment_3_1 ) )
+            // InternalSmallUmlParser.g:1011:2: ( rule__Class__SuperAssignment_3_1 )
             {
              before(grammarAccess.getClassAccess().getSuperAssignment_3_1()); 
-            // InternalSmallUmlParser.g:1120:2: ( rule__Class__SuperAssignment_3_1 )
-            // InternalSmallUmlParser.g:1120:3: rule__Class__SuperAssignment_3_1
+            // InternalSmallUmlParser.g:1012:2: ( rule__Class__SuperAssignment_3_1 )
+            // InternalSmallUmlParser.g:1012:3: rule__Class__SuperAssignment_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Class__SuperAssignment_3_1();
@@ -3467,15 +3126,263 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Class__Group_3__1__Impl"
 
 
+    // $ANTLR start "rule__Class__Group_4__0"
+    // InternalSmallUmlParser.g:1021:1: rule__Class__Group_4__0 : rule__Class__Group_4__0__Impl rule__Class__Group_4__1 ;
+    public final void rule__Class__Group_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1025:1: ( rule__Class__Group_4__0__Impl rule__Class__Group_4__1 )
+            // InternalSmallUmlParser.g:1026:2: rule__Class__Group_4__0__Impl rule__Class__Group_4__1
+            {
+            pushFollow(FOLLOW_10);
+            rule__Class__Group_4__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Class__Group_4__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Class__Group_4__0"
+
+
+    // $ANTLR start "rule__Class__Group_4__0__Impl"
+    // InternalSmallUmlParser.g:1033:1: rule__Class__Group_4__0__Impl : ( RULE_BEGIN ) ;
+    public final void rule__Class__Group_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1037:1: ( ( RULE_BEGIN ) )
+            // InternalSmallUmlParser.g:1038:1: ( RULE_BEGIN )
+            {
+            // InternalSmallUmlParser.g:1038:1: ( RULE_BEGIN )
+            // InternalSmallUmlParser.g:1039:2: RULE_BEGIN
+            {
+             before(grammarAccess.getClassAccess().getBEGINTerminalRuleCall_4_0()); 
+            match(input,RULE_BEGIN,FOLLOW_2); 
+             after(grammarAccess.getClassAccess().getBEGINTerminalRuleCall_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Class__Group_4__0__Impl"
+
+
+    // $ANTLR start "rule__Class__Group_4__1"
+    // InternalSmallUmlParser.g:1048:1: rule__Class__Group_4__1 : rule__Class__Group_4__1__Impl rule__Class__Group_4__2 ;
+    public final void rule__Class__Group_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1052:1: ( rule__Class__Group_4__1__Impl rule__Class__Group_4__2 )
+            // InternalSmallUmlParser.g:1053:2: rule__Class__Group_4__1__Impl rule__Class__Group_4__2
+            {
+            pushFollow(FOLLOW_10);
+            rule__Class__Group_4__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Class__Group_4__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Class__Group_4__1"
+
+
+    // $ANTLR start "rule__Class__Group_4__1__Impl"
+    // InternalSmallUmlParser.g:1060:1: rule__Class__Group_4__1__Impl : ( ( rule__Class__Alternatives_4_1 )* ) ;
+    public final void rule__Class__Group_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1064:1: ( ( ( rule__Class__Alternatives_4_1 )* ) )
+            // InternalSmallUmlParser.g:1065:1: ( ( rule__Class__Alternatives_4_1 )* )
+            {
+            // InternalSmallUmlParser.g:1065:1: ( ( rule__Class__Alternatives_4_1 )* )
+            // InternalSmallUmlParser.g:1066:2: ( rule__Class__Alternatives_4_1 )*
+            {
+             before(grammarAccess.getClassAccess().getAlternatives_4_1()); 
+            // InternalSmallUmlParser.g:1067:2: ( rule__Class__Alternatives_4_1 )*
+            loop8:
+            do {
+                int alt8=2;
+                int LA8_0 = input.LA(1);
+
+                if ( (LA8_0==PlusSign) ) {
+                    alt8=1;
+                }
+
+
+                switch (alt8) {
+            	case 1 :
+            	    // InternalSmallUmlParser.g:1067:3: rule__Class__Alternatives_4_1
+            	    {
+            	    pushFollow(FOLLOW_11);
+            	    rule__Class__Alternatives_4_1();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop8;
+                }
+            } while (true);
+
+             after(grammarAccess.getClassAccess().getAlternatives_4_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Class__Group_4__1__Impl"
+
+
+    // $ANTLR start "rule__Class__Group_4__2"
+    // InternalSmallUmlParser.g:1075:1: rule__Class__Group_4__2 : rule__Class__Group_4__2__Impl ;
+    public final void rule__Class__Group_4__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1079:1: ( rule__Class__Group_4__2__Impl )
+            // InternalSmallUmlParser.g:1080:2: rule__Class__Group_4__2__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Class__Group_4__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Class__Group_4__2"
+
+
+    // $ANTLR start "rule__Class__Group_4__2__Impl"
+    // InternalSmallUmlParser.g:1086:1: rule__Class__Group_4__2__Impl : ( RULE_END ) ;
+    public final void rule__Class__Group_4__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1090:1: ( ( RULE_END ) )
+            // InternalSmallUmlParser.g:1091:1: ( RULE_END )
+            {
+            // InternalSmallUmlParser.g:1091:1: ( RULE_END )
+            // InternalSmallUmlParser.g:1092:2: RULE_END
+            {
+             before(grammarAccess.getClassAccess().getENDTerminalRuleCall_4_2()); 
+            match(input,RULE_END,FOLLOW_2); 
+             after(grammarAccess.getClassAccess().getENDTerminalRuleCall_4_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Class__Group_4__2__Impl"
+
+
     // $ANTLR start "rule__Attribute__Group__0"
-    // InternalSmallUmlParser.g:1129:1: rule__Attribute__Group__0 : rule__Attribute__Group__0__Impl rule__Attribute__Group__1 ;
+    // InternalSmallUmlParser.g:1102:1: rule__Attribute__Group__0 : rule__Attribute__Group__0__Impl rule__Attribute__Group__1 ;
     public final void rule__Attribute__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1133:1: ( rule__Attribute__Group__0__Impl rule__Attribute__Group__1 )
-            // InternalSmallUmlParser.g:1134:2: rule__Attribute__Group__0__Impl rule__Attribute__Group__1
+            // InternalSmallUmlParser.g:1106:1: ( rule__Attribute__Group__0__Impl rule__Attribute__Group__1 )
+            // InternalSmallUmlParser.g:1107:2: rule__Attribute__Group__0__Impl rule__Attribute__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Attribute__Group__0__Impl();
@@ -3506,17 +3413,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__0__Impl"
-    // InternalSmallUmlParser.g:1141:1: rule__Attribute__Group__0__Impl : ( PlusSign ) ;
+    // InternalSmallUmlParser.g:1114:1: rule__Attribute__Group__0__Impl : ( PlusSign ) ;
     public final void rule__Attribute__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1145:1: ( ( PlusSign ) )
-            // InternalSmallUmlParser.g:1146:1: ( PlusSign )
+            // InternalSmallUmlParser.g:1118:1: ( ( PlusSign ) )
+            // InternalSmallUmlParser.g:1119:1: ( PlusSign )
             {
-            // InternalSmallUmlParser.g:1146:1: ( PlusSign )
-            // InternalSmallUmlParser.g:1147:2: PlusSign
+            // InternalSmallUmlParser.g:1119:1: ( PlusSign )
+            // InternalSmallUmlParser.g:1120:2: PlusSign
             {
              before(grammarAccess.getAttributeAccess().getPlusSignKeyword_0()); 
             match(input,PlusSign,FOLLOW_2); 
@@ -3543,14 +3450,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__1"
-    // InternalSmallUmlParser.g:1156:1: rule__Attribute__Group__1 : rule__Attribute__Group__1__Impl rule__Attribute__Group__2 ;
+    // InternalSmallUmlParser.g:1129:1: rule__Attribute__Group__1 : rule__Attribute__Group__1__Impl rule__Attribute__Group__2 ;
     public final void rule__Attribute__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1160:1: ( rule__Attribute__Group__1__Impl rule__Attribute__Group__2 )
-            // InternalSmallUmlParser.g:1161:2: rule__Attribute__Group__1__Impl rule__Attribute__Group__2
+            // InternalSmallUmlParser.g:1133:1: ( rule__Attribute__Group__1__Impl rule__Attribute__Group__2 )
+            // InternalSmallUmlParser.g:1134:2: rule__Attribute__Group__1__Impl rule__Attribute__Group__2
             {
             pushFollow(FOLLOW_12);
             rule__Attribute__Group__1__Impl();
@@ -3581,21 +3488,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__1__Impl"
-    // InternalSmallUmlParser.g:1168:1: rule__Attribute__Group__1__Impl : ( ( rule__Attribute__NameAssignment_1 ) ) ;
+    // InternalSmallUmlParser.g:1141:1: rule__Attribute__Group__1__Impl : ( ( rule__Attribute__NameAssignment_1 ) ) ;
     public final void rule__Attribute__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1172:1: ( ( ( rule__Attribute__NameAssignment_1 ) ) )
-            // InternalSmallUmlParser.g:1173:1: ( ( rule__Attribute__NameAssignment_1 ) )
+            // InternalSmallUmlParser.g:1145:1: ( ( ( rule__Attribute__NameAssignment_1 ) ) )
+            // InternalSmallUmlParser.g:1146:1: ( ( rule__Attribute__NameAssignment_1 ) )
             {
-            // InternalSmallUmlParser.g:1173:1: ( ( rule__Attribute__NameAssignment_1 ) )
-            // InternalSmallUmlParser.g:1174:2: ( rule__Attribute__NameAssignment_1 )
+            // InternalSmallUmlParser.g:1146:1: ( ( rule__Attribute__NameAssignment_1 ) )
+            // InternalSmallUmlParser.g:1147:2: ( rule__Attribute__NameAssignment_1 )
             {
              before(grammarAccess.getAttributeAccess().getNameAssignment_1()); 
-            // InternalSmallUmlParser.g:1175:2: ( rule__Attribute__NameAssignment_1 )
-            // InternalSmallUmlParser.g:1175:3: rule__Attribute__NameAssignment_1
+            // InternalSmallUmlParser.g:1148:2: ( rule__Attribute__NameAssignment_1 )
+            // InternalSmallUmlParser.g:1148:3: rule__Attribute__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Attribute__NameAssignment_1();
@@ -3628,14 +3535,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__2"
-    // InternalSmallUmlParser.g:1183:1: rule__Attribute__Group__2 : rule__Attribute__Group__2__Impl rule__Attribute__Group__3 ;
+    // InternalSmallUmlParser.g:1156:1: rule__Attribute__Group__2 : rule__Attribute__Group__2__Impl rule__Attribute__Group__3 ;
     public final void rule__Attribute__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1187:1: ( rule__Attribute__Group__2__Impl rule__Attribute__Group__3 )
-            // InternalSmallUmlParser.g:1188:2: rule__Attribute__Group__2__Impl rule__Attribute__Group__3
+            // InternalSmallUmlParser.g:1160:1: ( rule__Attribute__Group__2__Impl rule__Attribute__Group__3 )
+            // InternalSmallUmlParser.g:1161:2: rule__Attribute__Group__2__Impl rule__Attribute__Group__3
             {
             pushFollow(FOLLOW_13);
             rule__Attribute__Group__2__Impl();
@@ -3666,17 +3573,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__2__Impl"
-    // InternalSmallUmlParser.g:1195:1: rule__Attribute__Group__2__Impl : ( Colon ) ;
+    // InternalSmallUmlParser.g:1168:1: rule__Attribute__Group__2__Impl : ( Colon ) ;
     public final void rule__Attribute__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1199:1: ( ( Colon ) )
-            // InternalSmallUmlParser.g:1200:1: ( Colon )
+            // InternalSmallUmlParser.g:1172:1: ( ( Colon ) )
+            // InternalSmallUmlParser.g:1173:1: ( Colon )
             {
-            // InternalSmallUmlParser.g:1200:1: ( Colon )
-            // InternalSmallUmlParser.g:1201:2: Colon
+            // InternalSmallUmlParser.g:1173:1: ( Colon )
+            // InternalSmallUmlParser.g:1174:2: Colon
             {
              before(grammarAccess.getAttributeAccess().getColonKeyword_2()); 
             match(input,Colon,FOLLOW_2); 
@@ -3703,14 +3610,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__3"
-    // InternalSmallUmlParser.g:1210:1: rule__Attribute__Group__3 : rule__Attribute__Group__3__Impl ;
+    // InternalSmallUmlParser.g:1183:1: rule__Attribute__Group__3 : rule__Attribute__Group__3__Impl ;
     public final void rule__Attribute__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1214:1: ( rule__Attribute__Group__3__Impl )
-            // InternalSmallUmlParser.g:1215:2: rule__Attribute__Group__3__Impl
+            // InternalSmallUmlParser.g:1187:1: ( rule__Attribute__Group__3__Impl )
+            // InternalSmallUmlParser.g:1188:2: rule__Attribute__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Attribute__Group__3__Impl();
@@ -3736,21 +3643,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__3__Impl"
-    // InternalSmallUmlParser.g:1221:1: rule__Attribute__Group__3__Impl : ( ( rule__Attribute__TypeAssignment_3 ) ) ;
+    // InternalSmallUmlParser.g:1194:1: rule__Attribute__Group__3__Impl : ( ( rule__Attribute__TypeAssignment_3 ) ) ;
     public final void rule__Attribute__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1225:1: ( ( ( rule__Attribute__TypeAssignment_3 ) ) )
-            // InternalSmallUmlParser.g:1226:1: ( ( rule__Attribute__TypeAssignment_3 ) )
+            // InternalSmallUmlParser.g:1198:1: ( ( ( rule__Attribute__TypeAssignment_3 ) ) )
+            // InternalSmallUmlParser.g:1199:1: ( ( rule__Attribute__TypeAssignment_3 ) )
             {
-            // InternalSmallUmlParser.g:1226:1: ( ( rule__Attribute__TypeAssignment_3 ) )
-            // InternalSmallUmlParser.g:1227:2: ( rule__Attribute__TypeAssignment_3 )
+            // InternalSmallUmlParser.g:1199:1: ( ( rule__Attribute__TypeAssignment_3 ) )
+            // InternalSmallUmlParser.g:1200:2: ( rule__Attribute__TypeAssignment_3 )
             {
              before(grammarAccess.getAttributeAccess().getTypeAssignment_3()); 
-            // InternalSmallUmlParser.g:1228:2: ( rule__Attribute__TypeAssignment_3 )
-            // InternalSmallUmlParser.g:1228:3: rule__Attribute__TypeAssignment_3
+            // InternalSmallUmlParser.g:1201:2: ( rule__Attribute__TypeAssignment_3 )
+            // InternalSmallUmlParser.g:1201:3: rule__Attribute__TypeAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Attribute__TypeAssignment_3();
@@ -3783,14 +3690,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__0"
-    // InternalSmallUmlParser.g:1237:1: rule__Method__Group__0 : rule__Method__Group__0__Impl rule__Method__Group__1 ;
+    // InternalSmallUmlParser.g:1210:1: rule__Method__Group__0 : rule__Method__Group__0__Impl rule__Method__Group__1 ;
     public final void rule__Method__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1241:1: ( rule__Method__Group__0__Impl rule__Method__Group__1 )
-            // InternalSmallUmlParser.g:1242:2: rule__Method__Group__0__Impl rule__Method__Group__1
+            // InternalSmallUmlParser.g:1214:1: ( rule__Method__Group__0__Impl rule__Method__Group__1 )
+            // InternalSmallUmlParser.g:1215:2: rule__Method__Group__0__Impl rule__Method__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__Method__Group__0__Impl();
@@ -3821,21 +3728,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__0__Impl"
-    // InternalSmallUmlParser.g:1249:1: rule__Method__Group__0__Impl : ( () ) ;
+    // InternalSmallUmlParser.g:1222:1: rule__Method__Group__0__Impl : ( () ) ;
     public final void rule__Method__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1253:1: ( ( () ) )
-            // InternalSmallUmlParser.g:1254:1: ( () )
+            // InternalSmallUmlParser.g:1226:1: ( ( () ) )
+            // InternalSmallUmlParser.g:1227:1: ( () )
             {
-            // InternalSmallUmlParser.g:1254:1: ( () )
-            // InternalSmallUmlParser.g:1255:2: ()
+            // InternalSmallUmlParser.g:1227:1: ( () )
+            // InternalSmallUmlParser.g:1228:2: ()
             {
              before(grammarAccess.getMethodAccess().getMethodAction_0()); 
-            // InternalSmallUmlParser.g:1256:2: ()
-            // InternalSmallUmlParser.g:1256:3: 
+            // InternalSmallUmlParser.g:1229:2: ()
+            // InternalSmallUmlParser.g:1229:3: 
             {
             }
 
@@ -3858,14 +3765,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__1"
-    // InternalSmallUmlParser.g:1264:1: rule__Method__Group__1 : rule__Method__Group__1__Impl rule__Method__Group__2 ;
+    // InternalSmallUmlParser.g:1237:1: rule__Method__Group__1 : rule__Method__Group__1__Impl rule__Method__Group__2 ;
     public final void rule__Method__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1268:1: ( rule__Method__Group__1__Impl rule__Method__Group__2 )
-            // InternalSmallUmlParser.g:1269:2: rule__Method__Group__1__Impl rule__Method__Group__2
+            // InternalSmallUmlParser.g:1241:1: ( rule__Method__Group__1__Impl rule__Method__Group__2 )
+            // InternalSmallUmlParser.g:1242:2: rule__Method__Group__1__Impl rule__Method__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__Method__Group__1__Impl();
@@ -3896,17 +3803,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__1__Impl"
-    // InternalSmallUmlParser.g:1276:1: rule__Method__Group__1__Impl : ( PlusSign ) ;
+    // InternalSmallUmlParser.g:1249:1: rule__Method__Group__1__Impl : ( PlusSign ) ;
     public final void rule__Method__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1280:1: ( ( PlusSign ) )
-            // InternalSmallUmlParser.g:1281:1: ( PlusSign )
+            // InternalSmallUmlParser.g:1253:1: ( ( PlusSign ) )
+            // InternalSmallUmlParser.g:1254:1: ( PlusSign )
             {
-            // InternalSmallUmlParser.g:1281:1: ( PlusSign )
-            // InternalSmallUmlParser.g:1282:2: PlusSign
+            // InternalSmallUmlParser.g:1254:1: ( PlusSign )
+            // InternalSmallUmlParser.g:1255:2: PlusSign
             {
              before(grammarAccess.getMethodAccess().getPlusSignKeyword_1()); 
             match(input,PlusSign,FOLLOW_2); 
@@ -3933,14 +3840,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__2"
-    // InternalSmallUmlParser.g:1291:1: rule__Method__Group__2 : rule__Method__Group__2__Impl rule__Method__Group__3 ;
+    // InternalSmallUmlParser.g:1264:1: rule__Method__Group__2 : rule__Method__Group__2__Impl rule__Method__Group__3 ;
     public final void rule__Method__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1295:1: ( rule__Method__Group__2__Impl rule__Method__Group__3 )
-            // InternalSmallUmlParser.g:1296:2: rule__Method__Group__2__Impl rule__Method__Group__3
+            // InternalSmallUmlParser.g:1268:1: ( rule__Method__Group__2__Impl rule__Method__Group__3 )
+            // InternalSmallUmlParser.g:1269:2: rule__Method__Group__2__Impl rule__Method__Group__3
             {
             pushFollow(FOLLOW_15);
             rule__Method__Group__2__Impl();
@@ -3971,21 +3878,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__2__Impl"
-    // InternalSmallUmlParser.g:1303:1: rule__Method__Group__2__Impl : ( ( rule__Method__NameAssignment_2 ) ) ;
+    // InternalSmallUmlParser.g:1276:1: rule__Method__Group__2__Impl : ( ( rule__Method__NameAssignment_2 ) ) ;
     public final void rule__Method__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1307:1: ( ( ( rule__Method__NameAssignment_2 ) ) )
-            // InternalSmallUmlParser.g:1308:1: ( ( rule__Method__NameAssignment_2 ) )
+            // InternalSmallUmlParser.g:1280:1: ( ( ( rule__Method__NameAssignment_2 ) ) )
+            // InternalSmallUmlParser.g:1281:1: ( ( rule__Method__NameAssignment_2 ) )
             {
-            // InternalSmallUmlParser.g:1308:1: ( ( rule__Method__NameAssignment_2 ) )
-            // InternalSmallUmlParser.g:1309:2: ( rule__Method__NameAssignment_2 )
+            // InternalSmallUmlParser.g:1281:1: ( ( rule__Method__NameAssignment_2 ) )
+            // InternalSmallUmlParser.g:1282:2: ( rule__Method__NameAssignment_2 )
             {
              before(grammarAccess.getMethodAccess().getNameAssignment_2()); 
-            // InternalSmallUmlParser.g:1310:2: ( rule__Method__NameAssignment_2 )
-            // InternalSmallUmlParser.g:1310:3: rule__Method__NameAssignment_2
+            // InternalSmallUmlParser.g:1283:2: ( rule__Method__NameAssignment_2 )
+            // InternalSmallUmlParser.g:1283:3: rule__Method__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Method__NameAssignment_2();
@@ -4018,14 +3925,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__3"
-    // InternalSmallUmlParser.g:1318:1: rule__Method__Group__3 : rule__Method__Group__3__Impl rule__Method__Group__4 ;
+    // InternalSmallUmlParser.g:1291:1: rule__Method__Group__3 : rule__Method__Group__3__Impl rule__Method__Group__4 ;
     public final void rule__Method__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1322:1: ( rule__Method__Group__3__Impl rule__Method__Group__4 )
-            // InternalSmallUmlParser.g:1323:2: rule__Method__Group__3__Impl rule__Method__Group__4
+            // InternalSmallUmlParser.g:1295:1: ( rule__Method__Group__3__Impl rule__Method__Group__4 )
+            // InternalSmallUmlParser.g:1296:2: rule__Method__Group__3__Impl rule__Method__Group__4
             {
             pushFollow(FOLLOW_16);
             rule__Method__Group__3__Impl();
@@ -4056,17 +3963,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__3__Impl"
-    // InternalSmallUmlParser.g:1330:1: rule__Method__Group__3__Impl : ( LeftParenthesis ) ;
+    // InternalSmallUmlParser.g:1303:1: rule__Method__Group__3__Impl : ( LeftParenthesis ) ;
     public final void rule__Method__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1334:1: ( ( LeftParenthesis ) )
-            // InternalSmallUmlParser.g:1335:1: ( LeftParenthesis )
+            // InternalSmallUmlParser.g:1307:1: ( ( LeftParenthesis ) )
+            // InternalSmallUmlParser.g:1308:1: ( LeftParenthesis )
             {
-            // InternalSmallUmlParser.g:1335:1: ( LeftParenthesis )
-            // InternalSmallUmlParser.g:1336:2: LeftParenthesis
+            // InternalSmallUmlParser.g:1308:1: ( LeftParenthesis )
+            // InternalSmallUmlParser.g:1309:2: LeftParenthesis
             {
              before(grammarAccess.getMethodAccess().getLeftParenthesisKeyword_3()); 
             match(input,LeftParenthesis,FOLLOW_2); 
@@ -4093,14 +4000,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__4"
-    // InternalSmallUmlParser.g:1345:1: rule__Method__Group__4 : rule__Method__Group__4__Impl rule__Method__Group__5 ;
+    // InternalSmallUmlParser.g:1318:1: rule__Method__Group__4 : rule__Method__Group__4__Impl rule__Method__Group__5 ;
     public final void rule__Method__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1349:1: ( rule__Method__Group__4__Impl rule__Method__Group__5 )
-            // InternalSmallUmlParser.g:1350:2: rule__Method__Group__4__Impl rule__Method__Group__5
+            // InternalSmallUmlParser.g:1322:1: ( rule__Method__Group__4__Impl rule__Method__Group__5 )
+            // InternalSmallUmlParser.g:1323:2: rule__Method__Group__4__Impl rule__Method__Group__5
             {
             pushFollow(FOLLOW_16);
             rule__Method__Group__4__Impl();
@@ -4131,29 +4038,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__4__Impl"
-    // InternalSmallUmlParser.g:1357:1: rule__Method__Group__4__Impl : ( ( rule__Method__Group_4__0 )? ) ;
+    // InternalSmallUmlParser.g:1330:1: rule__Method__Group__4__Impl : ( ( rule__Method__Group_4__0 )? ) ;
     public final void rule__Method__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1361:1: ( ( ( rule__Method__Group_4__0 )? ) )
-            // InternalSmallUmlParser.g:1362:1: ( ( rule__Method__Group_4__0 )? )
+            // InternalSmallUmlParser.g:1334:1: ( ( ( rule__Method__Group_4__0 )? ) )
+            // InternalSmallUmlParser.g:1335:1: ( ( rule__Method__Group_4__0 )? )
             {
-            // InternalSmallUmlParser.g:1362:1: ( ( rule__Method__Group_4__0 )? )
-            // InternalSmallUmlParser.g:1363:2: ( rule__Method__Group_4__0 )?
+            // InternalSmallUmlParser.g:1335:1: ( ( rule__Method__Group_4__0 )? )
+            // InternalSmallUmlParser.g:1336:2: ( rule__Method__Group_4__0 )?
             {
              before(grammarAccess.getMethodAccess().getGroup_4()); 
-            // InternalSmallUmlParser.g:1364:2: ( rule__Method__Group_4__0 )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalSmallUmlParser.g:1337:2: ( rule__Method__Group_4__0 )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA10_0==RULE_ID||LA10_0==RULE_STRING) ) {
-                alt10=1;
+            if ( (LA9_0==RULE_ID||LA9_0==RULE_STRING) ) {
+                alt9=1;
             }
-            switch (alt10) {
+            switch (alt9) {
                 case 1 :
-                    // InternalSmallUmlParser.g:1364:3: rule__Method__Group_4__0
+                    // InternalSmallUmlParser.g:1337:3: rule__Method__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Method__Group_4__0();
@@ -4189,14 +4096,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__5"
-    // InternalSmallUmlParser.g:1372:1: rule__Method__Group__5 : rule__Method__Group__5__Impl rule__Method__Group__6 ;
+    // InternalSmallUmlParser.g:1345:1: rule__Method__Group__5 : rule__Method__Group__5__Impl rule__Method__Group__6 ;
     public final void rule__Method__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1376:1: ( rule__Method__Group__5__Impl rule__Method__Group__6 )
-            // InternalSmallUmlParser.g:1377:2: rule__Method__Group__5__Impl rule__Method__Group__6
+            // InternalSmallUmlParser.g:1349:1: ( rule__Method__Group__5__Impl rule__Method__Group__6 )
+            // InternalSmallUmlParser.g:1350:2: rule__Method__Group__5__Impl rule__Method__Group__6
             {
             pushFollow(FOLLOW_12);
             rule__Method__Group__5__Impl();
@@ -4227,17 +4134,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__5__Impl"
-    // InternalSmallUmlParser.g:1384:1: rule__Method__Group__5__Impl : ( RightParenthesis ) ;
+    // InternalSmallUmlParser.g:1357:1: rule__Method__Group__5__Impl : ( RightParenthesis ) ;
     public final void rule__Method__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1388:1: ( ( RightParenthesis ) )
-            // InternalSmallUmlParser.g:1389:1: ( RightParenthesis )
+            // InternalSmallUmlParser.g:1361:1: ( ( RightParenthesis ) )
+            // InternalSmallUmlParser.g:1362:1: ( RightParenthesis )
             {
-            // InternalSmallUmlParser.g:1389:1: ( RightParenthesis )
-            // InternalSmallUmlParser.g:1390:2: RightParenthesis
+            // InternalSmallUmlParser.g:1362:1: ( RightParenthesis )
+            // InternalSmallUmlParser.g:1363:2: RightParenthesis
             {
              before(grammarAccess.getMethodAccess().getRightParenthesisKeyword_5()); 
             match(input,RightParenthesis,FOLLOW_2); 
@@ -4264,14 +4171,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__6"
-    // InternalSmallUmlParser.g:1399:1: rule__Method__Group__6 : rule__Method__Group__6__Impl ;
+    // InternalSmallUmlParser.g:1372:1: rule__Method__Group__6 : rule__Method__Group__6__Impl ;
     public final void rule__Method__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1403:1: ( rule__Method__Group__6__Impl )
-            // InternalSmallUmlParser.g:1404:2: rule__Method__Group__6__Impl
+            // InternalSmallUmlParser.g:1376:1: ( rule__Method__Group__6__Impl )
+            // InternalSmallUmlParser.g:1377:2: rule__Method__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Method__Group__6__Impl();
@@ -4297,33 +4204,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group__6__Impl"
-    // InternalSmallUmlParser.g:1410:1: rule__Method__Group__6__Impl : ( ( rule__Method__Group_6__0 )? ) ;
+    // InternalSmallUmlParser.g:1383:1: rule__Method__Group__6__Impl : ( ( rule__Method__Group_6__0 )? ) ;
     public final void rule__Method__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1414:1: ( ( ( rule__Method__Group_6__0 )? ) )
-            // InternalSmallUmlParser.g:1415:1: ( ( rule__Method__Group_6__0 )? )
+            // InternalSmallUmlParser.g:1387:1: ( ( ( rule__Method__Group_6__0 )? ) )
+            // InternalSmallUmlParser.g:1388:1: ( ( rule__Method__Group_6__0 )? )
             {
-            // InternalSmallUmlParser.g:1415:1: ( ( rule__Method__Group_6__0 )? )
-            // InternalSmallUmlParser.g:1416:2: ( rule__Method__Group_6__0 )?
+            // InternalSmallUmlParser.g:1388:1: ( ( rule__Method__Group_6__0 )? )
+            // InternalSmallUmlParser.g:1389:2: ( rule__Method__Group_6__0 )?
             {
              before(grammarAccess.getMethodAccess().getGroup_6()); 
-            // InternalSmallUmlParser.g:1417:2: ( rule__Method__Group_6__0 )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // InternalSmallUmlParser.g:1390:2: ( rule__Method__Group_6__0 )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA11_0==Colon) ) {
-                int LA11_1 = input.LA(2);
-
-                if ( ((LA11_1>=UnlimitedNatural && LA11_1<=Integer)||LA11_1==String||(LA11_1>=Bool && LA11_1<=Real)) ) {
-                    alt11=1;
-                }
+            if ( (LA10_0==Colon) ) {
+                alt10=1;
             }
-            switch (alt11) {
+            switch (alt10) {
                 case 1 :
-                    // InternalSmallUmlParser.g:1417:3: rule__Method__Group_6__0
+                    // InternalSmallUmlParser.g:1390:3: rule__Method__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Method__Group_6__0();
@@ -4359,14 +4262,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_4__0"
-    // InternalSmallUmlParser.g:1426:1: rule__Method__Group_4__0 : rule__Method__Group_4__0__Impl rule__Method__Group_4__1 ;
+    // InternalSmallUmlParser.g:1399:1: rule__Method__Group_4__0 : rule__Method__Group_4__0__Impl rule__Method__Group_4__1 ;
     public final void rule__Method__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1430:1: ( rule__Method__Group_4__0__Impl rule__Method__Group_4__1 )
-            // InternalSmallUmlParser.g:1431:2: rule__Method__Group_4__0__Impl rule__Method__Group_4__1
+            // InternalSmallUmlParser.g:1403:1: ( rule__Method__Group_4__0__Impl rule__Method__Group_4__1 )
+            // InternalSmallUmlParser.g:1404:2: rule__Method__Group_4__0__Impl rule__Method__Group_4__1
             {
             pushFollow(FOLLOW_17);
             rule__Method__Group_4__0__Impl();
@@ -4397,21 +4300,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_4__0__Impl"
-    // InternalSmallUmlParser.g:1438:1: rule__Method__Group_4__0__Impl : ( ( rule__Method__ParameterAssignment_4_0 ) ) ;
+    // InternalSmallUmlParser.g:1411:1: rule__Method__Group_4__0__Impl : ( ( rule__Method__ParameterAssignment_4_0 ) ) ;
     public final void rule__Method__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1442:1: ( ( ( rule__Method__ParameterAssignment_4_0 ) ) )
-            // InternalSmallUmlParser.g:1443:1: ( ( rule__Method__ParameterAssignment_4_0 ) )
+            // InternalSmallUmlParser.g:1415:1: ( ( ( rule__Method__ParameterAssignment_4_0 ) ) )
+            // InternalSmallUmlParser.g:1416:1: ( ( rule__Method__ParameterAssignment_4_0 ) )
             {
-            // InternalSmallUmlParser.g:1443:1: ( ( rule__Method__ParameterAssignment_4_0 ) )
-            // InternalSmallUmlParser.g:1444:2: ( rule__Method__ParameterAssignment_4_0 )
+            // InternalSmallUmlParser.g:1416:1: ( ( rule__Method__ParameterAssignment_4_0 ) )
+            // InternalSmallUmlParser.g:1417:2: ( rule__Method__ParameterAssignment_4_0 )
             {
              before(grammarAccess.getMethodAccess().getParameterAssignment_4_0()); 
-            // InternalSmallUmlParser.g:1445:2: ( rule__Method__ParameterAssignment_4_0 )
-            // InternalSmallUmlParser.g:1445:3: rule__Method__ParameterAssignment_4_0
+            // InternalSmallUmlParser.g:1418:2: ( rule__Method__ParameterAssignment_4_0 )
+            // InternalSmallUmlParser.g:1418:3: rule__Method__ParameterAssignment_4_0
             {
             pushFollow(FOLLOW_2);
             rule__Method__ParameterAssignment_4_0();
@@ -4444,14 +4347,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_4__1"
-    // InternalSmallUmlParser.g:1453:1: rule__Method__Group_4__1 : rule__Method__Group_4__1__Impl ;
+    // InternalSmallUmlParser.g:1426:1: rule__Method__Group_4__1 : rule__Method__Group_4__1__Impl ;
     public final void rule__Method__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1457:1: ( rule__Method__Group_4__1__Impl )
-            // InternalSmallUmlParser.g:1458:2: rule__Method__Group_4__1__Impl
+            // InternalSmallUmlParser.g:1430:1: ( rule__Method__Group_4__1__Impl )
+            // InternalSmallUmlParser.g:1431:2: rule__Method__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Method__Group_4__1__Impl();
@@ -4477,33 +4380,33 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_4__1__Impl"
-    // InternalSmallUmlParser.g:1464:1: rule__Method__Group_4__1__Impl : ( ( rule__Method__Group_4_1__0 )* ) ;
+    // InternalSmallUmlParser.g:1437:1: rule__Method__Group_4__1__Impl : ( ( rule__Method__Group_4_1__0 )* ) ;
     public final void rule__Method__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1468:1: ( ( ( rule__Method__Group_4_1__0 )* ) )
-            // InternalSmallUmlParser.g:1469:1: ( ( rule__Method__Group_4_1__0 )* )
+            // InternalSmallUmlParser.g:1441:1: ( ( ( rule__Method__Group_4_1__0 )* ) )
+            // InternalSmallUmlParser.g:1442:1: ( ( rule__Method__Group_4_1__0 )* )
             {
-            // InternalSmallUmlParser.g:1469:1: ( ( rule__Method__Group_4_1__0 )* )
-            // InternalSmallUmlParser.g:1470:2: ( rule__Method__Group_4_1__0 )*
+            // InternalSmallUmlParser.g:1442:1: ( ( rule__Method__Group_4_1__0 )* )
+            // InternalSmallUmlParser.g:1443:2: ( rule__Method__Group_4_1__0 )*
             {
              before(grammarAccess.getMethodAccess().getGroup_4_1()); 
-            // InternalSmallUmlParser.g:1471:2: ( rule__Method__Group_4_1__0 )*
-            loop12:
+            // InternalSmallUmlParser.g:1444:2: ( rule__Method__Group_4_1__0 )*
+            loop11:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA12_0==Comma) ) {
-                    alt12=1;
+                if ( (LA11_0==Comma) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt11) {
             	case 1 :
-            	    // InternalSmallUmlParser.g:1471:3: rule__Method__Group_4_1__0
+            	    // InternalSmallUmlParser.g:1444:3: rule__Method__Group_4_1__0
             	    {
             	    pushFollow(FOLLOW_18);
             	    rule__Method__Group_4_1__0();
@@ -4515,7 +4418,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop11;
                 }
             } while (true);
 
@@ -4542,14 +4445,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_4_1__0"
-    // InternalSmallUmlParser.g:1480:1: rule__Method__Group_4_1__0 : rule__Method__Group_4_1__0__Impl rule__Method__Group_4_1__1 ;
+    // InternalSmallUmlParser.g:1453:1: rule__Method__Group_4_1__0 : rule__Method__Group_4_1__0__Impl rule__Method__Group_4_1__1 ;
     public final void rule__Method__Group_4_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1484:1: ( rule__Method__Group_4_1__0__Impl rule__Method__Group_4_1__1 )
-            // InternalSmallUmlParser.g:1485:2: rule__Method__Group_4_1__0__Impl rule__Method__Group_4_1__1
+            // InternalSmallUmlParser.g:1457:1: ( rule__Method__Group_4_1__0__Impl rule__Method__Group_4_1__1 )
+            // InternalSmallUmlParser.g:1458:2: rule__Method__Group_4_1__0__Impl rule__Method__Group_4_1__1
             {
             pushFollow(FOLLOW_4);
             rule__Method__Group_4_1__0__Impl();
@@ -4580,17 +4483,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_4_1__0__Impl"
-    // InternalSmallUmlParser.g:1492:1: rule__Method__Group_4_1__0__Impl : ( Comma ) ;
+    // InternalSmallUmlParser.g:1465:1: rule__Method__Group_4_1__0__Impl : ( Comma ) ;
     public final void rule__Method__Group_4_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1496:1: ( ( Comma ) )
-            // InternalSmallUmlParser.g:1497:1: ( Comma )
+            // InternalSmallUmlParser.g:1469:1: ( ( Comma ) )
+            // InternalSmallUmlParser.g:1470:1: ( Comma )
             {
-            // InternalSmallUmlParser.g:1497:1: ( Comma )
-            // InternalSmallUmlParser.g:1498:2: Comma
+            // InternalSmallUmlParser.g:1470:1: ( Comma )
+            // InternalSmallUmlParser.g:1471:2: Comma
             {
              before(grammarAccess.getMethodAccess().getCommaKeyword_4_1_0()); 
             match(input,Comma,FOLLOW_2); 
@@ -4617,14 +4520,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_4_1__1"
-    // InternalSmallUmlParser.g:1507:1: rule__Method__Group_4_1__1 : rule__Method__Group_4_1__1__Impl ;
+    // InternalSmallUmlParser.g:1480:1: rule__Method__Group_4_1__1 : rule__Method__Group_4_1__1__Impl ;
     public final void rule__Method__Group_4_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1511:1: ( rule__Method__Group_4_1__1__Impl )
-            // InternalSmallUmlParser.g:1512:2: rule__Method__Group_4_1__1__Impl
+            // InternalSmallUmlParser.g:1484:1: ( rule__Method__Group_4_1__1__Impl )
+            // InternalSmallUmlParser.g:1485:2: rule__Method__Group_4_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Method__Group_4_1__1__Impl();
@@ -4650,21 +4553,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_4_1__1__Impl"
-    // InternalSmallUmlParser.g:1518:1: rule__Method__Group_4_1__1__Impl : ( ( rule__Method__ParameterAssignment_4_1_1 ) ) ;
+    // InternalSmallUmlParser.g:1491:1: rule__Method__Group_4_1__1__Impl : ( ( rule__Method__ParameterAssignment_4_1_1 ) ) ;
     public final void rule__Method__Group_4_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1522:1: ( ( ( rule__Method__ParameterAssignment_4_1_1 ) ) )
-            // InternalSmallUmlParser.g:1523:1: ( ( rule__Method__ParameterAssignment_4_1_1 ) )
+            // InternalSmallUmlParser.g:1495:1: ( ( ( rule__Method__ParameterAssignment_4_1_1 ) ) )
+            // InternalSmallUmlParser.g:1496:1: ( ( rule__Method__ParameterAssignment_4_1_1 ) )
             {
-            // InternalSmallUmlParser.g:1523:1: ( ( rule__Method__ParameterAssignment_4_1_1 ) )
-            // InternalSmallUmlParser.g:1524:2: ( rule__Method__ParameterAssignment_4_1_1 )
+            // InternalSmallUmlParser.g:1496:1: ( ( rule__Method__ParameterAssignment_4_1_1 ) )
+            // InternalSmallUmlParser.g:1497:2: ( rule__Method__ParameterAssignment_4_1_1 )
             {
              before(grammarAccess.getMethodAccess().getParameterAssignment_4_1_1()); 
-            // InternalSmallUmlParser.g:1525:2: ( rule__Method__ParameterAssignment_4_1_1 )
-            // InternalSmallUmlParser.g:1525:3: rule__Method__ParameterAssignment_4_1_1
+            // InternalSmallUmlParser.g:1498:2: ( rule__Method__ParameterAssignment_4_1_1 )
+            // InternalSmallUmlParser.g:1498:3: rule__Method__ParameterAssignment_4_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Method__ParameterAssignment_4_1_1();
@@ -4697,14 +4600,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_6__0"
-    // InternalSmallUmlParser.g:1534:1: rule__Method__Group_6__0 : rule__Method__Group_6__0__Impl rule__Method__Group_6__1 ;
+    // InternalSmallUmlParser.g:1507:1: rule__Method__Group_6__0 : rule__Method__Group_6__0__Impl rule__Method__Group_6__1 ;
     public final void rule__Method__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1538:1: ( rule__Method__Group_6__0__Impl rule__Method__Group_6__1 )
-            // InternalSmallUmlParser.g:1539:2: rule__Method__Group_6__0__Impl rule__Method__Group_6__1
+            // InternalSmallUmlParser.g:1511:1: ( rule__Method__Group_6__0__Impl rule__Method__Group_6__1 )
+            // InternalSmallUmlParser.g:1512:2: rule__Method__Group_6__0__Impl rule__Method__Group_6__1
             {
             pushFollow(FOLLOW_13);
             rule__Method__Group_6__0__Impl();
@@ -4735,17 +4638,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_6__0__Impl"
-    // InternalSmallUmlParser.g:1546:1: rule__Method__Group_6__0__Impl : ( Colon ) ;
+    // InternalSmallUmlParser.g:1519:1: rule__Method__Group_6__0__Impl : ( Colon ) ;
     public final void rule__Method__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1550:1: ( ( Colon ) )
-            // InternalSmallUmlParser.g:1551:1: ( Colon )
+            // InternalSmallUmlParser.g:1523:1: ( ( Colon ) )
+            // InternalSmallUmlParser.g:1524:1: ( Colon )
             {
-            // InternalSmallUmlParser.g:1551:1: ( Colon )
-            // InternalSmallUmlParser.g:1552:2: Colon
+            // InternalSmallUmlParser.g:1524:1: ( Colon )
+            // InternalSmallUmlParser.g:1525:2: Colon
             {
              before(grammarAccess.getMethodAccess().getColonKeyword_6_0()); 
             match(input,Colon,FOLLOW_2); 
@@ -4772,14 +4675,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_6__1"
-    // InternalSmallUmlParser.g:1561:1: rule__Method__Group_6__1 : rule__Method__Group_6__1__Impl ;
+    // InternalSmallUmlParser.g:1534:1: rule__Method__Group_6__1 : rule__Method__Group_6__1__Impl ;
     public final void rule__Method__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1565:1: ( rule__Method__Group_6__1__Impl )
-            // InternalSmallUmlParser.g:1566:2: rule__Method__Group_6__1__Impl
+            // InternalSmallUmlParser.g:1538:1: ( rule__Method__Group_6__1__Impl )
+            // InternalSmallUmlParser.g:1539:2: rule__Method__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Method__Group_6__1__Impl();
@@ -4805,21 +4708,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Method__Group_6__1__Impl"
-    // InternalSmallUmlParser.g:1572:1: rule__Method__Group_6__1__Impl : ( ( rule__Method__ReturnTypeAssignment_6_1 ) ) ;
+    // InternalSmallUmlParser.g:1545:1: rule__Method__Group_6__1__Impl : ( ( rule__Method__ReturnTypeAssignment_6_1 ) ) ;
     public final void rule__Method__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1576:1: ( ( ( rule__Method__ReturnTypeAssignment_6_1 ) ) )
-            // InternalSmallUmlParser.g:1577:1: ( ( rule__Method__ReturnTypeAssignment_6_1 ) )
+            // InternalSmallUmlParser.g:1549:1: ( ( ( rule__Method__ReturnTypeAssignment_6_1 ) ) )
+            // InternalSmallUmlParser.g:1550:1: ( ( rule__Method__ReturnTypeAssignment_6_1 ) )
             {
-            // InternalSmallUmlParser.g:1577:1: ( ( rule__Method__ReturnTypeAssignment_6_1 ) )
-            // InternalSmallUmlParser.g:1578:2: ( rule__Method__ReturnTypeAssignment_6_1 )
+            // InternalSmallUmlParser.g:1550:1: ( ( rule__Method__ReturnTypeAssignment_6_1 ) )
+            // InternalSmallUmlParser.g:1551:2: ( rule__Method__ReturnTypeAssignment_6_1 )
             {
              before(grammarAccess.getMethodAccess().getReturnTypeAssignment_6_1()); 
-            // InternalSmallUmlParser.g:1579:2: ( rule__Method__ReturnTypeAssignment_6_1 )
-            // InternalSmallUmlParser.g:1579:3: rule__Method__ReturnTypeAssignment_6_1
+            // InternalSmallUmlParser.g:1552:2: ( rule__Method__ReturnTypeAssignment_6_1 )
+            // InternalSmallUmlParser.g:1552:3: rule__Method__ReturnTypeAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__Method__ReturnTypeAssignment_6_1();
@@ -4852,14 +4755,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Parameter__Group__0"
-    // InternalSmallUmlParser.g:1588:1: rule__Parameter__Group__0 : rule__Parameter__Group__0__Impl rule__Parameter__Group__1 ;
+    // InternalSmallUmlParser.g:1561:1: rule__Parameter__Group__0 : rule__Parameter__Group__0__Impl rule__Parameter__Group__1 ;
     public final void rule__Parameter__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1592:1: ( rule__Parameter__Group__0__Impl rule__Parameter__Group__1 )
-            // InternalSmallUmlParser.g:1593:2: rule__Parameter__Group__0__Impl rule__Parameter__Group__1
+            // InternalSmallUmlParser.g:1565:1: ( rule__Parameter__Group__0__Impl rule__Parameter__Group__1 )
+            // InternalSmallUmlParser.g:1566:2: rule__Parameter__Group__0__Impl rule__Parameter__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__Parameter__Group__0__Impl();
@@ -4890,21 +4793,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Parameter__Group__0__Impl"
-    // InternalSmallUmlParser.g:1600:1: rule__Parameter__Group__0__Impl : ( ( rule__Parameter__NameAssignment_0 ) ) ;
+    // InternalSmallUmlParser.g:1573:1: rule__Parameter__Group__0__Impl : ( ( rule__Parameter__NameAssignment_0 ) ) ;
     public final void rule__Parameter__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1604:1: ( ( ( rule__Parameter__NameAssignment_0 ) ) )
-            // InternalSmallUmlParser.g:1605:1: ( ( rule__Parameter__NameAssignment_0 ) )
+            // InternalSmallUmlParser.g:1577:1: ( ( ( rule__Parameter__NameAssignment_0 ) ) )
+            // InternalSmallUmlParser.g:1578:1: ( ( rule__Parameter__NameAssignment_0 ) )
             {
-            // InternalSmallUmlParser.g:1605:1: ( ( rule__Parameter__NameAssignment_0 ) )
-            // InternalSmallUmlParser.g:1606:2: ( rule__Parameter__NameAssignment_0 )
+            // InternalSmallUmlParser.g:1578:1: ( ( rule__Parameter__NameAssignment_0 ) )
+            // InternalSmallUmlParser.g:1579:2: ( rule__Parameter__NameAssignment_0 )
             {
              before(grammarAccess.getParameterAccess().getNameAssignment_0()); 
-            // InternalSmallUmlParser.g:1607:2: ( rule__Parameter__NameAssignment_0 )
-            // InternalSmallUmlParser.g:1607:3: rule__Parameter__NameAssignment_0
+            // InternalSmallUmlParser.g:1580:2: ( rule__Parameter__NameAssignment_0 )
+            // InternalSmallUmlParser.g:1580:3: rule__Parameter__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Parameter__NameAssignment_0();
@@ -4937,14 +4840,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Parameter__Group__1"
-    // InternalSmallUmlParser.g:1615:1: rule__Parameter__Group__1 : rule__Parameter__Group__1__Impl rule__Parameter__Group__2 ;
+    // InternalSmallUmlParser.g:1588:1: rule__Parameter__Group__1 : rule__Parameter__Group__1__Impl rule__Parameter__Group__2 ;
     public final void rule__Parameter__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1619:1: ( rule__Parameter__Group__1__Impl rule__Parameter__Group__2 )
-            // InternalSmallUmlParser.g:1620:2: rule__Parameter__Group__1__Impl rule__Parameter__Group__2
+            // InternalSmallUmlParser.g:1592:1: ( rule__Parameter__Group__1__Impl rule__Parameter__Group__2 )
+            // InternalSmallUmlParser.g:1593:2: rule__Parameter__Group__1__Impl rule__Parameter__Group__2
             {
             pushFollow(FOLLOW_13);
             rule__Parameter__Group__1__Impl();
@@ -4975,17 +4878,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Parameter__Group__1__Impl"
-    // InternalSmallUmlParser.g:1627:1: rule__Parameter__Group__1__Impl : ( Colon ) ;
+    // InternalSmallUmlParser.g:1600:1: rule__Parameter__Group__1__Impl : ( Colon ) ;
     public final void rule__Parameter__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1631:1: ( ( Colon ) )
-            // InternalSmallUmlParser.g:1632:1: ( Colon )
+            // InternalSmallUmlParser.g:1604:1: ( ( Colon ) )
+            // InternalSmallUmlParser.g:1605:1: ( Colon )
             {
-            // InternalSmallUmlParser.g:1632:1: ( Colon )
-            // InternalSmallUmlParser.g:1633:2: Colon
+            // InternalSmallUmlParser.g:1605:1: ( Colon )
+            // InternalSmallUmlParser.g:1606:2: Colon
             {
              before(grammarAccess.getParameterAccess().getColonKeyword_1()); 
             match(input,Colon,FOLLOW_2); 
@@ -5012,14 +4915,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Parameter__Group__2"
-    // InternalSmallUmlParser.g:1642:1: rule__Parameter__Group__2 : rule__Parameter__Group__2__Impl ;
+    // InternalSmallUmlParser.g:1615:1: rule__Parameter__Group__2 : rule__Parameter__Group__2__Impl ;
     public final void rule__Parameter__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1646:1: ( rule__Parameter__Group__2__Impl )
-            // InternalSmallUmlParser.g:1647:2: rule__Parameter__Group__2__Impl
+            // InternalSmallUmlParser.g:1619:1: ( rule__Parameter__Group__2__Impl )
+            // InternalSmallUmlParser.g:1620:2: rule__Parameter__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Parameter__Group__2__Impl();
@@ -5045,21 +4948,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Parameter__Group__2__Impl"
-    // InternalSmallUmlParser.g:1653:1: rule__Parameter__Group__2__Impl : ( ( rule__Parameter__TypeAssignment_2 ) ) ;
+    // InternalSmallUmlParser.g:1626:1: rule__Parameter__Group__2__Impl : ( ( rule__Parameter__TypeAssignment_2 ) ) ;
     public final void rule__Parameter__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1657:1: ( ( ( rule__Parameter__TypeAssignment_2 ) ) )
-            // InternalSmallUmlParser.g:1658:1: ( ( rule__Parameter__TypeAssignment_2 ) )
+            // InternalSmallUmlParser.g:1630:1: ( ( ( rule__Parameter__TypeAssignment_2 ) ) )
+            // InternalSmallUmlParser.g:1631:1: ( ( rule__Parameter__TypeAssignment_2 ) )
             {
-            // InternalSmallUmlParser.g:1658:1: ( ( rule__Parameter__TypeAssignment_2 ) )
-            // InternalSmallUmlParser.g:1659:2: ( rule__Parameter__TypeAssignment_2 )
+            // InternalSmallUmlParser.g:1631:1: ( ( rule__Parameter__TypeAssignment_2 ) )
+            // InternalSmallUmlParser.g:1632:2: ( rule__Parameter__TypeAssignment_2 )
             {
              before(grammarAccess.getParameterAccess().getTypeAssignment_2()); 
-            // InternalSmallUmlParser.g:1660:2: ( rule__Parameter__TypeAssignment_2 )
-            // InternalSmallUmlParser.g:1660:3: rule__Parameter__TypeAssignment_2
+            // InternalSmallUmlParser.g:1633:2: ( rule__Parameter__TypeAssignment_2 )
+            // InternalSmallUmlParser.g:1633:3: rule__Parameter__TypeAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Parameter__TypeAssignment_2();
@@ -5092,14 +4995,14 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Composition__Group__0"
-    // InternalSmallUmlParser.g:1669:1: rule__Composition__Group__0 : rule__Composition__Group__0__Impl rule__Composition__Group__1 ;
+    // InternalSmallUmlParser.g:1642:1: rule__Composition__Group__0 : rule__Composition__Group__0__Impl rule__Composition__Group__1 ;
     public final void rule__Composition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1673:1: ( rule__Composition__Group__0__Impl rule__Composition__Group__1 )
-            // InternalSmallUmlParser.g:1674:2: rule__Composition__Group__0__Impl rule__Composition__Group__1
+            // InternalSmallUmlParser.g:1646:1: ( rule__Composition__Group__0__Impl rule__Composition__Group__1 )
+            // InternalSmallUmlParser.g:1647:2: rule__Composition__Group__0__Impl rule__Composition__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__Composition__Group__0__Impl();
@@ -5130,32 +5033,43 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Composition__Group__0__Impl"
-    // InternalSmallUmlParser.g:1681:1: rule__Composition__Group__0__Impl : ( ( rule__Composition__NameAssignment_0 )? ) ;
+    // InternalSmallUmlParser.g:1654:1: rule__Composition__Group__0__Impl : ( ( rule__Composition__Group_0__0 )? ) ;
     public final void rule__Composition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1685:1: ( ( ( rule__Composition__NameAssignment_0 )? ) )
-            // InternalSmallUmlParser.g:1686:1: ( ( rule__Composition__NameAssignment_0 )? )
+            // InternalSmallUmlParser.g:1658:1: ( ( ( rule__Composition__Group_0__0 )? ) )
+            // InternalSmallUmlParser.g:1659:1: ( ( rule__Composition__Group_0__0 )? )
             {
-            // InternalSmallUmlParser.g:1686:1: ( ( rule__Composition__NameAssignment_0 )? )
-            // InternalSmallUmlParser.g:1687:2: ( rule__Composition__NameAssignment_0 )?
+            // InternalSmallUmlParser.g:1659:1: ( ( rule__Composition__Group_0__0 )? )
+            // InternalSmallUmlParser.g:1660:2: ( rule__Composition__Group_0__0 )?
             {
-             before(grammarAccess.getCompositionAccess().getNameAssignment_0()); 
-            // InternalSmallUmlParser.g:1688:2: ( rule__Composition__NameAssignment_0 )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+             before(grammarAccess.getCompositionAccess().getGroup_0()); 
+            // InternalSmallUmlParser.g:1661:2: ( rule__Composition__Group_0__0 )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_ID||LA13_0==RULE_STRING) ) {
-                alt13=1;
+            if ( (LA12_0==RULE_STRING) ) {
+                int LA12_1 = input.LA(2);
+
+                if ( (LA12_1==Colon) ) {
+                    alt12=1;
+                }
             }
-            switch (alt13) {
+            else if ( (LA12_0==RULE_ID) ) {
+                int LA12_2 = input.LA(2);
+
+                if ( (LA12_2==Colon) ) {
+                    alt12=1;
+                }
+            }
+            switch (alt12) {
                 case 1 :
-                    // InternalSmallUmlParser.g:1688:3: rule__Composition__NameAssignment_0
+                    // InternalSmallUmlParser.g:1661:3: rule__Composition__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Composition__NameAssignment_0();
+                    rule__Composition__Group_0__0();
 
                     state._fsp--;
 
@@ -5165,7 +5079,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
             }
 
-             after(grammarAccess.getCompositionAccess().getNameAssignment_0()); 
+             after(grammarAccess.getCompositionAccess().getGroup_0()); 
 
             }
 
@@ -5188,16 +5102,16 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Composition__Group__1"
-    // InternalSmallUmlParser.g:1696:1: rule__Composition__Group__1 : rule__Composition__Group__1__Impl rule__Composition__Group__2 ;
+    // InternalSmallUmlParser.g:1669:1: rule__Composition__Group__1 : rule__Composition__Group__1__Impl rule__Composition__Group__2 ;
     public final void rule__Composition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1700:1: ( rule__Composition__Group__1__Impl rule__Composition__Group__2 )
-            // InternalSmallUmlParser.g:1701:2: rule__Composition__Group__1__Impl rule__Composition__Group__2
+            // InternalSmallUmlParser.g:1673:1: ( rule__Composition__Group__1__Impl rule__Composition__Group__2 )
+            // InternalSmallUmlParser.g:1674:2: rule__Composition__Group__1__Impl rule__Composition__Group__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_20);
             rule__Composition__Group__1__Impl();
 
             state._fsp--;
@@ -5226,21 +5140,31 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Composition__Group__1__Impl"
-    // InternalSmallUmlParser.g:1708:1: rule__Composition__Group__1__Impl : ( Colon ) ;
+    // InternalSmallUmlParser.g:1681:1: rule__Composition__Group__1__Impl : ( ( rule__Composition__SourceAssignment_1 ) ) ;
     public final void rule__Composition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1712:1: ( ( Colon ) )
-            // InternalSmallUmlParser.g:1713:1: ( Colon )
+            // InternalSmallUmlParser.g:1685:1: ( ( ( rule__Composition__SourceAssignment_1 ) ) )
+            // InternalSmallUmlParser.g:1686:1: ( ( rule__Composition__SourceAssignment_1 ) )
             {
-            // InternalSmallUmlParser.g:1713:1: ( Colon )
-            // InternalSmallUmlParser.g:1714:2: Colon
+            // InternalSmallUmlParser.g:1686:1: ( ( rule__Composition__SourceAssignment_1 ) )
+            // InternalSmallUmlParser.g:1687:2: ( rule__Composition__SourceAssignment_1 )
             {
-             before(grammarAccess.getCompositionAccess().getColonKeyword_1()); 
-            match(input,Colon,FOLLOW_2); 
-             after(grammarAccess.getCompositionAccess().getColonKeyword_1()); 
+             before(grammarAccess.getCompositionAccess().getSourceAssignment_1()); 
+            // InternalSmallUmlParser.g:1688:2: ( rule__Composition__SourceAssignment_1 )
+            // InternalSmallUmlParser.g:1688:3: rule__Composition__SourceAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Composition__SourceAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getCompositionAccess().getSourceAssignment_1()); 
 
             }
 
@@ -5263,16 +5187,16 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Composition__Group__2"
-    // InternalSmallUmlParser.g:1723:1: rule__Composition__Group__2 : rule__Composition__Group__2__Impl rule__Composition__Group__3 ;
+    // InternalSmallUmlParser.g:1696:1: rule__Composition__Group__2 : rule__Composition__Group__2__Impl rule__Composition__Group__3 ;
     public final void rule__Composition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1727:1: ( rule__Composition__Group__2__Impl rule__Composition__Group__3 )
-            // InternalSmallUmlParser.g:1728:2: rule__Composition__Group__2__Impl rule__Composition__Group__3
+            // InternalSmallUmlParser.g:1700:1: ( rule__Composition__Group__2__Impl rule__Composition__Group__3 )
+            // InternalSmallUmlParser.g:1701:2: rule__Composition__Group__2__Impl rule__Composition__Group__3
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_19);
             rule__Composition__Group__2__Impl();
 
             state._fsp--;
@@ -5301,31 +5225,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Composition__Group__2__Impl"
-    // InternalSmallUmlParser.g:1735:1: rule__Composition__Group__2__Impl : ( ( rule__Composition__SourceAssignment_2 ) ) ;
+    // InternalSmallUmlParser.g:1708:1: rule__Composition__Group__2__Impl : ( LessThanSignGreaterThanSignHyphenMinusHyphenMinus ) ;
     public final void rule__Composition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1739:1: ( ( ( rule__Composition__SourceAssignment_2 ) ) )
-            // InternalSmallUmlParser.g:1740:1: ( ( rule__Composition__SourceAssignment_2 ) )
+            // InternalSmallUmlParser.g:1712:1: ( ( LessThanSignGreaterThanSignHyphenMinusHyphenMinus ) )
+            // InternalSmallUmlParser.g:1713:1: ( LessThanSignGreaterThanSignHyphenMinusHyphenMinus )
             {
-            // InternalSmallUmlParser.g:1740:1: ( ( rule__Composition__SourceAssignment_2 ) )
-            // InternalSmallUmlParser.g:1741:2: ( rule__Composition__SourceAssignment_2 )
+            // InternalSmallUmlParser.g:1713:1: ( LessThanSignGreaterThanSignHyphenMinusHyphenMinus )
+            // InternalSmallUmlParser.g:1714:2: LessThanSignGreaterThanSignHyphenMinusHyphenMinus
             {
-             before(grammarAccess.getCompositionAccess().getSourceAssignment_2()); 
-            // InternalSmallUmlParser.g:1742:2: ( rule__Composition__SourceAssignment_2 )
-            // InternalSmallUmlParser.g:1742:3: rule__Composition__SourceAssignment_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Composition__SourceAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getCompositionAccess().getSourceAssignment_2()); 
+             before(grammarAccess.getCompositionAccess().getLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_2()); 
+            match(input,LessThanSignGreaterThanSignHyphenMinusHyphenMinus,FOLLOW_2); 
+             after(grammarAccess.getCompositionAccess().getLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_2()); 
 
             }
 
@@ -5348,22 +5262,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Composition__Group__3"
-    // InternalSmallUmlParser.g:1750:1: rule__Composition__Group__3 : rule__Composition__Group__3__Impl rule__Composition__Group__4 ;
+    // InternalSmallUmlParser.g:1723:1: rule__Composition__Group__3 : rule__Composition__Group__3__Impl ;
     public final void rule__Composition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1754:1: ( rule__Composition__Group__3__Impl rule__Composition__Group__4 )
-            // InternalSmallUmlParser.g:1755:2: rule__Composition__Group__3__Impl rule__Composition__Group__4
+            // InternalSmallUmlParser.g:1727:1: ( rule__Composition__Group__3__Impl )
+            // InternalSmallUmlParser.g:1728:2: rule__Composition__Group__3__Impl
             {
-            pushFollow(FOLLOW_4);
-            rule__Composition__Group__3__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Composition__Group__4();
+            rule__Composition__Group__3__Impl();
 
             state._fsp--;
 
@@ -5386,21 +5295,31 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Composition__Group__3__Impl"
-    // InternalSmallUmlParser.g:1762:1: rule__Composition__Group__3__Impl : ( LessThanSignGreaterThanSignHyphenMinusHyphenMinus ) ;
+    // InternalSmallUmlParser.g:1734:1: rule__Composition__Group__3__Impl : ( ( rule__Composition__TargetAssignment_3 ) ) ;
     public final void rule__Composition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1766:1: ( ( LessThanSignGreaterThanSignHyphenMinusHyphenMinus ) )
-            // InternalSmallUmlParser.g:1767:1: ( LessThanSignGreaterThanSignHyphenMinusHyphenMinus )
+            // InternalSmallUmlParser.g:1738:1: ( ( ( rule__Composition__TargetAssignment_3 ) ) )
+            // InternalSmallUmlParser.g:1739:1: ( ( rule__Composition__TargetAssignment_3 ) )
             {
-            // InternalSmallUmlParser.g:1767:1: ( LessThanSignGreaterThanSignHyphenMinusHyphenMinus )
-            // InternalSmallUmlParser.g:1768:2: LessThanSignGreaterThanSignHyphenMinusHyphenMinus
+            // InternalSmallUmlParser.g:1739:1: ( ( rule__Composition__TargetAssignment_3 ) )
+            // InternalSmallUmlParser.g:1740:2: ( rule__Composition__TargetAssignment_3 )
             {
-             before(grammarAccess.getCompositionAccess().getLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_3()); 
-            match(input,LessThanSignGreaterThanSignHyphenMinusHyphenMinus,FOLLOW_2); 
-             after(grammarAccess.getCompositionAccess().getLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_3()); 
+             before(grammarAccess.getCompositionAccess().getTargetAssignment_3()); 
+            // InternalSmallUmlParser.g:1741:2: ( rule__Composition__TargetAssignment_3 )
+            // InternalSmallUmlParser.g:1741:3: rule__Composition__TargetAssignment_3
+            {
+            pushFollow(FOLLOW_2);
+            rule__Composition__TargetAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getCompositionAccess().getTargetAssignment_3()); 
 
             }
 
@@ -5422,18 +5341,23 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Composition__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Composition__Group__4"
-    // InternalSmallUmlParser.g:1777:1: rule__Composition__Group__4 : rule__Composition__Group__4__Impl ;
-    public final void rule__Composition__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Composition__Group_0__0"
+    // InternalSmallUmlParser.g:1750:1: rule__Composition__Group_0__0 : rule__Composition__Group_0__0__Impl rule__Composition__Group_0__1 ;
+    public final void rule__Composition__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1781:1: ( rule__Composition__Group__4__Impl )
-            // InternalSmallUmlParser.g:1782:2: rule__Composition__Group__4__Impl
+            // InternalSmallUmlParser.g:1754:1: ( rule__Composition__Group_0__0__Impl rule__Composition__Group_0__1 )
+            // InternalSmallUmlParser.g:1755:2: rule__Composition__Group_0__0__Impl rule__Composition__Group_0__1
             {
+            pushFollow(FOLLOW_12);
+            rule__Composition__Group_0__0__Impl();
+
+            state._fsp--;
+
             pushFollow(FOLLOW_2);
-            rule__Composition__Group__4__Impl();
+            rule__Composition__Group_0__1();
 
             state._fsp--;
 
@@ -5452,35 +5376,35 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Composition__Group__4"
+    // $ANTLR end "rule__Composition__Group_0__0"
 
 
-    // $ANTLR start "rule__Composition__Group__4__Impl"
-    // InternalSmallUmlParser.g:1788:1: rule__Composition__Group__4__Impl : ( ( rule__Composition__TargetAssignment_4 ) ) ;
-    public final void rule__Composition__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Composition__Group_0__0__Impl"
+    // InternalSmallUmlParser.g:1762:1: rule__Composition__Group_0__0__Impl : ( ( rule__Composition__NameAssignment_0_0 ) ) ;
+    public final void rule__Composition__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1792:1: ( ( ( rule__Composition__TargetAssignment_4 ) ) )
-            // InternalSmallUmlParser.g:1793:1: ( ( rule__Composition__TargetAssignment_4 ) )
+            // InternalSmallUmlParser.g:1766:1: ( ( ( rule__Composition__NameAssignment_0_0 ) ) )
+            // InternalSmallUmlParser.g:1767:1: ( ( rule__Composition__NameAssignment_0_0 ) )
             {
-            // InternalSmallUmlParser.g:1793:1: ( ( rule__Composition__TargetAssignment_4 ) )
-            // InternalSmallUmlParser.g:1794:2: ( rule__Composition__TargetAssignment_4 )
+            // InternalSmallUmlParser.g:1767:1: ( ( rule__Composition__NameAssignment_0_0 ) )
+            // InternalSmallUmlParser.g:1768:2: ( rule__Composition__NameAssignment_0_0 )
             {
-             before(grammarAccess.getCompositionAccess().getTargetAssignment_4()); 
-            // InternalSmallUmlParser.g:1795:2: ( rule__Composition__TargetAssignment_4 )
-            // InternalSmallUmlParser.g:1795:3: rule__Composition__TargetAssignment_4
+             before(grammarAccess.getCompositionAccess().getNameAssignment_0_0()); 
+            // InternalSmallUmlParser.g:1769:2: ( rule__Composition__NameAssignment_0_0 )
+            // InternalSmallUmlParser.g:1769:3: rule__Composition__NameAssignment_0_0
             {
             pushFollow(FOLLOW_2);
-            rule__Composition__TargetAssignment_4();
+            rule__Composition__NameAssignment_0_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCompositionAccess().getTargetAssignment_4()); 
+             after(grammarAccess.getCompositionAccess().getNameAssignment_0_0()); 
 
             }
 
@@ -5499,7 +5423,77 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Composition__Group__4__Impl"
+    // $ANTLR end "rule__Composition__Group_0__0__Impl"
+
+
+    // $ANTLR start "rule__Composition__Group_0__1"
+    // InternalSmallUmlParser.g:1777:1: rule__Composition__Group_0__1 : rule__Composition__Group_0__1__Impl ;
+    public final void rule__Composition__Group_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1781:1: ( rule__Composition__Group_0__1__Impl )
+            // InternalSmallUmlParser.g:1782:2: rule__Composition__Group_0__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Composition__Group_0__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Composition__Group_0__1"
+
+
+    // $ANTLR start "rule__Composition__Group_0__1__Impl"
+    // InternalSmallUmlParser.g:1788:1: rule__Composition__Group_0__1__Impl : ( Colon ) ;
+    public final void rule__Composition__Group_0__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1792:1: ( ( Colon ) )
+            // InternalSmallUmlParser.g:1793:1: ( Colon )
+            {
+            // InternalSmallUmlParser.g:1793:1: ( Colon )
+            // InternalSmallUmlParser.g:1794:2: Colon
+            {
+             before(grammarAccess.getCompositionAccess().getColonKeyword_0_1()); 
+            match(input,Colon,FOLLOW_2); 
+             after(grammarAccess.getCompositionAccess().getColonKeyword_0_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Composition__Group_0__1__Impl"
 
 
     // $ANTLR start "rule__Reference__Group__0"
@@ -5541,32 +5535,43 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Reference__Group__0__Impl"
-    // InternalSmallUmlParser.g:1816:1: rule__Reference__Group__0__Impl : ( ( rule__Reference__NameAssignment_0 )? ) ;
+    // InternalSmallUmlParser.g:1816:1: rule__Reference__Group__0__Impl : ( ( rule__Reference__Group_0__0 )? ) ;
     public final void rule__Reference__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1820:1: ( ( ( rule__Reference__NameAssignment_0 )? ) )
-            // InternalSmallUmlParser.g:1821:1: ( ( rule__Reference__NameAssignment_0 )? )
+            // InternalSmallUmlParser.g:1820:1: ( ( ( rule__Reference__Group_0__0 )? ) )
+            // InternalSmallUmlParser.g:1821:1: ( ( rule__Reference__Group_0__0 )? )
             {
-            // InternalSmallUmlParser.g:1821:1: ( ( rule__Reference__NameAssignment_0 )? )
-            // InternalSmallUmlParser.g:1822:2: ( rule__Reference__NameAssignment_0 )?
+            // InternalSmallUmlParser.g:1821:1: ( ( rule__Reference__Group_0__0 )? )
+            // InternalSmallUmlParser.g:1822:2: ( rule__Reference__Group_0__0 )?
             {
-             before(grammarAccess.getReferenceAccess().getNameAssignment_0()); 
-            // InternalSmallUmlParser.g:1823:2: ( rule__Reference__NameAssignment_0 )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+             before(grammarAccess.getReferenceAccess().getGroup_0()); 
+            // InternalSmallUmlParser.g:1823:2: ( rule__Reference__Group_0__0 )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA14_0==RULE_ID||LA14_0==RULE_STRING) ) {
-                alt14=1;
+            if ( (LA13_0==RULE_STRING) ) {
+                int LA13_1 = input.LA(2);
+
+                if ( (LA13_1==Colon) ) {
+                    alt13=1;
+                }
             }
-            switch (alt14) {
+            else if ( (LA13_0==RULE_ID) ) {
+                int LA13_2 = input.LA(2);
+
+                if ( (LA13_2==Colon) ) {
+                    alt13=1;
+                }
+            }
+            switch (alt13) {
                 case 1 :
-                    // InternalSmallUmlParser.g:1823:3: rule__Reference__NameAssignment_0
+                    // InternalSmallUmlParser.g:1823:3: rule__Reference__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Reference__NameAssignment_0();
+                    rule__Reference__Group_0__0();
 
                     state._fsp--;
 
@@ -5576,7 +5581,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
             }
 
-             after(grammarAccess.getReferenceAccess().getNameAssignment_0()); 
+             after(grammarAccess.getReferenceAccess().getGroup_0()); 
 
             }
 
@@ -5608,7 +5613,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:1835:1: ( rule__Reference__Group__1__Impl rule__Reference__Group__2 )
             // InternalSmallUmlParser.g:1836:2: rule__Reference__Group__1__Impl rule__Reference__Group__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_21);
             rule__Reference__Group__1__Impl();
 
             state._fsp--;
@@ -5637,21 +5642,31 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Reference__Group__1__Impl"
-    // InternalSmallUmlParser.g:1843:1: rule__Reference__Group__1__Impl : ( Colon ) ;
+    // InternalSmallUmlParser.g:1843:1: rule__Reference__Group__1__Impl : ( ( rule__Reference__SourceAssignment_1 ) ) ;
     public final void rule__Reference__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1847:1: ( ( Colon ) )
-            // InternalSmallUmlParser.g:1848:1: ( Colon )
+            // InternalSmallUmlParser.g:1847:1: ( ( ( rule__Reference__SourceAssignment_1 ) ) )
+            // InternalSmallUmlParser.g:1848:1: ( ( rule__Reference__SourceAssignment_1 ) )
             {
-            // InternalSmallUmlParser.g:1848:1: ( Colon )
-            // InternalSmallUmlParser.g:1849:2: Colon
+            // InternalSmallUmlParser.g:1848:1: ( ( rule__Reference__SourceAssignment_1 ) )
+            // InternalSmallUmlParser.g:1849:2: ( rule__Reference__SourceAssignment_1 )
             {
-             before(grammarAccess.getReferenceAccess().getColonKeyword_1()); 
-            match(input,Colon,FOLLOW_2); 
-             after(grammarAccess.getReferenceAccess().getColonKeyword_1()); 
+             before(grammarAccess.getReferenceAccess().getSourceAssignment_1()); 
+            // InternalSmallUmlParser.g:1850:2: ( rule__Reference__SourceAssignment_1 )
+            // InternalSmallUmlParser.g:1850:3: rule__Reference__SourceAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Reference__SourceAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getReferenceAccess().getSourceAssignment_1()); 
 
             }
 
@@ -5683,7 +5698,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:1862:1: ( rule__Reference__Group__2__Impl rule__Reference__Group__3 )
             // InternalSmallUmlParser.g:1863:2: rule__Reference__Group__2__Impl rule__Reference__Group__3
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_19);
             rule__Reference__Group__2__Impl();
 
             state._fsp--;
@@ -5712,31 +5727,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Reference__Group__2__Impl"
-    // InternalSmallUmlParser.g:1870:1: rule__Reference__Group__2__Impl : ( ( rule__Reference__SourceAssignment_2 ) ) ;
+    // InternalSmallUmlParser.g:1870:1: rule__Reference__Group__2__Impl : ( HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ) ;
     public final void rule__Reference__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1874:1: ( ( ( rule__Reference__SourceAssignment_2 ) ) )
-            // InternalSmallUmlParser.g:1875:1: ( ( rule__Reference__SourceAssignment_2 ) )
+            // InternalSmallUmlParser.g:1874:1: ( ( HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ) )
+            // InternalSmallUmlParser.g:1875:1: ( HyphenMinusHyphenMinusHyphenMinusGreaterThanSign )
             {
-            // InternalSmallUmlParser.g:1875:1: ( ( rule__Reference__SourceAssignment_2 ) )
-            // InternalSmallUmlParser.g:1876:2: ( rule__Reference__SourceAssignment_2 )
+            // InternalSmallUmlParser.g:1875:1: ( HyphenMinusHyphenMinusHyphenMinusGreaterThanSign )
+            // InternalSmallUmlParser.g:1876:2: HyphenMinusHyphenMinusHyphenMinusGreaterThanSign
             {
-             before(grammarAccess.getReferenceAccess().getSourceAssignment_2()); 
-            // InternalSmallUmlParser.g:1877:2: ( rule__Reference__SourceAssignment_2 )
-            // InternalSmallUmlParser.g:1877:3: rule__Reference__SourceAssignment_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Reference__SourceAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getReferenceAccess().getSourceAssignment_2()); 
+             before(grammarAccess.getReferenceAccess().getHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_2()); 
+            match(input,HyphenMinusHyphenMinusHyphenMinusGreaterThanSign,FOLLOW_2); 
+             after(grammarAccess.getReferenceAccess().getHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_2()); 
 
             }
 
@@ -5759,22 +5764,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Reference__Group__3"
-    // InternalSmallUmlParser.g:1885:1: rule__Reference__Group__3 : rule__Reference__Group__3__Impl rule__Reference__Group__4 ;
+    // InternalSmallUmlParser.g:1885:1: rule__Reference__Group__3 : rule__Reference__Group__3__Impl ;
     public final void rule__Reference__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1889:1: ( rule__Reference__Group__3__Impl rule__Reference__Group__4 )
-            // InternalSmallUmlParser.g:1890:2: rule__Reference__Group__3__Impl rule__Reference__Group__4
+            // InternalSmallUmlParser.g:1889:1: ( rule__Reference__Group__3__Impl )
+            // InternalSmallUmlParser.g:1890:2: rule__Reference__Group__3__Impl
             {
-            pushFollow(FOLLOW_4);
-            rule__Reference__Group__3__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Reference__Group__4();
+            rule__Reference__Group__3__Impl();
 
             state._fsp--;
 
@@ -5797,21 +5797,31 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Reference__Group__3__Impl"
-    // InternalSmallUmlParser.g:1897:1: rule__Reference__Group__3__Impl : ( HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ) ;
+    // InternalSmallUmlParser.g:1896:1: rule__Reference__Group__3__Impl : ( ( rule__Reference__TargetAssignment_3 ) ) ;
     public final void rule__Reference__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1901:1: ( ( HyphenMinusHyphenMinusHyphenMinusGreaterThanSign ) )
-            // InternalSmallUmlParser.g:1902:1: ( HyphenMinusHyphenMinusHyphenMinusGreaterThanSign )
+            // InternalSmallUmlParser.g:1900:1: ( ( ( rule__Reference__TargetAssignment_3 ) ) )
+            // InternalSmallUmlParser.g:1901:1: ( ( rule__Reference__TargetAssignment_3 ) )
             {
-            // InternalSmallUmlParser.g:1902:1: ( HyphenMinusHyphenMinusHyphenMinusGreaterThanSign )
-            // InternalSmallUmlParser.g:1903:2: HyphenMinusHyphenMinusHyphenMinusGreaterThanSign
+            // InternalSmallUmlParser.g:1901:1: ( ( rule__Reference__TargetAssignment_3 ) )
+            // InternalSmallUmlParser.g:1902:2: ( rule__Reference__TargetAssignment_3 )
             {
-             before(grammarAccess.getReferenceAccess().getHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_3()); 
-            match(input,HyphenMinusHyphenMinusHyphenMinusGreaterThanSign,FOLLOW_2); 
-             after(grammarAccess.getReferenceAccess().getHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_3()); 
+             before(grammarAccess.getReferenceAccess().getTargetAssignment_3()); 
+            // InternalSmallUmlParser.g:1903:2: ( rule__Reference__TargetAssignment_3 )
+            // InternalSmallUmlParser.g:1903:3: rule__Reference__TargetAssignment_3
+            {
+            pushFollow(FOLLOW_2);
+            rule__Reference__TargetAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getReferenceAccess().getTargetAssignment_3()); 
 
             }
 
@@ -5833,18 +5843,23 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Reference__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Reference__Group__4"
-    // InternalSmallUmlParser.g:1912:1: rule__Reference__Group__4 : rule__Reference__Group__4__Impl ;
-    public final void rule__Reference__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Reference__Group_0__0"
+    // InternalSmallUmlParser.g:1912:1: rule__Reference__Group_0__0 : rule__Reference__Group_0__0__Impl rule__Reference__Group_0__1 ;
+    public final void rule__Reference__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1916:1: ( rule__Reference__Group__4__Impl )
-            // InternalSmallUmlParser.g:1917:2: rule__Reference__Group__4__Impl
+            // InternalSmallUmlParser.g:1916:1: ( rule__Reference__Group_0__0__Impl rule__Reference__Group_0__1 )
+            // InternalSmallUmlParser.g:1917:2: rule__Reference__Group_0__0__Impl rule__Reference__Group_0__1
             {
+            pushFollow(FOLLOW_12);
+            rule__Reference__Group_0__0__Impl();
+
+            state._fsp--;
+
             pushFollow(FOLLOW_2);
-            rule__Reference__Group__4__Impl();
+            rule__Reference__Group_0__1();
 
             state._fsp--;
 
@@ -5863,35 +5878,35 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Reference__Group__4"
+    // $ANTLR end "rule__Reference__Group_0__0"
 
 
-    // $ANTLR start "rule__Reference__Group__4__Impl"
-    // InternalSmallUmlParser.g:1923:1: rule__Reference__Group__4__Impl : ( ( rule__Reference__TargetAssignment_4 ) ) ;
-    public final void rule__Reference__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Reference__Group_0__0__Impl"
+    // InternalSmallUmlParser.g:1924:1: rule__Reference__Group_0__0__Impl : ( ( rule__Reference__NameAssignment_0_0 ) ) ;
+    public final void rule__Reference__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1927:1: ( ( ( rule__Reference__TargetAssignment_4 ) ) )
-            // InternalSmallUmlParser.g:1928:1: ( ( rule__Reference__TargetAssignment_4 ) )
+            // InternalSmallUmlParser.g:1928:1: ( ( ( rule__Reference__NameAssignment_0_0 ) ) )
+            // InternalSmallUmlParser.g:1929:1: ( ( rule__Reference__NameAssignment_0_0 ) )
             {
-            // InternalSmallUmlParser.g:1928:1: ( ( rule__Reference__TargetAssignment_4 ) )
-            // InternalSmallUmlParser.g:1929:2: ( rule__Reference__TargetAssignment_4 )
+            // InternalSmallUmlParser.g:1929:1: ( ( rule__Reference__NameAssignment_0_0 ) )
+            // InternalSmallUmlParser.g:1930:2: ( rule__Reference__NameAssignment_0_0 )
             {
-             before(grammarAccess.getReferenceAccess().getTargetAssignment_4()); 
-            // InternalSmallUmlParser.g:1930:2: ( rule__Reference__TargetAssignment_4 )
-            // InternalSmallUmlParser.g:1930:3: rule__Reference__TargetAssignment_4
+             before(grammarAccess.getReferenceAccess().getNameAssignment_0_0()); 
+            // InternalSmallUmlParser.g:1931:2: ( rule__Reference__NameAssignment_0_0 )
+            // InternalSmallUmlParser.g:1931:3: rule__Reference__NameAssignment_0_0
             {
             pushFollow(FOLLOW_2);
-            rule__Reference__TargetAssignment_4();
+            rule__Reference__NameAssignment_0_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getReferenceAccess().getTargetAssignment_4()); 
+             after(grammarAccess.getReferenceAccess().getNameAssignment_0_0()); 
 
             }
 
@@ -5910,20 +5925,90 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Reference__Group__4__Impl"
+    // $ANTLR end "rule__Reference__Group_0__0__Impl"
+
+
+    // $ANTLR start "rule__Reference__Group_0__1"
+    // InternalSmallUmlParser.g:1939:1: rule__Reference__Group_0__1 : rule__Reference__Group_0__1__Impl ;
+    public final void rule__Reference__Group_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1943:1: ( rule__Reference__Group_0__1__Impl )
+            // InternalSmallUmlParser.g:1944:2: rule__Reference__Group_0__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Reference__Group_0__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Reference__Group_0__1"
+
+
+    // $ANTLR start "rule__Reference__Group_0__1__Impl"
+    // InternalSmallUmlParser.g:1950:1: rule__Reference__Group_0__1__Impl : ( Colon ) ;
+    public final void rule__Reference__Group_0__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmallUmlParser.g:1954:1: ( ( Colon ) )
+            // InternalSmallUmlParser.g:1955:1: ( Colon )
+            {
+            // InternalSmallUmlParser.g:1955:1: ( Colon )
+            // InternalSmallUmlParser.g:1956:2: Colon
+            {
+             before(grammarAccess.getReferenceAccess().getColonKeyword_0_1()); 
+            match(input,Colon,FOLLOW_2); 
+             after(grammarAccess.getReferenceAccess().getColonKeyword_0_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Reference__Group_0__1__Impl"
 
 
     // $ANTLR start "rule__Role__Group__0"
-    // InternalSmallUmlParser.g:1939:1: rule__Role__Group__0 : rule__Role__Group__0__Impl rule__Role__Group__1 ;
+    // InternalSmallUmlParser.g:1966:1: rule__Role__Group__0 : rule__Role__Group__0__Impl rule__Role__Group__1 ;
     public final void rule__Role__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1943:1: ( rule__Role__Group__0__Impl rule__Role__Group__1 )
-            // InternalSmallUmlParser.g:1944:2: rule__Role__Group__0__Impl rule__Role__Group__1
+            // InternalSmallUmlParser.g:1970:1: ( rule__Role__Group__0__Impl rule__Role__Group__1 )
+            // InternalSmallUmlParser.g:1971:2: rule__Role__Group__0__Impl rule__Role__Group__1
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_19);
             rule__Role__Group__0__Impl();
 
             state._fsp--;
@@ -5952,31 +6037,52 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Role__Group__0__Impl"
-    // InternalSmallUmlParser.g:1951:1: rule__Role__Group__0__Impl : ( () ) ;
+    // InternalSmallUmlParser.g:1978:1: rule__Role__Group__0__Impl : ( ( rule__Role__NameAssignment_0 )? ) ;
     public final void rule__Role__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1955:1: ( ( () ) )
-            // InternalSmallUmlParser.g:1956:1: ( () )
+            // InternalSmallUmlParser.g:1982:1: ( ( ( rule__Role__NameAssignment_0 )? ) )
+            // InternalSmallUmlParser.g:1983:1: ( ( rule__Role__NameAssignment_0 )? )
             {
-            // InternalSmallUmlParser.g:1956:1: ( () )
-            // InternalSmallUmlParser.g:1957:2: ()
+            // InternalSmallUmlParser.g:1983:1: ( ( rule__Role__NameAssignment_0 )? )
+            // InternalSmallUmlParser.g:1984:2: ( rule__Role__NameAssignment_0 )?
             {
-             before(grammarAccess.getRoleAccess().getRoleAction_0()); 
-            // InternalSmallUmlParser.g:1958:2: ()
-            // InternalSmallUmlParser.g:1958:3: 
-            {
+             before(grammarAccess.getRoleAccess().getNameAssignment_0()); 
+            // InternalSmallUmlParser.g:1985:2: ( rule__Role__NameAssignment_0 )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
+
+            if ( (LA14_0==RULE_ID||LA14_0==RULE_STRING) ) {
+                alt14=1;
+            }
+            switch (alt14) {
+                case 1 :
+                    // InternalSmallUmlParser.g:1985:3: rule__Role__NameAssignment_0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Role__NameAssignment_0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
             }
 
-             after(grammarAccess.getRoleAccess().getRoleAction_0()); 
+             after(grammarAccess.getRoleAccess().getNameAssignment_0()); 
 
             }
 
 
             }
 
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
         }
         finally {
 
@@ -5989,16 +6095,16 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Role__Group__1"
-    // InternalSmallUmlParser.g:1966:1: rule__Role__Group__1 : rule__Role__Group__1__Impl rule__Role__Group__2 ;
+    // InternalSmallUmlParser.g:1993:1: rule__Role__Group__1 : rule__Role__Group__1__Impl rule__Role__Group__2 ;
     public final void rule__Role__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1970:1: ( rule__Role__Group__1__Impl rule__Role__Group__2 )
-            // InternalSmallUmlParser.g:1971:2: rule__Role__Group__1__Impl rule__Role__Group__2
+            // InternalSmallUmlParser.g:1997:1: ( rule__Role__Group__1__Impl rule__Role__Group__2 )
+            // InternalSmallUmlParser.g:1998:2: rule__Role__Group__1__Impl rule__Role__Group__2
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_4);
             rule__Role__Group__1__Impl();
 
             state._fsp--;
@@ -6027,42 +6133,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Role__Group__1__Impl"
-    // InternalSmallUmlParser.g:1978:1: rule__Role__Group__1__Impl : ( ( rule__Role__NameAssignment_1 )? ) ;
+    // InternalSmallUmlParser.g:2005:1: rule__Role__Group__1__Impl : ( LeftParenthesis ) ;
     public final void rule__Role__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1982:1: ( ( ( rule__Role__NameAssignment_1 )? ) )
-            // InternalSmallUmlParser.g:1983:1: ( ( rule__Role__NameAssignment_1 )? )
+            // InternalSmallUmlParser.g:2009:1: ( ( LeftParenthesis ) )
+            // InternalSmallUmlParser.g:2010:1: ( LeftParenthesis )
             {
-            // InternalSmallUmlParser.g:1983:1: ( ( rule__Role__NameAssignment_1 )? )
-            // InternalSmallUmlParser.g:1984:2: ( rule__Role__NameAssignment_1 )?
+            // InternalSmallUmlParser.g:2010:1: ( LeftParenthesis )
+            // InternalSmallUmlParser.g:2011:2: LeftParenthesis
             {
-             before(grammarAccess.getRoleAccess().getNameAssignment_1()); 
-            // InternalSmallUmlParser.g:1985:2: ( rule__Role__NameAssignment_1 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
-
-            if ( (LA15_0==RULE_ID||LA15_0==RULE_STRING) ) {
-                alt15=1;
-            }
-            switch (alt15) {
-                case 1 :
-                    // InternalSmallUmlParser.g:1985:3: rule__Role__NameAssignment_1
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Role__NameAssignment_1();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getRoleAccess().getNameAssignment_1()); 
+             before(grammarAccess.getRoleAccess().getLeftParenthesisKeyword_1()); 
+            match(input,LeftParenthesis,FOLLOW_2); 
+             after(grammarAccess.getRoleAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -6085,16 +6170,16 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Role__Group__2"
-    // InternalSmallUmlParser.g:1993:1: rule__Role__Group__2 : rule__Role__Group__2__Impl rule__Role__Group__3 ;
+    // InternalSmallUmlParser.g:2020:1: rule__Role__Group__2 : rule__Role__Group__2__Impl rule__Role__Group__3 ;
     public final void rule__Role__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:1997:1: ( rule__Role__Group__2__Impl rule__Role__Group__3 )
-            // InternalSmallUmlParser.g:1998:2: rule__Role__Group__2__Impl rule__Role__Group__3
+            // InternalSmallUmlParser.g:2024:1: ( rule__Role__Group__2__Impl rule__Role__Group__3 )
+            // InternalSmallUmlParser.g:2025:2: rule__Role__Group__2__Impl rule__Role__Group__3
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_22);
             rule__Role__Group__2__Impl();
 
             state._fsp--;
@@ -6123,21 +6208,31 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Role__Group__2__Impl"
-    // InternalSmallUmlParser.g:2005:1: rule__Role__Group__2__Impl : ( LeftParenthesis ) ;
+    // InternalSmallUmlParser.g:2032:1: rule__Role__Group__2__Impl : ( ( rule__Role__ClassAssignment_2 ) ) ;
     public final void rule__Role__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2009:1: ( ( LeftParenthesis ) )
-            // InternalSmallUmlParser.g:2010:1: ( LeftParenthesis )
+            // InternalSmallUmlParser.g:2036:1: ( ( ( rule__Role__ClassAssignment_2 ) ) )
+            // InternalSmallUmlParser.g:2037:1: ( ( rule__Role__ClassAssignment_2 ) )
             {
-            // InternalSmallUmlParser.g:2010:1: ( LeftParenthesis )
-            // InternalSmallUmlParser.g:2011:2: LeftParenthesis
+            // InternalSmallUmlParser.g:2037:1: ( ( rule__Role__ClassAssignment_2 ) )
+            // InternalSmallUmlParser.g:2038:2: ( rule__Role__ClassAssignment_2 )
             {
-             before(grammarAccess.getRoleAccess().getLeftParenthesisKeyword_2()); 
-            match(input,LeftParenthesis,FOLLOW_2); 
-             after(grammarAccess.getRoleAccess().getLeftParenthesisKeyword_2()); 
+             before(grammarAccess.getRoleAccess().getClassAssignment_2()); 
+            // InternalSmallUmlParser.g:2039:2: ( rule__Role__ClassAssignment_2 )
+            // InternalSmallUmlParser.g:2039:3: rule__Role__ClassAssignment_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Role__ClassAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRoleAccess().getClassAssignment_2()); 
 
             }
 
@@ -6160,16 +6255,16 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Role__Group__3"
-    // InternalSmallUmlParser.g:2020:1: rule__Role__Group__3 : rule__Role__Group__3__Impl rule__Role__Group__4 ;
+    // InternalSmallUmlParser.g:2047:1: rule__Role__Group__3 : rule__Role__Group__3__Impl rule__Role__Group__4 ;
     public final void rule__Role__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2024:1: ( rule__Role__Group__3__Impl rule__Role__Group__4 )
-            // InternalSmallUmlParser.g:2025:2: rule__Role__Group__3__Impl rule__Role__Group__4
+            // InternalSmallUmlParser.g:2051:1: ( rule__Role__Group__3__Impl rule__Role__Group__4 )
+            // InternalSmallUmlParser.g:2052:2: rule__Role__Group__3__Impl rule__Role__Group__4
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_22);
             rule__Role__Group__3__Impl();
 
             state._fsp--;
@@ -6198,31 +6293,42 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Role__Group__3__Impl"
-    // InternalSmallUmlParser.g:2032:1: rule__Role__Group__3__Impl : ( ( rule__Role__ClassAssignment_3 ) ) ;
+    // InternalSmallUmlParser.g:2059:1: rule__Role__Group__3__Impl : ( ( rule__Role__Group_3__0 )? ) ;
     public final void rule__Role__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2036:1: ( ( ( rule__Role__ClassAssignment_3 ) ) )
-            // InternalSmallUmlParser.g:2037:1: ( ( rule__Role__ClassAssignment_3 ) )
+            // InternalSmallUmlParser.g:2063:1: ( ( ( rule__Role__Group_3__0 )? ) )
+            // InternalSmallUmlParser.g:2064:1: ( ( rule__Role__Group_3__0 )? )
             {
-            // InternalSmallUmlParser.g:2037:1: ( ( rule__Role__ClassAssignment_3 ) )
-            // InternalSmallUmlParser.g:2038:2: ( rule__Role__ClassAssignment_3 )
+            // InternalSmallUmlParser.g:2064:1: ( ( rule__Role__Group_3__0 )? )
+            // InternalSmallUmlParser.g:2065:2: ( rule__Role__Group_3__0 )?
             {
-             before(grammarAccess.getRoleAccess().getClassAssignment_3()); 
-            // InternalSmallUmlParser.g:2039:2: ( rule__Role__ClassAssignment_3 )
-            // InternalSmallUmlParser.g:2039:3: rule__Role__ClassAssignment_3
-            {
-            pushFollow(FOLLOW_2);
-            rule__Role__ClassAssignment_3();
+             before(grammarAccess.getRoleAccess().getGroup_3()); 
+            // InternalSmallUmlParser.g:2066:2: ( rule__Role__Group_3__0 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA15_0==Comma) ) {
+                alt15=1;
+            }
+            switch (alt15) {
+                case 1 :
+                    // InternalSmallUmlParser.g:2066:3: rule__Role__Group_3__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Role__Group_3__0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getRoleAccess().getClassAssignment_3()); 
+             after(grammarAccess.getRoleAccess().getGroup_3()); 
 
             }
 
@@ -6245,22 +6351,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Role__Group__4"
-    // InternalSmallUmlParser.g:2047:1: rule__Role__Group__4 : rule__Role__Group__4__Impl rule__Role__Group__5 ;
+    // InternalSmallUmlParser.g:2074:1: rule__Role__Group__4 : rule__Role__Group__4__Impl ;
     public final void rule__Role__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2051:1: ( rule__Role__Group__4__Impl rule__Role__Group__5 )
-            // InternalSmallUmlParser.g:2052:2: rule__Role__Group__4__Impl rule__Role__Group__5
+            // InternalSmallUmlParser.g:2078:1: ( rule__Role__Group__4__Impl )
+            // InternalSmallUmlParser.g:2079:2: rule__Role__Group__4__Impl
             {
-            pushFollow(FOLLOW_23);
-            rule__Role__Group__4__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Role__Group__5();
+            rule__Role__Group__4__Impl();
 
             state._fsp--;
 
@@ -6283,42 +6384,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Role__Group__4__Impl"
-    // InternalSmallUmlParser.g:2059:1: rule__Role__Group__4__Impl : ( ( rule__Role__Group_4__0 )? ) ;
+    // InternalSmallUmlParser.g:2085:1: rule__Role__Group__4__Impl : ( RightParenthesis ) ;
     public final void rule__Role__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2063:1: ( ( ( rule__Role__Group_4__0 )? ) )
-            // InternalSmallUmlParser.g:2064:1: ( ( rule__Role__Group_4__0 )? )
+            // InternalSmallUmlParser.g:2089:1: ( ( RightParenthesis ) )
+            // InternalSmallUmlParser.g:2090:1: ( RightParenthesis )
             {
-            // InternalSmallUmlParser.g:2064:1: ( ( rule__Role__Group_4__0 )? )
-            // InternalSmallUmlParser.g:2065:2: ( rule__Role__Group_4__0 )?
+            // InternalSmallUmlParser.g:2090:1: ( RightParenthesis )
+            // InternalSmallUmlParser.g:2091:2: RightParenthesis
             {
-             before(grammarAccess.getRoleAccess().getGroup_4()); 
-            // InternalSmallUmlParser.g:2066:2: ( rule__Role__Group_4__0 )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
-
-            if ( (LA16_0==Comma) ) {
-                alt16=1;
-            }
-            switch (alt16) {
-                case 1 :
-                    // InternalSmallUmlParser.g:2066:3: rule__Role__Group_4__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Role__Group_4__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getRoleAccess().getGroup_4()); 
+             before(grammarAccess.getRoleAccess().getRightParenthesisKeyword_4()); 
+            match(input,RightParenthesis,FOLLOW_2); 
+             after(grammarAccess.getRoleAccess().getRightParenthesisKeyword_4()); 
 
             }
 
@@ -6340,93 +6420,23 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Role__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Role__Group__5"
-    // InternalSmallUmlParser.g:2074:1: rule__Role__Group__5 : rule__Role__Group__5__Impl ;
-    public final void rule__Role__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__0"
+    // InternalSmallUmlParser.g:2101:1: rule__Role__Group_3__0 : rule__Role__Group_3__0__Impl rule__Role__Group_3__1 ;
+    public final void rule__Role__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2078:1: ( rule__Role__Group__5__Impl )
-            // InternalSmallUmlParser.g:2079:2: rule__Role__Group__5__Impl
+            // InternalSmallUmlParser.g:2105:1: ( rule__Role__Group_3__0__Impl rule__Role__Group_3__1 )
+            // InternalSmallUmlParser.g:2106:2: rule__Role__Group_3__0__Impl rule__Role__Group_3__1
             {
-            pushFollow(FOLLOW_2);
-            rule__Role__Group__5__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Role__Group__5"
-
-
-    // $ANTLR start "rule__Role__Group__5__Impl"
-    // InternalSmallUmlParser.g:2085:1: rule__Role__Group__5__Impl : ( RightParenthesis ) ;
-    public final void rule__Role__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:2089:1: ( ( RightParenthesis ) )
-            // InternalSmallUmlParser.g:2090:1: ( RightParenthesis )
-            {
-            // InternalSmallUmlParser.g:2090:1: ( RightParenthesis )
-            // InternalSmallUmlParser.g:2091:2: RightParenthesis
-            {
-             before(grammarAccess.getRoleAccess().getRightParenthesisKeyword_5()); 
-            match(input,RightParenthesis,FOLLOW_2); 
-             after(grammarAccess.getRoleAccess().getRightParenthesisKeyword_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Role__Group__5__Impl"
-
-
-    // $ANTLR start "rule__Role__Group_4__0"
-    // InternalSmallUmlParser.g:2101:1: rule__Role__Group_4__0 : rule__Role__Group_4__0__Impl rule__Role__Group_4__1 ;
-    public final void rule__Role__Group_4__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmallUmlParser.g:2105:1: ( rule__Role__Group_4__0__Impl rule__Role__Group_4__1 )
-            // InternalSmallUmlParser.g:2106:2: rule__Role__Group_4__0__Impl rule__Role__Group_4__1
-            {
-            pushFollow(FOLLOW_24);
-            rule__Role__Group_4__0__Impl();
+            pushFollow(FOLLOW_23);
+            rule__Role__Group_3__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Role__Group_4__1();
+            rule__Role__Group_3__1();
 
             state._fsp--;
 
@@ -6445,12 +6455,12 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__0"
+    // $ANTLR end "rule__Role__Group_3__0"
 
 
-    // $ANTLR start "rule__Role__Group_4__0__Impl"
-    // InternalSmallUmlParser.g:2113:1: rule__Role__Group_4__0__Impl : ( Comma ) ;
-    public final void rule__Role__Group_4__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__0__Impl"
+    // InternalSmallUmlParser.g:2113:1: rule__Role__Group_3__0__Impl : ( Comma ) ;
+    public final void rule__Role__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6461,9 +6471,9 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2118:1: ( Comma )
             // InternalSmallUmlParser.g:2119:2: Comma
             {
-             before(grammarAccess.getRoleAccess().getCommaKeyword_4_0()); 
+             before(grammarAccess.getRoleAccess().getCommaKeyword_3_0()); 
             match(input,Comma,FOLLOW_2); 
-             after(grammarAccess.getRoleAccess().getCommaKeyword_4_0()); 
+             after(grammarAccess.getRoleAccess().getCommaKeyword_3_0()); 
 
             }
 
@@ -6482,26 +6492,26 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__0__Impl"
+    // $ANTLR end "rule__Role__Group_3__0__Impl"
 
 
-    // $ANTLR start "rule__Role__Group_4__1"
-    // InternalSmallUmlParser.g:2128:1: rule__Role__Group_4__1 : rule__Role__Group_4__1__Impl rule__Role__Group_4__2 ;
-    public final void rule__Role__Group_4__1() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__1"
+    // InternalSmallUmlParser.g:2128:1: rule__Role__Group_3__1 : rule__Role__Group_3__1__Impl rule__Role__Group_3__2 ;
+    public final void rule__Role__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2132:1: ( rule__Role__Group_4__1__Impl rule__Role__Group_4__2 )
-            // InternalSmallUmlParser.g:2133:2: rule__Role__Group_4__1__Impl rule__Role__Group_4__2
+            // InternalSmallUmlParser.g:2132:1: ( rule__Role__Group_3__1__Impl rule__Role__Group_3__2 )
+            // InternalSmallUmlParser.g:2133:2: rule__Role__Group_3__1__Impl rule__Role__Group_3__2
             {
-            pushFollow(FOLLOW_25);
-            rule__Role__Group_4__1__Impl();
+            pushFollow(FOLLOW_24);
+            rule__Role__Group_3__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Role__Group_4__2();
+            rule__Role__Group_3__2();
 
             state._fsp--;
 
@@ -6520,12 +6530,12 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__1"
+    // $ANTLR end "rule__Role__Group_3__1"
 
 
-    // $ANTLR start "rule__Role__Group_4__1__Impl"
-    // InternalSmallUmlParser.g:2140:1: rule__Role__Group_4__1__Impl : ( LeftSquareBracket ) ;
-    public final void rule__Role__Group_4__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__1__Impl"
+    // InternalSmallUmlParser.g:2140:1: rule__Role__Group_3__1__Impl : ( LeftSquareBracket ) ;
+    public final void rule__Role__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6536,9 +6546,9 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2145:1: ( LeftSquareBracket )
             // InternalSmallUmlParser.g:2146:2: LeftSquareBracket
             {
-             before(grammarAccess.getRoleAccess().getLeftSquareBracketKeyword_4_1()); 
+             before(grammarAccess.getRoleAccess().getLeftSquareBracketKeyword_3_1()); 
             match(input,LeftSquareBracket,FOLLOW_2); 
-             after(grammarAccess.getRoleAccess().getLeftSquareBracketKeyword_4_1()); 
+             after(grammarAccess.getRoleAccess().getLeftSquareBracketKeyword_3_1()); 
 
             }
 
@@ -6557,26 +6567,26 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__1__Impl"
+    // $ANTLR end "rule__Role__Group_3__1__Impl"
 
 
-    // $ANTLR start "rule__Role__Group_4__2"
-    // InternalSmallUmlParser.g:2155:1: rule__Role__Group_4__2 : rule__Role__Group_4__2__Impl rule__Role__Group_4__3 ;
-    public final void rule__Role__Group_4__2() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__2"
+    // InternalSmallUmlParser.g:2155:1: rule__Role__Group_3__2 : rule__Role__Group_3__2__Impl rule__Role__Group_3__3 ;
+    public final void rule__Role__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2159:1: ( rule__Role__Group_4__2__Impl rule__Role__Group_4__3 )
-            // InternalSmallUmlParser.g:2160:2: rule__Role__Group_4__2__Impl rule__Role__Group_4__3
+            // InternalSmallUmlParser.g:2159:1: ( rule__Role__Group_3__2__Impl rule__Role__Group_3__3 )
+            // InternalSmallUmlParser.g:2160:2: rule__Role__Group_3__2__Impl rule__Role__Group_3__3
             {
             pushFollow(FOLLOW_17);
-            rule__Role__Group_4__2__Impl();
+            rule__Role__Group_3__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Role__Group_4__3();
+            rule__Role__Group_3__3();
 
             state._fsp--;
 
@@ -6595,35 +6605,35 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__2"
+    // $ANTLR end "rule__Role__Group_3__2"
 
 
-    // $ANTLR start "rule__Role__Group_4__2__Impl"
-    // InternalSmallUmlParser.g:2167:1: rule__Role__Group_4__2__Impl : ( ( rule__Role__LowerBoundAssignment_4_2 ) ) ;
-    public final void rule__Role__Group_4__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__2__Impl"
+    // InternalSmallUmlParser.g:2167:1: rule__Role__Group_3__2__Impl : ( ( rule__Role__LowerBoundAssignment_3_2 ) ) ;
+    public final void rule__Role__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2171:1: ( ( ( rule__Role__LowerBoundAssignment_4_2 ) ) )
-            // InternalSmallUmlParser.g:2172:1: ( ( rule__Role__LowerBoundAssignment_4_2 ) )
+            // InternalSmallUmlParser.g:2171:1: ( ( ( rule__Role__LowerBoundAssignment_3_2 ) ) )
+            // InternalSmallUmlParser.g:2172:1: ( ( rule__Role__LowerBoundAssignment_3_2 ) )
             {
-            // InternalSmallUmlParser.g:2172:1: ( ( rule__Role__LowerBoundAssignment_4_2 ) )
-            // InternalSmallUmlParser.g:2173:2: ( rule__Role__LowerBoundAssignment_4_2 )
+            // InternalSmallUmlParser.g:2172:1: ( ( rule__Role__LowerBoundAssignment_3_2 ) )
+            // InternalSmallUmlParser.g:2173:2: ( rule__Role__LowerBoundAssignment_3_2 )
             {
-             before(grammarAccess.getRoleAccess().getLowerBoundAssignment_4_2()); 
-            // InternalSmallUmlParser.g:2174:2: ( rule__Role__LowerBoundAssignment_4_2 )
-            // InternalSmallUmlParser.g:2174:3: rule__Role__LowerBoundAssignment_4_2
+             before(grammarAccess.getRoleAccess().getLowerBoundAssignment_3_2()); 
+            // InternalSmallUmlParser.g:2174:2: ( rule__Role__LowerBoundAssignment_3_2 )
+            // InternalSmallUmlParser.g:2174:3: rule__Role__LowerBoundAssignment_3_2
             {
             pushFollow(FOLLOW_2);
-            rule__Role__LowerBoundAssignment_4_2();
+            rule__Role__LowerBoundAssignment_3_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRoleAccess().getLowerBoundAssignment_4_2()); 
+             after(grammarAccess.getRoleAccess().getLowerBoundAssignment_3_2()); 
 
             }
 
@@ -6642,26 +6652,26 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__2__Impl"
+    // $ANTLR end "rule__Role__Group_3__2__Impl"
 
 
-    // $ANTLR start "rule__Role__Group_4__3"
-    // InternalSmallUmlParser.g:2182:1: rule__Role__Group_4__3 : rule__Role__Group_4__3__Impl rule__Role__Group_4__4 ;
-    public final void rule__Role__Group_4__3() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__3"
+    // InternalSmallUmlParser.g:2182:1: rule__Role__Group_3__3 : rule__Role__Group_3__3__Impl rule__Role__Group_3__4 ;
+    public final void rule__Role__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2186:1: ( rule__Role__Group_4__3__Impl rule__Role__Group_4__4 )
-            // InternalSmallUmlParser.g:2187:2: rule__Role__Group_4__3__Impl rule__Role__Group_4__4
+            // InternalSmallUmlParser.g:2186:1: ( rule__Role__Group_3__3__Impl rule__Role__Group_3__4 )
+            // InternalSmallUmlParser.g:2187:2: rule__Role__Group_3__3__Impl rule__Role__Group_3__4
             {
-            pushFollow(FOLLOW_25);
-            rule__Role__Group_4__3__Impl();
+            pushFollow(FOLLOW_24);
+            rule__Role__Group_3__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Role__Group_4__4();
+            rule__Role__Group_3__4();
 
             state._fsp--;
 
@@ -6680,12 +6690,12 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__3"
+    // $ANTLR end "rule__Role__Group_3__3"
 
 
-    // $ANTLR start "rule__Role__Group_4__3__Impl"
-    // InternalSmallUmlParser.g:2194:1: rule__Role__Group_4__3__Impl : ( Comma ) ;
-    public final void rule__Role__Group_4__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__3__Impl"
+    // InternalSmallUmlParser.g:2194:1: rule__Role__Group_3__3__Impl : ( Comma ) ;
+    public final void rule__Role__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6696,9 +6706,9 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2199:1: ( Comma )
             // InternalSmallUmlParser.g:2200:2: Comma
             {
-             before(grammarAccess.getRoleAccess().getCommaKeyword_4_3()); 
+             before(grammarAccess.getRoleAccess().getCommaKeyword_3_3()); 
             match(input,Comma,FOLLOW_2); 
-             after(grammarAccess.getRoleAccess().getCommaKeyword_4_3()); 
+             after(grammarAccess.getRoleAccess().getCommaKeyword_3_3()); 
 
             }
 
@@ -6717,26 +6727,26 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__3__Impl"
+    // $ANTLR end "rule__Role__Group_3__3__Impl"
 
 
-    // $ANTLR start "rule__Role__Group_4__4"
-    // InternalSmallUmlParser.g:2209:1: rule__Role__Group_4__4 : rule__Role__Group_4__4__Impl rule__Role__Group_4__5 ;
-    public final void rule__Role__Group_4__4() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__4"
+    // InternalSmallUmlParser.g:2209:1: rule__Role__Group_3__4 : rule__Role__Group_3__4__Impl rule__Role__Group_3__5 ;
+    public final void rule__Role__Group_3__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2213:1: ( rule__Role__Group_4__4__Impl rule__Role__Group_4__5 )
-            // InternalSmallUmlParser.g:2214:2: rule__Role__Group_4__4__Impl rule__Role__Group_4__5
+            // InternalSmallUmlParser.g:2213:1: ( rule__Role__Group_3__4__Impl rule__Role__Group_3__5 )
+            // InternalSmallUmlParser.g:2214:2: rule__Role__Group_3__4__Impl rule__Role__Group_3__5
             {
-            pushFollow(FOLLOW_26);
-            rule__Role__Group_4__4__Impl();
+            pushFollow(FOLLOW_25);
+            rule__Role__Group_3__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Role__Group_4__5();
+            rule__Role__Group_3__5();
 
             state._fsp--;
 
@@ -6755,35 +6765,35 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__4"
+    // $ANTLR end "rule__Role__Group_3__4"
 
 
-    // $ANTLR start "rule__Role__Group_4__4__Impl"
-    // InternalSmallUmlParser.g:2221:1: rule__Role__Group_4__4__Impl : ( ( rule__Role__UpperBoundAssignment_4_4 ) ) ;
-    public final void rule__Role__Group_4__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__4__Impl"
+    // InternalSmallUmlParser.g:2221:1: rule__Role__Group_3__4__Impl : ( ( rule__Role__UpperBoundAssignment_3_4 ) ) ;
+    public final void rule__Role__Group_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2225:1: ( ( ( rule__Role__UpperBoundAssignment_4_4 ) ) )
-            // InternalSmallUmlParser.g:2226:1: ( ( rule__Role__UpperBoundAssignment_4_4 ) )
+            // InternalSmallUmlParser.g:2225:1: ( ( ( rule__Role__UpperBoundAssignment_3_4 ) ) )
+            // InternalSmallUmlParser.g:2226:1: ( ( rule__Role__UpperBoundAssignment_3_4 ) )
             {
-            // InternalSmallUmlParser.g:2226:1: ( ( rule__Role__UpperBoundAssignment_4_4 ) )
-            // InternalSmallUmlParser.g:2227:2: ( rule__Role__UpperBoundAssignment_4_4 )
+            // InternalSmallUmlParser.g:2226:1: ( ( rule__Role__UpperBoundAssignment_3_4 ) )
+            // InternalSmallUmlParser.g:2227:2: ( rule__Role__UpperBoundAssignment_3_4 )
             {
-             before(grammarAccess.getRoleAccess().getUpperBoundAssignment_4_4()); 
-            // InternalSmallUmlParser.g:2228:2: ( rule__Role__UpperBoundAssignment_4_4 )
-            // InternalSmallUmlParser.g:2228:3: rule__Role__UpperBoundAssignment_4_4
+             before(grammarAccess.getRoleAccess().getUpperBoundAssignment_3_4()); 
+            // InternalSmallUmlParser.g:2228:2: ( rule__Role__UpperBoundAssignment_3_4 )
+            // InternalSmallUmlParser.g:2228:3: rule__Role__UpperBoundAssignment_3_4
             {
             pushFollow(FOLLOW_2);
-            rule__Role__UpperBoundAssignment_4_4();
+            rule__Role__UpperBoundAssignment_3_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRoleAccess().getUpperBoundAssignment_4_4()); 
+             after(grammarAccess.getRoleAccess().getUpperBoundAssignment_3_4()); 
 
             }
 
@@ -6802,21 +6812,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__4__Impl"
+    // $ANTLR end "rule__Role__Group_3__4__Impl"
 
 
-    // $ANTLR start "rule__Role__Group_4__5"
-    // InternalSmallUmlParser.g:2236:1: rule__Role__Group_4__5 : rule__Role__Group_4__5__Impl ;
-    public final void rule__Role__Group_4__5() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__5"
+    // InternalSmallUmlParser.g:2236:1: rule__Role__Group_3__5 : rule__Role__Group_3__5__Impl ;
+    public final void rule__Role__Group_3__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:2240:1: ( rule__Role__Group_4__5__Impl )
-            // InternalSmallUmlParser.g:2241:2: rule__Role__Group_4__5__Impl
+            // InternalSmallUmlParser.g:2240:1: ( rule__Role__Group_3__5__Impl )
+            // InternalSmallUmlParser.g:2241:2: rule__Role__Group_3__5__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Role__Group_4__5__Impl();
+            rule__Role__Group_3__5__Impl();
 
             state._fsp--;
 
@@ -6835,12 +6845,12 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__5"
+    // $ANTLR end "rule__Role__Group_3__5"
 
 
-    // $ANTLR start "rule__Role__Group_4__5__Impl"
-    // InternalSmallUmlParser.g:2247:1: rule__Role__Group_4__5__Impl : ( RightSquareBracket ) ;
-    public final void rule__Role__Group_4__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Role__Group_3__5__Impl"
+    // InternalSmallUmlParser.g:2247:1: rule__Role__Group_3__5__Impl : ( RightSquareBracket ) ;
+    public final void rule__Role__Group_3__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6851,9 +6861,9 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2252:1: ( RightSquareBracket )
             // InternalSmallUmlParser.g:2253:2: RightSquareBracket
             {
-             before(grammarAccess.getRoleAccess().getRightSquareBracketKeyword_4_5()); 
+             before(grammarAccess.getRoleAccess().getRightSquareBracketKeyword_3_5()); 
             match(input,RightSquareBracket,FOLLOW_2); 
-             after(grammarAccess.getRoleAccess().getRightSquareBracketKeyword_4_5()); 
+             after(grammarAccess.getRoleAccess().getRightSquareBracketKeyword_3_5()); 
 
             }
 
@@ -6872,7 +6882,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__Group_4__5__Impl"
+    // $ANTLR end "rule__Role__Group_3__5__Impl"
 
 
     // $ANTLR start "rule__String0__Group__0"
@@ -6885,7 +6895,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2267:1: ( rule__String0__Group__0__Impl rule__String0__Group__1 )
             // InternalSmallUmlParser.g:2268:2: rule__String0__Group__0__Impl rule__String0__Group__1
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_26);
             rule__String0__Group__0__Impl();
 
             state._fsp--;
@@ -7030,7 +7040,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2321:1: ( rule__Integer__Group__0__Impl rule__Integer__Group__1 )
             // InternalSmallUmlParser.g:2322:2: rule__Integer__Group__0__Impl rule__Integer__Group__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_27);
             rule__Integer__Group__0__Impl();
 
             state._fsp--;
@@ -7175,7 +7185,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2375:1: ( rule__Bool__Group__0__Impl rule__Bool__Group__1 )
             // InternalSmallUmlParser.g:2376:2: rule__Bool__Group__0__Impl rule__Bool__Group__1
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_28);
             rule__Bool__Group__0__Impl();
 
             state._fsp--;
@@ -7320,7 +7330,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2429:1: ( rule__Real__Group__0__Impl rule__Real__Group__1 )
             // InternalSmallUmlParser.g:2430:2: rule__Real__Group__0__Impl rule__Real__Group__1
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_29);
             rule__Real__Group__0__Impl();
 
             state._fsp--;
@@ -7465,7 +7475,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2483:1: ( rule__UnlimitedNatural__Group__0__Impl rule__UnlimitedNatural__Group__1 )
             // InternalSmallUmlParser.g:2484:2: rule__UnlimitedNatural__Group__0__Impl rule__UnlimitedNatural__Group__1
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_30);
             rule__UnlimitedNatural__Group__0__Impl();
 
             state._fsp--;
@@ -7610,7 +7620,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2537:1: ( rule__Enumeration__Group__0__Impl rule__Enumeration__Group__1 )
             // InternalSmallUmlParser.g:2538:2: rule__Enumeration__Group__0__Impl rule__Enumeration__Group__1
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_31);
             rule__Enumeration__Group__0__Impl();
 
             state._fsp--;
@@ -7685,7 +7695,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2564:1: ( rule__Enumeration__Group__1__Impl rule__Enumeration__Group__2 )
             // InternalSmallUmlParser.g:2565:2: rule__Enumeration__Group__1__Impl rule__Enumeration__Group__2
             {
-            pushFollow(FOLLOW_33);
+            pushFollow(FOLLOW_32);
             rule__Enumeration__Group__1__Impl();
 
             state._fsp--;
@@ -7760,7 +7770,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2591:1: ( rule__Enumeration__Group__2__Impl rule__Enumeration__Group__3 )
             // InternalSmallUmlParser.g:2592:2: rule__Enumeration__Group__2__Impl rule__Enumeration__Group__3
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_31);
             rule__Enumeration__Group__2__Impl();
 
             state._fsp--;
@@ -7835,7 +7845,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2618:1: ( rule__Enumeration__Group__3__Impl rule__Enumeration__Group__4 )
             // InternalSmallUmlParser.g:2619:2: rule__Enumeration__Group__3__Impl rule__Enumeration__Group__4
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_26);
             rule__Enumeration__Group__3__Impl();
 
             state._fsp--;
@@ -7910,7 +7920,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2645:1: ( rule__Enumeration__Group__4__Impl rule__Enumeration__Group__5 )
             // InternalSmallUmlParser.g:2646:2: rule__Enumeration__Group__4__Impl rule__Enumeration__Group__5
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_33);
             rule__Enumeration__Group__4__Impl();
 
             state._fsp--;
@@ -7995,7 +8005,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2672:1: ( rule__Enumeration__Group__5__Impl rule__Enumeration__Group__6 )
             // InternalSmallUmlParser.g:2673:2: rule__Enumeration__Group__5__Impl rule__Enumeration__Group__6
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_33);
             rule__Enumeration__Group__5__Impl();
 
             state._fsp--;
@@ -8038,17 +8048,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             {
              before(grammarAccess.getEnumerationAccess().getGroup_5()); 
             // InternalSmallUmlParser.g:2687:2: ( rule__Enumeration__Group_5__0 )*
-            loop17:
+            loop16:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( (LA17_0==Comma) ) {
-                    alt17=1;
+                if ( (LA16_0==Comma) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt16) {
             	case 1 :
             	    // InternalSmallUmlParser.g:2687:3: rule__Enumeration__Group_5__0
             	    {
@@ -8062,7 +8072,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop16;
                 }
             } while (true);
 
@@ -8098,7 +8108,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2699:1: ( rule__Enumeration__Group__6__Impl rule__Enumeration__Group__7 )
             // InternalSmallUmlParser.g:2700:2: rule__Enumeration__Group__6__Impl rule__Enumeration__Group__7
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_34);
             rule__Enumeration__Group__6__Impl();
 
             state._fsp--;
@@ -8243,7 +8253,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2753:1: ( rule__Enumeration__Group_5__0__Impl rule__Enumeration__Group_5__1 )
             // InternalSmallUmlParser.g:2754:2: rule__Enumeration__Group_5__0__Impl rule__Enumeration__Group_5__1
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_26);
             rule__Enumeration__Group_5__0__Impl();
 
             state._fsp--;
@@ -8398,7 +8408,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2807:1: ( rule__EInt__Group__0__Impl rule__EInt__Group__1 )
             // InternalSmallUmlParser.g:2808:2: rule__EInt__Group__0__Impl rule__EInt__Group__1
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_24);
             rule__EInt__Group__0__Impl();
 
             state._fsp--;
@@ -8441,13 +8451,13 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             {
              before(grammarAccess.getEIntAccess().getHyphenMinusKeyword_0()); 
             // InternalSmallUmlParser.g:2822:2: ( HyphenMinus )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA18_0==HyphenMinus) ) {
-                alt18=1;
+            if ( (LA17_0==HyphenMinus) ) {
+                alt17=1;
             }
-            switch (alt18) {
+            switch (alt17) {
                 case 1 :
                     // InternalSmallUmlParser.g:2822:3: HyphenMinus
                     {
@@ -8722,9 +8732,9 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Class__SuperAssignment_3_1"
 
 
-    // $ANTLR start "rule__Class__MethodAssignment_6_0"
-    // InternalSmallUmlParser.g:2921:1: rule__Class__MethodAssignment_6_0 : ( ruleMethod ) ;
-    public final void rule__Class__MethodAssignment_6_0() throws RecognitionException {
+    // $ANTLR start "rule__Class__MethodAssignment_4_1_0"
+    // InternalSmallUmlParser.g:2921:1: rule__Class__MethodAssignment_4_1_0 : ( ruleMethod ) ;
+    public final void rule__Class__MethodAssignment_4_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8735,13 +8745,13 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2926:2: ( ruleMethod )
             // InternalSmallUmlParser.g:2927:3: ruleMethod
             {
-             before(grammarAccess.getClassAccess().getMethodMethodParserRuleCall_6_0_0()); 
+             before(grammarAccess.getClassAccess().getMethodMethodParserRuleCall_4_1_0_0()); 
             pushFollow(FOLLOW_2);
             ruleMethod();
 
             state._fsp--;
 
-             after(grammarAccess.getClassAccess().getMethodMethodParserRuleCall_6_0_0()); 
+             after(grammarAccess.getClassAccess().getMethodMethodParserRuleCall_4_1_0_0()); 
 
             }
 
@@ -8760,12 +8770,12 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Class__MethodAssignment_6_0"
+    // $ANTLR end "rule__Class__MethodAssignment_4_1_0"
 
 
-    // $ANTLR start "rule__Class__AttributeAssignment_6_1"
-    // InternalSmallUmlParser.g:2936:1: rule__Class__AttributeAssignment_6_1 : ( ruleAttribute ) ;
-    public final void rule__Class__AttributeAssignment_6_1() throws RecognitionException {
+    // $ANTLR start "rule__Class__AttributeAssignment_4_1_1"
+    // InternalSmallUmlParser.g:2936:1: rule__Class__AttributeAssignment_4_1_1 : ( ruleAttribute ) ;
+    public final void rule__Class__AttributeAssignment_4_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8776,13 +8786,13 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:2941:2: ( ruleAttribute )
             // InternalSmallUmlParser.g:2942:3: ruleAttribute
             {
-             before(grammarAccess.getClassAccess().getAttributeAttributeParserRuleCall_6_1_0()); 
+             before(grammarAccess.getClassAccess().getAttributeAttributeParserRuleCall_4_1_1_0()); 
             pushFollow(FOLLOW_2);
             ruleAttribute();
 
             state._fsp--;
 
-             after(grammarAccess.getClassAccess().getAttributeAttributeParserRuleCall_6_1_0()); 
+             after(grammarAccess.getClassAccess().getAttributeAttributeParserRuleCall_4_1_1_0()); 
 
             }
 
@@ -8801,7 +8811,7 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Class__AttributeAssignment_6_1"
+    // $ANTLR end "rule__Class__AttributeAssignment_4_1_1"
 
 
     // $ANTLR start "rule__Attribute__NameAssignment_1"
@@ -9132,9 +9142,9 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Parameter__TypeAssignment_2"
 
 
-    // $ANTLR start "rule__Composition__NameAssignment_0"
-    // InternalSmallUmlParser.g:3071:1: rule__Composition__NameAssignment_0 : ( ruleEString ) ;
-    public final void rule__Composition__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Composition__NameAssignment_0_0"
+    // InternalSmallUmlParser.g:3071:1: rule__Composition__NameAssignment_0_0 : ( ruleEString ) ;
+    public final void rule__Composition__NameAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9145,13 +9155,13 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             // InternalSmallUmlParser.g:3076:2: ( ruleEString )
             // InternalSmallUmlParser.g:3077:3: ruleEString
             {
-             before(grammarAccess.getCompositionAccess().getNameEStringParserRuleCall_0_0()); 
+             before(grammarAccess.getCompositionAccess().getNameEStringParserRuleCall_0_0_0()); 
             pushFollow(FOLLOW_2);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getCompositionAccess().getNameEStringParserRuleCall_0_0()); 
+             after(grammarAccess.getCompositionAccess().getNameEStringParserRuleCall_0_0_0()); 
 
             }
 
@@ -9170,37 +9180,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Composition__NameAssignment_0"
+    // $ANTLR end "rule__Composition__NameAssignment_0_0"
 
 
-    // $ANTLR start "rule__Composition__SourceAssignment_2"
-    // InternalSmallUmlParser.g:3086:1: rule__Composition__SourceAssignment_2 : ( ( ruleEString ) ) ;
-    public final void rule__Composition__SourceAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Composition__SourceAssignment_1"
+    // InternalSmallUmlParser.g:3086:1: rule__Composition__SourceAssignment_1 : ( ruleRole ) ;
+    public final void rule__Composition__SourceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3090:1: ( ( ( ruleEString ) ) )
-            // InternalSmallUmlParser.g:3091:2: ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:3090:1: ( ( ruleRole ) )
+            // InternalSmallUmlParser.g:3091:2: ( ruleRole )
             {
-            // InternalSmallUmlParser.g:3091:2: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:3092:3: ( ruleEString )
+            // InternalSmallUmlParser.g:3091:2: ( ruleRole )
+            // InternalSmallUmlParser.g:3092:3: ruleRole
             {
-             before(grammarAccess.getCompositionAccess().getSourceRoleCrossReference_2_0()); 
-            // InternalSmallUmlParser.g:3093:3: ( ruleEString )
-            // InternalSmallUmlParser.g:3094:4: ruleEString
-            {
-             before(grammarAccess.getCompositionAccess().getSourceRoleEStringParserRuleCall_2_0_1()); 
+             before(grammarAccess.getCompositionAccess().getSourceRoleParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
-            ruleEString();
+            ruleRole();
 
             state._fsp--;
 
-             after(grammarAccess.getCompositionAccess().getSourceRoleEStringParserRuleCall_2_0_1()); 
-
-            }
-
-             after(grammarAccess.getCompositionAccess().getSourceRoleCrossReference_2_0()); 
+             after(grammarAccess.getCompositionAccess().getSourceRoleParserRuleCall_1_0()); 
 
             }
 
@@ -9219,37 +9221,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Composition__SourceAssignment_2"
+    // $ANTLR end "rule__Composition__SourceAssignment_1"
 
 
-    // $ANTLR start "rule__Composition__TargetAssignment_4"
-    // InternalSmallUmlParser.g:3105:1: rule__Composition__TargetAssignment_4 : ( ( ruleEString ) ) ;
-    public final void rule__Composition__TargetAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Composition__TargetAssignment_3"
+    // InternalSmallUmlParser.g:3101:1: rule__Composition__TargetAssignment_3 : ( ruleRole ) ;
+    public final void rule__Composition__TargetAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3109:1: ( ( ( ruleEString ) ) )
-            // InternalSmallUmlParser.g:3110:2: ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:3105:1: ( ( ruleRole ) )
+            // InternalSmallUmlParser.g:3106:2: ( ruleRole )
             {
-            // InternalSmallUmlParser.g:3110:2: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:3111:3: ( ruleEString )
+            // InternalSmallUmlParser.g:3106:2: ( ruleRole )
+            // InternalSmallUmlParser.g:3107:3: ruleRole
             {
-             before(grammarAccess.getCompositionAccess().getTargetRoleCrossReference_4_0()); 
-            // InternalSmallUmlParser.g:3112:3: ( ruleEString )
-            // InternalSmallUmlParser.g:3113:4: ruleEString
-            {
-             before(grammarAccess.getCompositionAccess().getTargetRoleEStringParserRuleCall_4_0_1()); 
+             before(grammarAccess.getCompositionAccess().getTargetRoleParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
-            ruleEString();
+            ruleRole();
 
             state._fsp--;
 
-             after(grammarAccess.getCompositionAccess().getTargetRoleEStringParserRuleCall_4_0_1()); 
-
-            }
-
-             after(grammarAccess.getCompositionAccess().getTargetRoleCrossReference_4_0()); 
+             after(grammarAccess.getCompositionAccess().getTargetRoleParserRuleCall_3_0()); 
 
             }
 
@@ -9268,29 +9262,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Composition__TargetAssignment_4"
+    // $ANTLR end "rule__Composition__TargetAssignment_3"
 
 
-    // $ANTLR start "rule__Reference__NameAssignment_0"
-    // InternalSmallUmlParser.g:3124:1: rule__Reference__NameAssignment_0 : ( ruleEString ) ;
-    public final void rule__Reference__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Reference__NameAssignment_0_0"
+    // InternalSmallUmlParser.g:3116:1: rule__Reference__NameAssignment_0_0 : ( ruleEString ) ;
+    public final void rule__Reference__NameAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3128:1: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:3129:2: ( ruleEString )
+            // InternalSmallUmlParser.g:3120:1: ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:3121:2: ( ruleEString )
             {
-            // InternalSmallUmlParser.g:3129:2: ( ruleEString )
-            // InternalSmallUmlParser.g:3130:3: ruleEString
+            // InternalSmallUmlParser.g:3121:2: ( ruleEString )
+            // InternalSmallUmlParser.g:3122:3: ruleEString
             {
-             before(grammarAccess.getReferenceAccess().getNameEStringParserRuleCall_0_0()); 
+             before(grammarAccess.getReferenceAccess().getNameEStringParserRuleCall_0_0_0()); 
             pushFollow(FOLLOW_2);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getReferenceAccess().getNameEStringParserRuleCall_0_0()); 
+             after(grammarAccess.getReferenceAccess().getNameEStringParserRuleCall_0_0_0()); 
 
             }
 
@@ -9309,37 +9303,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Reference__NameAssignment_0"
+    // $ANTLR end "rule__Reference__NameAssignment_0_0"
 
 
-    // $ANTLR start "rule__Reference__SourceAssignment_2"
-    // InternalSmallUmlParser.g:3139:1: rule__Reference__SourceAssignment_2 : ( ( ruleEString ) ) ;
-    public final void rule__Reference__SourceAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Reference__SourceAssignment_1"
+    // InternalSmallUmlParser.g:3131:1: rule__Reference__SourceAssignment_1 : ( ruleRole ) ;
+    public final void rule__Reference__SourceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3143:1: ( ( ( ruleEString ) ) )
-            // InternalSmallUmlParser.g:3144:2: ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:3135:1: ( ( ruleRole ) )
+            // InternalSmallUmlParser.g:3136:2: ( ruleRole )
             {
-            // InternalSmallUmlParser.g:3144:2: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:3145:3: ( ruleEString )
+            // InternalSmallUmlParser.g:3136:2: ( ruleRole )
+            // InternalSmallUmlParser.g:3137:3: ruleRole
             {
-             before(grammarAccess.getReferenceAccess().getSourceRoleCrossReference_2_0()); 
-            // InternalSmallUmlParser.g:3146:3: ( ruleEString )
-            // InternalSmallUmlParser.g:3147:4: ruleEString
-            {
-             before(grammarAccess.getReferenceAccess().getSourceRoleEStringParserRuleCall_2_0_1()); 
+             before(grammarAccess.getReferenceAccess().getSourceRoleParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
-            ruleEString();
+            ruleRole();
 
             state._fsp--;
 
-             after(grammarAccess.getReferenceAccess().getSourceRoleEStringParserRuleCall_2_0_1()); 
-
-            }
-
-             after(grammarAccess.getReferenceAccess().getSourceRoleCrossReference_2_0()); 
+             after(grammarAccess.getReferenceAccess().getSourceRoleParserRuleCall_1_0()); 
 
             }
 
@@ -9358,37 +9344,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Reference__SourceAssignment_2"
+    // $ANTLR end "rule__Reference__SourceAssignment_1"
 
 
-    // $ANTLR start "rule__Reference__TargetAssignment_4"
-    // InternalSmallUmlParser.g:3158:1: rule__Reference__TargetAssignment_4 : ( ( ruleEString ) ) ;
-    public final void rule__Reference__TargetAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Reference__TargetAssignment_3"
+    // InternalSmallUmlParser.g:3146:1: rule__Reference__TargetAssignment_3 : ( ruleRole ) ;
+    public final void rule__Reference__TargetAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3162:1: ( ( ( ruleEString ) ) )
-            // InternalSmallUmlParser.g:3163:2: ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:3150:1: ( ( ruleRole ) )
+            // InternalSmallUmlParser.g:3151:2: ( ruleRole )
             {
-            // InternalSmallUmlParser.g:3163:2: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:3164:3: ( ruleEString )
+            // InternalSmallUmlParser.g:3151:2: ( ruleRole )
+            // InternalSmallUmlParser.g:3152:3: ruleRole
             {
-             before(grammarAccess.getReferenceAccess().getTargetRoleCrossReference_4_0()); 
-            // InternalSmallUmlParser.g:3165:3: ( ruleEString )
-            // InternalSmallUmlParser.g:3166:4: ruleEString
-            {
-             before(grammarAccess.getReferenceAccess().getTargetRoleEStringParserRuleCall_4_0_1()); 
+             before(grammarAccess.getReferenceAccess().getTargetRoleParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
-            ruleEString();
+            ruleRole();
 
             state._fsp--;
 
-             after(grammarAccess.getReferenceAccess().getTargetRoleEStringParserRuleCall_4_0_1()); 
-
-            }
-
-             after(grammarAccess.getReferenceAccess().getTargetRoleCrossReference_4_0()); 
+             after(grammarAccess.getReferenceAccess().getTargetRoleParserRuleCall_3_0()); 
 
             }
 
@@ -9407,29 +9385,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Reference__TargetAssignment_4"
+    // $ANTLR end "rule__Reference__TargetAssignment_3"
 
 
-    // $ANTLR start "rule__Role__NameAssignment_1"
-    // InternalSmallUmlParser.g:3177:1: rule__Role__NameAssignment_1 : ( ruleEString ) ;
-    public final void rule__Role__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Role__NameAssignment_0"
+    // InternalSmallUmlParser.g:3161:1: rule__Role__NameAssignment_0 : ( ruleEString ) ;
+    public final void rule__Role__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3181:1: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:3182:2: ( ruleEString )
+            // InternalSmallUmlParser.g:3165:1: ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:3166:2: ( ruleEString )
             {
-            // InternalSmallUmlParser.g:3182:2: ( ruleEString )
-            // InternalSmallUmlParser.g:3183:3: ruleEString
+            // InternalSmallUmlParser.g:3166:2: ( ruleEString )
+            // InternalSmallUmlParser.g:3167:3: ruleEString
             {
-             before(grammarAccess.getRoleAccess().getNameEStringParserRuleCall_1_0()); 
+             before(grammarAccess.getRoleAccess().getNameEStringParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getRoleAccess().getNameEStringParserRuleCall_1_0()); 
+             after(grammarAccess.getRoleAccess().getNameEStringParserRuleCall_0_0()); 
 
             }
 
@@ -9448,37 +9426,37 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__NameAssignment_1"
+    // $ANTLR end "rule__Role__NameAssignment_0"
 
 
-    // $ANTLR start "rule__Role__ClassAssignment_3"
-    // InternalSmallUmlParser.g:3192:1: rule__Role__ClassAssignment_3 : ( ( ruleEString ) ) ;
-    public final void rule__Role__ClassAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Role__ClassAssignment_2"
+    // InternalSmallUmlParser.g:3176:1: rule__Role__ClassAssignment_2 : ( ( ruleEString ) ) ;
+    public final void rule__Role__ClassAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3196:1: ( ( ( ruleEString ) ) )
-            // InternalSmallUmlParser.g:3197:2: ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:3180:1: ( ( ( ruleEString ) ) )
+            // InternalSmallUmlParser.g:3181:2: ( ( ruleEString ) )
             {
-            // InternalSmallUmlParser.g:3197:2: ( ( ruleEString ) )
-            // InternalSmallUmlParser.g:3198:3: ( ruleEString )
+            // InternalSmallUmlParser.g:3181:2: ( ( ruleEString ) )
+            // InternalSmallUmlParser.g:3182:3: ( ruleEString )
             {
-             before(grammarAccess.getRoleAccess().getClassClassCrossReference_3_0()); 
-            // InternalSmallUmlParser.g:3199:3: ( ruleEString )
-            // InternalSmallUmlParser.g:3200:4: ruleEString
+             before(grammarAccess.getRoleAccess().getClassClassCrossReference_2_0()); 
+            // InternalSmallUmlParser.g:3183:3: ( ruleEString )
+            // InternalSmallUmlParser.g:3184:4: ruleEString
             {
-             before(grammarAccess.getRoleAccess().getClassClassEStringParserRuleCall_3_0_1()); 
+             before(grammarAccess.getRoleAccess().getClassClassEStringParserRuleCall_2_0_1()); 
             pushFollow(FOLLOW_2);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getRoleAccess().getClassClassEStringParserRuleCall_3_0_1()); 
+             after(grammarAccess.getRoleAccess().getClassClassEStringParserRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getRoleAccess().getClassClassCrossReference_3_0()); 
+             after(grammarAccess.getRoleAccess().getClassClassCrossReference_2_0()); 
 
             }
 
@@ -9497,29 +9475,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__ClassAssignment_3"
+    // $ANTLR end "rule__Role__ClassAssignment_2"
 
 
-    // $ANTLR start "rule__Role__LowerBoundAssignment_4_2"
-    // InternalSmallUmlParser.g:3211:1: rule__Role__LowerBoundAssignment_4_2 : ( ruleEInt ) ;
-    public final void rule__Role__LowerBoundAssignment_4_2() throws RecognitionException {
+    // $ANTLR start "rule__Role__LowerBoundAssignment_3_2"
+    // InternalSmallUmlParser.g:3195:1: rule__Role__LowerBoundAssignment_3_2 : ( ruleEInt ) ;
+    public final void rule__Role__LowerBoundAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3215:1: ( ( ruleEInt ) )
-            // InternalSmallUmlParser.g:3216:2: ( ruleEInt )
+            // InternalSmallUmlParser.g:3199:1: ( ( ruleEInt ) )
+            // InternalSmallUmlParser.g:3200:2: ( ruleEInt )
             {
-            // InternalSmallUmlParser.g:3216:2: ( ruleEInt )
-            // InternalSmallUmlParser.g:3217:3: ruleEInt
+            // InternalSmallUmlParser.g:3200:2: ( ruleEInt )
+            // InternalSmallUmlParser.g:3201:3: ruleEInt
             {
-             before(grammarAccess.getRoleAccess().getLowerBoundEIntParserRuleCall_4_2_0()); 
+             before(grammarAccess.getRoleAccess().getLowerBoundEIntParserRuleCall_3_2_0()); 
             pushFollow(FOLLOW_2);
             ruleEInt();
 
             state._fsp--;
 
-             after(grammarAccess.getRoleAccess().getLowerBoundEIntParserRuleCall_4_2_0()); 
+             after(grammarAccess.getRoleAccess().getLowerBoundEIntParserRuleCall_3_2_0()); 
 
             }
 
@@ -9538,29 +9516,29 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__LowerBoundAssignment_4_2"
+    // $ANTLR end "rule__Role__LowerBoundAssignment_3_2"
 
 
-    // $ANTLR start "rule__Role__UpperBoundAssignment_4_4"
-    // InternalSmallUmlParser.g:3226:1: rule__Role__UpperBoundAssignment_4_4 : ( ruleEInt ) ;
-    public final void rule__Role__UpperBoundAssignment_4_4() throws RecognitionException {
+    // $ANTLR start "rule__Role__UpperBoundAssignment_3_4"
+    // InternalSmallUmlParser.g:3210:1: rule__Role__UpperBoundAssignment_3_4 : ( ruleEInt ) ;
+    public final void rule__Role__UpperBoundAssignment_3_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3230:1: ( ( ruleEInt ) )
-            // InternalSmallUmlParser.g:3231:2: ( ruleEInt )
+            // InternalSmallUmlParser.g:3214:1: ( ( ruleEInt ) )
+            // InternalSmallUmlParser.g:3215:2: ( ruleEInt )
             {
-            // InternalSmallUmlParser.g:3231:2: ( ruleEInt )
-            // InternalSmallUmlParser.g:3232:3: ruleEInt
+            // InternalSmallUmlParser.g:3215:2: ( ruleEInt )
+            // InternalSmallUmlParser.g:3216:3: ruleEInt
             {
-             before(grammarAccess.getRoleAccess().getUpperBoundEIntParserRuleCall_4_4_0()); 
+             before(grammarAccess.getRoleAccess().getUpperBoundEIntParserRuleCall_3_4_0()); 
             pushFollow(FOLLOW_2);
             ruleEInt();
 
             state._fsp--;
 
-             after(grammarAccess.getRoleAccess().getUpperBoundEIntParserRuleCall_4_4_0()); 
+             after(grammarAccess.getRoleAccess().getUpperBoundEIntParserRuleCall_3_4_0()); 
 
             }
 
@@ -9579,21 +9557,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Role__UpperBoundAssignment_4_4"
+    // $ANTLR end "rule__Role__UpperBoundAssignment_3_4"
 
 
     // $ANTLR start "rule__Enumeration__ValueAssignment_4"
-    // InternalSmallUmlParser.g:3241:1: rule__Enumeration__ValueAssignment_4 : ( ruleString0 ) ;
+    // InternalSmallUmlParser.g:3225:1: rule__Enumeration__ValueAssignment_4 : ( ruleString0 ) ;
     public final void rule__Enumeration__ValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3245:1: ( ( ruleString0 ) )
-            // InternalSmallUmlParser.g:3246:2: ( ruleString0 )
+            // InternalSmallUmlParser.g:3229:1: ( ( ruleString0 ) )
+            // InternalSmallUmlParser.g:3230:2: ( ruleString0 )
             {
-            // InternalSmallUmlParser.g:3246:2: ( ruleString0 )
-            // InternalSmallUmlParser.g:3247:3: ruleString0
+            // InternalSmallUmlParser.g:3230:2: ( ruleString0 )
+            // InternalSmallUmlParser.g:3231:3: ruleString0
             {
              before(grammarAccess.getEnumerationAccess().getValueString0ParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -9624,17 +9602,17 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Enumeration__ValueAssignment_5_1"
-    // InternalSmallUmlParser.g:3256:1: rule__Enumeration__ValueAssignment_5_1 : ( ruleString0 ) ;
+    // InternalSmallUmlParser.g:3240:1: rule__Enumeration__ValueAssignment_5_1 : ( ruleString0 ) ;
     public final void rule__Enumeration__ValueAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmallUmlParser.g:3260:1: ( ( ruleString0 ) )
-            // InternalSmallUmlParser.g:3261:2: ( ruleString0 )
+            // InternalSmallUmlParser.g:3244:1: ( ( ruleString0 ) )
+            // InternalSmallUmlParser.g:3245:2: ( ruleString0 )
             {
-            // InternalSmallUmlParser.g:3261:2: ( ruleString0 )
-            // InternalSmallUmlParser.g:3262:3: ruleString0
+            // InternalSmallUmlParser.g:3245:2: ( ruleString0 )
+            // InternalSmallUmlParser.g:3246:3: ruleString0
             {
              before(grammarAccess.getEnumerationAccess().getValueString0ParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -9667,38 +9645,63 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
 
 
     protected DFA1 dfa1 = new DFA1(this);
-    static final String dfa_1s = "\22\uffff";
-    static final String dfa_2s = "\1\7\1\uffff\1\34\2\20\1\uffff\1\34\1\uffff\2\20\1\4\2\14\5\uffff";
-    static final String dfa_3s = "\1\36\1\uffff\1\36\2\25\1\uffff\1\36\1\uffff\2\25\1\36\2\15\5\uffff";
-    static final String dfa_4s = "\1\uffff\1\1\3\uffff\1\5\1\uffff\1\10\5\uffff\1\3\1\2\1\4\1\7\1\6";
-    static final String dfa_5s = "\22\uffff}>";
-    static final String[] dfa_6s = {
-            "\1\7\2\uffff\1\1\5\uffff\1\5\1\uffff\1\2\2\uffff\1\6\6\uffff\1\4\1\uffff\1\3",
+    static final String dfa_1s = "\51\uffff";
+    static final String dfa_2s = "\23\uffff\1\30\25\uffff";
+    static final String dfa_3s = "\1\7\1\uffff\1\34\2\20\1\34\1\uffff\2\20\1\4\2\21\2\uffff\2\20\1\34\1\uffff\1\26\1\7\2\21\1\24\3\uffff\1\26\1\14\1\35\1\23\2\24\1\35\1\23\1\35\1\27\1\24\1\21\1\35\1\27\1\21";
+    static final String dfa_4s = "\1\36\1\uffff\1\36\2\25\1\36\1\uffff\2\25\1\36\2\23\2\uffff\2\20\1\36\1\uffff\1\26\1\36\2\23\1\35\3\uffff\1\26\1\15\1\35\1\23\3\35\1\23\1\35\1\27\1\35\1\21\1\35\1\27\1\21";
+    static final String dfa_5s = "\1\uffff\1\1\4\uffff\1\10\5\uffff\1\3\1\2\3\uffff\1\4\5\uffff\1\7\1\5\1\6\17\uffff";
+    static final String dfa_6s = "\51\uffff}>";
+    static final String[] dfa_7s = {
+            "\1\6\2\uffff\1\1\5\uffff\1\5\1\uffff\1\2\11\uffff\1\4\1\uffff\1\3",
             "",
-            "\1\11\1\uffff\1\10",
-            "\1\5\4\uffff\1\12",
-            "\1\5\4\uffff\1\12",
+            "\1\10\1\uffff\1\7",
+            "\1\5\4\uffff\1\11",
+            "\1\5\4\uffff\1\11",
+            "\1\13\1\uffff\1\12",
             "",
-            "\1\14\1\uffff\1\13",
-            "",
-            "\1\15\4\uffff\1\16",
-            "\1\15\4\uffff\1\16",
-            "\3\17\2\uffff\1\17\4\uffff\2\17\14\uffff\1\14\1\uffff\1\13",
-            "\1\20\1\21",
-            "\1\20\1\21",
-            "",
-            "",
+            "\1\14\4\uffff\1\15",
+            "\1\14\4\uffff\1\15",
+            "\3\21\2\uffff\1\21\4\uffff\2\21\1\20\13\uffff\1\17\1\uffff\1\16",
+            "\1\23\1\uffff\1\22",
+            "\1\23\1\uffff\1\22",
             "",
             "",
-            ""
+            "\1\20",
+            "\1\20",
+            "\1\25\1\uffff\1\24",
+            "",
+            "\1\26",
+            "\1\30\2\uffff\1\30\1\uffff\1\27\1\31\2\uffff\1\30\1\uffff\1\30\10\uffff\2\30\1\uffff\1\30",
+            "\1\33\1\uffff\1\32",
+            "\1\33\1\uffff\1\32",
+            "\1\34\10\uffff\1\35",
+            "",
+            "",
+            "",
+            "\1\36",
+            "\1\27\1\31",
+            "\1\35",
+            "\1\37",
+            "\1\40\10\uffff\1\41",
+            "\1\42\10\uffff\1\43",
+            "\1\41",
+            "\1\44",
+            "\1\43",
+            "\1\45",
+            "\1\46\10\uffff\1\47",
+            "\1\23",
+            "\1\47",
+            "\1\50",
+            "\1\33"
     };
 
     static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
-    static final char[] dfa_2 = DFA.unpackEncodedStringToUnsignedChars(dfa_2s);
+    static final short[] dfa_2 = DFA.unpackEncodedString(dfa_2s);
     static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
-    static final short[] dfa_4 = DFA.unpackEncodedString(dfa_4s);
+    static final char[] dfa_4 = DFA.unpackEncodedStringToUnsignedChars(dfa_4s);
     static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
-    static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
+    static final short[] dfa_6 = DFA.unpackEncodedString(dfa_6s);
+    static final short[][] dfa_7 = unpackEncodedStringArray(dfa_7s);
 
     class DFA1 extends DFA {
 
@@ -9706,12 +9709,12 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
             this.recognizer = recognizer;
             this.decisionNumber = 1;
             this.eot = dfa_1;
-            this.eof = dfa_1;
-            this.min = dfa_2;
-            this.max = dfa_3;
-            this.accept = dfa_4;
-            this.special = dfa_5;
-            this.transition = dfa_6;
+            this.eof = dfa_2;
+            this.min = dfa_3;
+            this.max = dfa_4;
+            this.accept = dfa_5;
+            this.special = dfa_6;
+            this.transition = dfa_7;
         }
         public String getDescription() {
             return "526:1: rule__NamedElement__Alternatives : ( ( ruleClass ) | ( ruleAttribute ) | ( ruleMethod ) | ( ruleParameter ) | ( ruleRole ) | ( ruleComposition ) | ( ruleReference ) | ( rulePackage ) );";
@@ -9724,11 +9727,11 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000080L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000050000000L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000058250480L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000050250482L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000058050480L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000050050482L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000001000100L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x000000000E040000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000004000100L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000008040000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000040002L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000000000000C270L});
@@ -9737,22 +9740,21 @@ public class InternalSmallUmlParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000050020000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000050200000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000050010000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000050010000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x00000000000A0000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000020100000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000002080000L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x00000000000A0000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020100000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000002080000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000002000000L});
 
 }

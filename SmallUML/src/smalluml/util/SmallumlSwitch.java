@@ -172,6 +172,7 @@ public class SmallumlSwitch<T> extends Switch<T> {
 				Enumeration enumeration = (Enumeration)theEObject;
 				T result = caseEnumeration(enumeration);
 				if (result == null) result = caseType(enumeration);
+				if (result == null) result = caseNamedElement(enumeration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

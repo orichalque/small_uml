@@ -141,7 +141,7 @@ public class SmallUmlSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Composition returns Composition
 	 *
 	 * Constraint:
-	 *     (name=EString? source=[Role|EString] target=[Role|EString])
+	 *     (name=EString? source=Role target=Role)
 	 */
 	protected void sequence_Composition(ISerializationContext context, Composition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -241,7 +241,7 @@ public class SmallUmlSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Reference returns Reference
 	 *
 	 * Constraint:
-	 *     (name=EString? source=[Role|EString] target=[Role|EString])
+	 *     (name=EString? source=Role target=Role)
 	 */
 	protected void sequence_Reference(ISerializationContext context, Reference semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

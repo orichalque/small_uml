@@ -181,28 +181,23 @@ public class SmallUmlGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cSuperAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final CrossReference cSuperClassCrossReference_3_1_0 = (CrossReference)cSuperAssignment_3_1.eContents().get(0);
 		private final RuleCall cSuperClassEStringParserRuleCall_3_1_0_1 = (RuleCall)cSuperClassCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final RuleCall cBEGINTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
-		private final Assignment cMethodAssignment_6_0 = (Assignment)cAlternatives_6.eContents().get(0);
-		private final RuleCall cMethodMethodParserRuleCall_6_0_0 = (RuleCall)cMethodAssignment_6_0.eContents().get(0);
-		private final Assignment cAttributeAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
-		private final RuleCall cAttributeAttributeParserRuleCall_6_1_0 = (RuleCall)cAttributeAssignment_6_1.eContents().get(0);
-		private final RuleCall cENDTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final RuleCall cBEGINTerminalRuleCall_4_0 = (RuleCall)cGroup_4.eContents().get(0);
+		private final Alternatives cAlternatives_4_1 = (Alternatives)cGroup_4.eContents().get(1);
+		private final Assignment cMethodAssignment_4_1_0 = (Assignment)cAlternatives_4_1.eContents().get(0);
+		private final RuleCall cMethodMethodParserRuleCall_4_1_0_0 = (RuleCall)cMethodAssignment_4_1_0.eContents().get(0);
+		private final Assignment cAttributeAssignment_4_1_1 = (Assignment)cAlternatives_4_1.eContents().get(1);
+		private final RuleCall cAttributeAttributeParserRuleCall_4_1_1_0 = (RuleCall)cAttributeAssignment_4_1_1.eContents().get(0);
+		private final RuleCall cENDTerminalRuleCall_4_2 = (RuleCall)cGroup_4.eContents().get(2);
 		
 		//Class:
 		//	{Class}
 		//	'Class'
-		//	name=EString ('extends' super=[Class|EString])?
-		//	'{'
-		//	BEGIN? (method+=Method | attribute+=Attribute)*
-		//	END?
-		//	'}';
+		//	name=EString ('extends' super=[Class|EString])? (BEGIN (method+=Method | attribute+=Attribute)*
+		//	END)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Class} 'Class' name=EString ('extends' super=[Class|EString])? '{' BEGIN? (method+=Method | attribute+=Attribute)* END?
-		//'}'
+		//{Class} 'Class' name=EString ('extends' super=[Class|EString])? (BEGIN (method+=Method | attribute+=Attribute)* END)?
 		public Group getGroup() { return cGroup; }
 		
 		//{Class}
@@ -232,32 +227,29 @@ public class SmallUmlGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getSuperClassEStringParserRuleCall_3_1_0_1() { return cSuperClassEStringParserRuleCall_3_1_0_1; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
+		//(BEGIN (method+=Method | attribute+=Attribute)* END)?
+		public Group getGroup_4() { return cGroup_4; }
 		
-		//BEGIN?
-		public RuleCall getBEGINTerminalRuleCall_5() { return cBEGINTerminalRuleCall_5; }
+		//BEGIN
+		public RuleCall getBEGINTerminalRuleCall_4_0() { return cBEGINTerminalRuleCall_4_0; }
 		
 		//(method+=Method | attribute+=Attribute)*
-		public Alternatives getAlternatives_6() { return cAlternatives_6; }
+		public Alternatives getAlternatives_4_1() { return cAlternatives_4_1; }
 		
 		//method+=Method
-		public Assignment getMethodAssignment_6_0() { return cMethodAssignment_6_0; }
+		public Assignment getMethodAssignment_4_1_0() { return cMethodAssignment_4_1_0; }
 		
 		//Method
-		public RuleCall getMethodMethodParserRuleCall_6_0_0() { return cMethodMethodParserRuleCall_6_0_0; }
+		public RuleCall getMethodMethodParserRuleCall_4_1_0_0() { return cMethodMethodParserRuleCall_4_1_0_0; }
 		
 		//attribute+=Attribute
-		public Assignment getAttributeAssignment_6_1() { return cAttributeAssignment_6_1; }
+		public Assignment getAttributeAssignment_4_1_1() { return cAttributeAssignment_4_1_1; }
 		
 		//Attribute
-		public RuleCall getAttributeAttributeParserRuleCall_6_1_0() { return cAttributeAttributeParserRuleCall_6_1_0; }
+		public RuleCall getAttributeAttributeParserRuleCall_4_1_1_0() { return cAttributeAttributeParserRuleCall_4_1_1_0; }
 		
-		//END?
-		public RuleCall getENDTerminalRuleCall_7() { return cENDTerminalRuleCall_7; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		//END
+		public RuleCall getENDTerminalRuleCall_4_2() { return cENDTerminalRuleCall_4_2; }
 	}
 	public class AttributeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.smalluml.SmallUml.Attribute");
@@ -409,73 +401,123 @@ public class SmallUmlGrammarAccess extends AbstractGrammarElementFinder {
 	public class CompositionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.smalluml.SmallUml.Composition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSourceAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cSourceRoleCrossReference_2_0 = (CrossReference)cSourceAssignment_2.eContents().get(0);
-		private final RuleCall cSourceRoleEStringParserRuleCall_2_0_1 = (RuleCall)cSourceRoleCrossReference_2_0.eContents().get(1);
-		private final Keyword cLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTargetAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cTargetRoleCrossReference_4_0 = (CrossReference)cTargetAssignment_4.eContents().get(0);
-		private final RuleCall cTargetRoleEStringParserRuleCall_4_0_1 = (RuleCall)cTargetRoleCrossReference_4_0.eContents().get(1);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cNameEStringParserRuleCall_0_0_0 = (RuleCall)cNameAssignment_0_0.eContents().get(0);
+		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Assignment cSourceAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSourceRoleParserRuleCall_1_0 = (RuleCall)cSourceAssignment_1.eContents().get(0);
+		private final Keyword cLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTargetAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTargetRoleParserRuleCall_3_0 = (RuleCall)cTargetAssignment_3.eContents().get(0);
 		
 		//Composition:
-		//	name=EString? ':' source=[Role|EString] '<>--' target=[Role|EString];
+		//	(name=EString ':')? source=Role '<>--' target=Role;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name=EString? ':' source=[Role|EString] '<>--' target=[Role|EString]
+		//(name=EString ':')? source=Role '<>--' target=Role
 		public Group getGroup() { return cGroup; }
 		
-		//name=EString?
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		//(name=EString ':')?
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//name=EString
+		public Assignment getNameAssignment_0_0() { return cNameAssignment_0_0; }
 		
 		//EString
-		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
+		public RuleCall getNameEStringParserRuleCall_0_0_0() { return cNameEStringParserRuleCall_0_0_0; }
 		
 		//':'
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
 		
-		//source=[Role|EString]
-		public Assignment getSourceAssignment_2() { return cSourceAssignment_2; }
+		//source=Role
+		public Assignment getSourceAssignment_1() { return cSourceAssignment_1; }
 		
-		//[Role|EString]
-		public CrossReference getSourceRoleCrossReference_2_0() { return cSourceRoleCrossReference_2_0; }
-		
-		//EString
-		public RuleCall getSourceRoleEStringParserRuleCall_2_0_1() { return cSourceRoleEStringParserRuleCall_2_0_1; }
+		//Role
+		public RuleCall getSourceRoleParserRuleCall_1_0() { return cSourceRoleParserRuleCall_1_0; }
 		
 		//'<>--'
-		public Keyword getLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_3() { return cLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_3; }
+		public Keyword getLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_2() { return cLessThanSignGreaterThanSignHyphenMinusHyphenMinusKeyword_2; }
 		
-		//target=[Role|EString]
-		public Assignment getTargetAssignment_4() { return cTargetAssignment_4; }
+		//target=Role
+		public Assignment getTargetAssignment_3() { return cTargetAssignment_3; }
 		
-		//[Role|EString]
-		public CrossReference getTargetRoleCrossReference_4_0() { return cTargetRoleCrossReference_4_0; }
-		
-		//EString
-		public RuleCall getTargetRoleEStringParserRuleCall_4_0_1() { return cTargetRoleEStringParserRuleCall_4_0_1; }
+		//Role
+		public RuleCall getTargetRoleParserRuleCall_3_0() { return cTargetRoleParserRuleCall_3_0; }
 	}
 	public class ReferenceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.smalluml.SmallUml.Reference");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSourceAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cSourceRoleCrossReference_2_0 = (CrossReference)cSourceAssignment_2.eContents().get(0);
-		private final RuleCall cSourceRoleEStringParserRuleCall_2_0_1 = (RuleCall)cSourceRoleCrossReference_2_0.eContents().get(1);
-		private final Keyword cHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTargetAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cTargetRoleCrossReference_4_0 = (CrossReference)cTargetAssignment_4.eContents().get(0);
-		private final RuleCall cTargetRoleEStringParserRuleCall_4_0_1 = (RuleCall)cTargetRoleCrossReference_4_0.eContents().get(1);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cNameEStringParserRuleCall_0_0_0 = (RuleCall)cNameAssignment_0_0.eContents().get(0);
+		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Assignment cSourceAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSourceRoleParserRuleCall_1_0 = (RuleCall)cSourceAssignment_1.eContents().get(0);
+		private final Keyword cHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTargetAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTargetRoleParserRuleCall_3_0 = (RuleCall)cTargetAssignment_3.eContents().get(0);
 		
 		//Reference:
-		//	name=EString? ':' source=[Role|EString] '--->' target=[Role|EString];
+		//	(name=EString ':')? source=Role '--->' target=Role;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name=EString? ':' source=[Role|EString] '--->' target=[Role|EString]
+		//(name=EString ':')? source=Role '--->' target=Role
+		public Group getGroup() { return cGroup; }
+		
+		//(name=EString ':')?
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//name=EString
+		public Assignment getNameAssignment_0_0() { return cNameAssignment_0_0; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_0_0_0() { return cNameEStringParserRuleCall_0_0_0; }
+		
+		//':'
+		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
+		
+		//source=Role
+		public Assignment getSourceAssignment_1() { return cSourceAssignment_1; }
+		
+		//Role
+		public RuleCall getSourceRoleParserRuleCall_1_0() { return cSourceRoleParserRuleCall_1_0; }
+		
+		//'--->'
+		public Keyword getHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_2() { return cHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_2; }
+		
+		//target=Role
+		public Assignment getTargetAssignment_3() { return cTargetAssignment_3; }
+		
+		//Role
+		public RuleCall getTargetRoleParserRuleCall_3_0() { return cTargetRoleParserRuleCall_3_0; }
+	}
+	public class RoleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.smalluml.SmallUml.Role");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cClassAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cClassClassCrossReference_2_0 = (CrossReference)cClassAssignment_2.eContents().get(0);
+		private final RuleCall cClassClassEStringParserRuleCall_2_0_1 = (RuleCall)cClassClassCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cLowerBoundAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cLowerBoundEIntParserRuleCall_3_2_0 = (RuleCall)cLowerBoundAssignment_3_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Assignment cUpperBoundAssignment_3_4 = (Assignment)cGroup_3.eContents().get(4);
+		private final RuleCall cUpperBoundEIntParserRuleCall_3_4_0 = (RuleCall)cUpperBoundAssignment_3_4.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_3_5 = (Keyword)cGroup_3.eContents().get(5);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//Role:
+		//	name=EString? '(' class=[Class|EString] (',' '[' lowerBound=EInt ',' upperBound=EInt ']')?
+		//	')';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name=EString? '(' class=[Class|EString] (',' '[' lowerBound=EInt ',' upperBound=EInt ']')? ')'
 		public Group getGroup() { return cGroup; }
 		
 		//name=EString?
@@ -484,108 +526,47 @@ public class SmallUmlGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
 		
-		//':'
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
-		
-		//source=[Role|EString]
-		public Assignment getSourceAssignment_2() { return cSourceAssignment_2; }
-		
-		//[Role|EString]
-		public CrossReference getSourceRoleCrossReference_2_0() { return cSourceRoleCrossReference_2_0; }
-		
-		//EString
-		public RuleCall getSourceRoleEStringParserRuleCall_2_0_1() { return cSourceRoleEStringParserRuleCall_2_0_1; }
-		
-		//'--->'
-		public Keyword getHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_3() { return cHyphenMinusHyphenMinusHyphenMinusGreaterThanSignKeyword_3; }
-		
-		//target=[Role|EString]
-		public Assignment getTargetAssignment_4() { return cTargetAssignment_4; }
-		
-		//[Role|EString]
-		public CrossReference getTargetRoleCrossReference_4_0() { return cTargetRoleCrossReference_4_0; }
-		
-		//EString
-		public RuleCall getTargetRoleEStringParserRuleCall_4_0_1() { return cTargetRoleEStringParserRuleCall_4_0_1; }
-	}
-	public class RoleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.smalluml.SmallUml.Role");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cRoleAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cClassAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cClassClassCrossReference_3_0 = (CrossReference)cClassAssignment_3.eContents().get(0);
-		private final RuleCall cClassClassEStringParserRuleCall_3_0_1 = (RuleCall)cClassClassCrossReference_3_0.eContents().get(1);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Keyword cLeftSquareBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cLowerBoundAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cLowerBoundEIntParserRuleCall_4_2_0 = (RuleCall)cLowerBoundAssignment_4_2.eContents().get(0);
-		private final Keyword cCommaKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
-		private final Assignment cUpperBoundAssignment_4_4 = (Assignment)cGroup_4.eContents().get(4);
-		private final RuleCall cUpperBoundEIntParserRuleCall_4_4_0 = (RuleCall)cUpperBoundAssignment_4_4.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_4_5 = (Keyword)cGroup_4.eContents().get(5);
-		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//Role:
-		//	{Role} name=EString? '(' class=[Class|EString] (',' '[' lowerBound=EInt ',' upperBound=EInt ']')? ')';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{Role} name=EString? '(' class=[Class|EString] (',' '[' lowerBound=EInt ',' upperBound=EInt ']')? ')'
-		public Group getGroup() { return cGroup; }
-		
-		//{Role}
-		public Action getRoleAction_0() { return cRoleAction_0; }
-		
-		//name=EString?
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
-		//EString
-		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
-		
 		//'('
-		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 		
 		//class=[Class|EString]
-		public Assignment getClassAssignment_3() { return cClassAssignment_3; }
+		public Assignment getClassAssignment_2() { return cClassAssignment_2; }
 		
 		//[Class|EString]
-		public CrossReference getClassClassCrossReference_3_0() { return cClassClassCrossReference_3_0; }
+		public CrossReference getClassClassCrossReference_2_0() { return cClassClassCrossReference_2_0; }
 		
 		//EString
-		public RuleCall getClassClassEStringParserRuleCall_3_0_1() { return cClassClassEStringParserRuleCall_3_0_1; }
+		public RuleCall getClassClassEStringParserRuleCall_2_0_1() { return cClassClassEStringParserRuleCall_2_0_1; }
 		
 		//(',' '[' lowerBound=EInt ',' upperBound=EInt ']')?
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//','
-		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 		
 		//'['
-		public Keyword getLeftSquareBracketKeyword_4_1() { return cLeftSquareBracketKeyword_4_1; }
+		public Keyword getLeftSquareBracketKeyword_3_1() { return cLeftSquareBracketKeyword_3_1; }
 		
 		//lowerBound=EInt
-		public Assignment getLowerBoundAssignment_4_2() { return cLowerBoundAssignment_4_2; }
+		public Assignment getLowerBoundAssignment_3_2() { return cLowerBoundAssignment_3_2; }
 		
 		//EInt
-		public RuleCall getLowerBoundEIntParserRuleCall_4_2_0() { return cLowerBoundEIntParserRuleCall_4_2_0; }
+		public RuleCall getLowerBoundEIntParserRuleCall_3_2_0() { return cLowerBoundEIntParserRuleCall_3_2_0; }
 		
 		//','
-		public Keyword getCommaKeyword_4_3() { return cCommaKeyword_4_3; }
+		public Keyword getCommaKeyword_3_3() { return cCommaKeyword_3_3; }
 		
 		//upperBound=EInt
-		public Assignment getUpperBoundAssignment_4_4() { return cUpperBoundAssignment_4_4; }
+		public Assignment getUpperBoundAssignment_3_4() { return cUpperBoundAssignment_3_4; }
 		
 		//EInt
-		public RuleCall getUpperBoundEIntParserRuleCall_4_4_0() { return cUpperBoundEIntParserRuleCall_4_4_0; }
+		public RuleCall getUpperBoundEIntParserRuleCall_3_4_0() { return cUpperBoundEIntParserRuleCall_3_4_0; }
 		
 		//']'
-		public Keyword getRightSquareBracketKeyword_4_5() { return cRightSquareBracketKeyword_4_5; }
+		public Keyword getRightSquareBracketKeyword_3_5() { return cRightSquareBracketKeyword_3_5; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 	public class String0Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.smalluml.SmallUml.String0");
@@ -897,11 +878,8 @@ public class SmallUmlGrammarAccess extends AbstractGrammarElementFinder {
 	//Class:
 	//	{Class}
 	//	'Class'
-	//	name=EString ('extends' super=[Class|EString])?
-	//	'{'
-	//	BEGIN? (method+=Method | attribute+=Attribute)*
-	//	END?
-	//	'}';
+	//	name=EString ('extends' super=[Class|EString])? (BEGIN (method+=Method | attribute+=Attribute)*
+	//	END)?;
 	public ClassElements getClassAccess() {
 		return pClass;
 	}
@@ -943,7 +921,7 @@ public class SmallUmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Composition:
-	//	name=EString? ':' source=[Role|EString] '<>--' target=[Role|EString];
+	//	(name=EString ':')? source=Role '<>--' target=Role;
 	public CompositionElements getCompositionAccess() {
 		return pComposition;
 	}
@@ -953,7 +931,7 @@ public class SmallUmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Reference:
-	//	name=EString? ':' source=[Role|EString] '--->' target=[Role|EString];
+	//	(name=EString ':')? source=Role '--->' target=Role;
 	public ReferenceElements getReferenceAccess() {
 		return pReference;
 	}
@@ -963,7 +941,8 @@ public class SmallUmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Role:
-	//	{Role} name=EString? '(' class=[Class|EString] (',' '[' lowerBound=EInt ',' upperBound=EInt ']')? ')';
+	//	name=EString? '(' class=[Class|EString] (',' '[' lowerBound=EInt ',' upperBound=EInt ']')?
+	//	')';
 	public RoleElements getRoleAccess() {
 		return pRole;
 	}

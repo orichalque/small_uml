@@ -605,13 +605,22 @@ public interface SmallumlPackage extends EPackage {
 	int ENUMERATION = 13;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__NAME = TYPE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENUMERATION__VALUE = TYPE_FEATURE_COUNT + 0;
+	int ENUMERATION__VALUE = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Enumeration</em>' class.
@@ -620,7 +629,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUMERATION_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+	int ENUMERATION_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Enumeration</em>' class.

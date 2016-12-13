@@ -10,6 +10,7 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -20,14 +21,12 @@ import org.smalluml.services.SmallUmlGrammarAccess;
 public class SmallUmlSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected SmallUmlGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Class_BEGINTerminalRuleCall_5_q;
-	protected AbstractElementAlias match_Class_ENDTerminalRuleCall_7_q;
+	protected AbstractElementAlias match_Class___BEGINTerminalRuleCall_4_0_ENDTerminalRuleCall_4_2__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (SmallUmlGrammarAccess) access;
-		match_Class_BEGINTerminalRuleCall_5_q = new TokenAlias(false, true, grammarAccess.getClassAccess().getBEGINTerminalRuleCall_5());
-		match_Class_ENDTerminalRuleCall_7_q = new TokenAlias(false, true, grammarAccess.getClassAccess().getENDTerminalRuleCall_7());
+		match_Class___BEGINTerminalRuleCall_4_0_ENDTerminalRuleCall_4_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getClassAccess().getBEGINTerminalRuleCall_4_0()), new TokenAlias(false, false, grammarAccess.getClassAccess().getENDTerminalRuleCall_4_2()));
 	}
 	
 	@Override
@@ -57,41 +56,21 @@ public class SmallUmlSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Class_BEGINTerminalRuleCall_5_q.equals(syntax))
-				emit_Class_BEGINTerminalRuleCall_5_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Class_ENDTerminalRuleCall_7_q.equals(syntax))
-				emit_Class_ENDTerminalRuleCall_7_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Class___BEGINTerminalRuleCall_4_0_ENDTerminalRuleCall_4_2__q.equals(syntax))
+				emit_Class___BEGINTerminalRuleCall_4_0_ENDTerminalRuleCall_4_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Ambiguous syntax:
-	 *     BEGIN?
+	 *     (BEGIN END)?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=EString '{' (ambiguity) END? '}' (rule end)
-	 *     name=EString '{' (ambiguity) attribute+=Attribute
-	 *     name=EString '{' (ambiguity) method+=Method
-	 *     super=[Class|EString] '{' (ambiguity) END? '}' (rule end)
-	 *     super=[Class|EString] '{' (ambiguity) attribute+=Attribute
-	 *     super=[Class|EString] '{' (ambiguity) method+=Method
+	 *     name=EString (ambiguity) (rule end)
+	 *     super=[Class|EString] (ambiguity) (rule end)
 	 */
-	protected void emit_Class_BEGINTerminalRuleCall_5_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     END?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     attribute+=Attribute (ambiguity) '}' (rule end)
-	 *     method+=Method (ambiguity) '}' (rule end)
-	 *     name=EString '{' BEGIN? (ambiguity) '}' (rule end)
-	 *     super=[Class|EString] '{' BEGIN? (ambiguity) '}' (rule end)
-	 */
-	protected void emit_Class_ENDTerminalRuleCall_7_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Class___BEGINTerminalRuleCall_4_0_ENDTerminalRuleCall_4_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

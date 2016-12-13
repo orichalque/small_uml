@@ -2,8 +2,10 @@
  */
 package smalluml.impl;
 
+import java.lang.String;
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,10 +13,12 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import smalluml.Enumeration;
+import smalluml.NamedElement;
 import smalluml.SmallumlPackage;
 
 /**
@@ -25,12 +29,31 @@ import smalluml.SmallumlPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link smalluml.impl.EnumerationImpl#getName <em>Name</em>}</li>
  *   <li>{@link smalluml.impl.EnumerationImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EnumerationImpl extends TypeImpl implements Enumeration {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -58,6 +81,27 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 	@Override
 	protected EClass eStaticClass() {
 		return SmallumlPackage.Literals.ENUMERATION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.ENUMERATION__NAME, oldName, name));
 	}
 
 	/**
@@ -94,6 +138,8 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case SmallumlPackage.ENUMERATION__NAME:
+				return getName();
 			case SmallumlPackage.ENUMERATION__VALUE:
 				return getValue();
 		}
@@ -109,6 +155,9 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case SmallumlPackage.ENUMERATION__NAME:
+				setName((String)newValue);
+				return;
 			case SmallumlPackage.ENUMERATION__VALUE:
 				getValue().clear();
 				getValue().addAll((Collection<? extends smalluml.String>)newValue);
@@ -125,6 +174,9 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case SmallumlPackage.ENUMERATION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case SmallumlPackage.ENUMERATION__VALUE:
 				getValue().clear();
 				return;
@@ -140,10 +192,60 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case SmallumlPackage.ENUMERATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SmallumlPackage.ENUMERATION__VALUE:
 				return value != null && !value.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == NamedElement.class) {
+			switch (derivedFeatureID) {
+				case SmallumlPackage.ENUMERATION__NAME: return SmallumlPackage.NAMED_ELEMENT__NAME;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == NamedElement.class) {
+			switch (baseFeatureID) {
+				case SmallumlPackage.NAMED_ELEMENT__NAME: return SmallumlPackage.ENUMERATION__NAME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //EnumerationImpl

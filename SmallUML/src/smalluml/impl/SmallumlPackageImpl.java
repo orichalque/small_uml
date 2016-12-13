@@ -604,6 +604,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		relationEClass.getESuperTypes().add(this.getNamedElement());
 		roleEClass.getESuperTypes().add(this.getNamedElement());
 		enumerationEClass.getESuperTypes().add(this.getType());
+		enumerationEClass.getESuperTypes().add(this.getNamedElement());
 		compositionEClass.getESuperTypes().add(this.getRelation());
 		referenceEClass.getESuperTypes().add(this.getRelation());
 		packageEClass.getESuperTypes().add(this.getNamedElement());
