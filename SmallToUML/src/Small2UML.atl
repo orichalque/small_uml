@@ -4,14 +4,6 @@
 module Small2UML;
 create OUT : UML from IN : SUML;
 
-lazy rule namedElem{
-	from
-		x : SUML!NamedElement
-	to 
-		y : UML!NamedElement (
-			qualifiedName <- x.name
-		)
-}
 
 --rule abstractType {
 --	from
@@ -20,36 +12,70 @@ lazy rule namedElem{
 --		y : UML!Type ()
 --}
 
+lazy rule transtypage(param){
+	from
+		x : SUML!Bool,
+		x : SUML!"smalluml::String",
+		x : SUML!"smalluml::Real",
+		x : SUML!"smalluml::Integer",
+		x : SUML!"smalluml::Real",
+		x : SUML!UnlimitedNatural
+	to 
+		y : UML!PrimitiveType,
+		(
+				ownedAttribute<- param,
+				if (x.oclIsKindOf(SUML!Bool)) then 
+					name <- 'boolean'
+				else if 
+				
+				
+				endif
+				
+		)
+}
 rule boolean {
 	from
 		x : SUML!Bool
 	to 
-		y : TYPE!"types::Boolean" ()
+		y : UML!PrimitiveType (
+			name <- 'boolean'	
+		)
 }
 
 rule string {
 	from
 		x : SUML!"smalluml::String"
 	to 
-		y : TYPE!"types::String" ()
+		y : UML!PrimitiveType (
+			name <- 'string'	
+		)
 }
+
 rule integer {
 	from
 		x : SUML!"smalluml::Integer"
 	to 
-		y : TYPE!"types::Integer" ()
+		y : UML!PrimitiveType (
+			name <- 'integer'	
+		)
 }
+
 rule real {
 	from
 		x : SUML!"smalluml::Real"
 	to 
-		y : TYPE!"types::Real" ()
+		y : UML!PrimitiveType (
+			name <- 'real'	
+		)
 }
+
 rule unlimitedNatural {
 	from
 		x : SUML!UnlimitedNatural
 	to 
-		y : TYPE!UnlimitedNatural ()
+		y : UML!PrimitiveType (
+			name <- 'unlimitedNatural'	
+		)
 }
 
 rule parameter {
@@ -57,7 +83,8 @@ rule parameter {
 		x : SUML!Parameter
 	to 
 		y : UML!Parameter (
-			type <- x.type	
+			name <- x.name,
+			type <- x.type
 		)
 }
 
@@ -65,8 +92,9 @@ rule method {
 	from
 		x : SUML!Method
 	to 
-		y : UML!Operation (
-			type <- x.returnType,
+		y : UML!Operation (			
+			type <- x.returnType,			
+			name <- x.name,
 			ownedParameter <- x.parameter
 		)
 }
@@ -75,7 +103,8 @@ rule attribute {
 		x : SUML!Attribute
 	to 
 		y : UML!Property (
-			type <- x.type
+			name <- x.name,
+			type <- x.type			
 		)
 }
 
@@ -84,12 +113,47 @@ rule class {
 		x : SUML!Class
 	to 
 		y : UML!Class (
-			ownedAttribute <- x.attribute,
+			name <- x.name,
+			ownedAttribute <- x.attribute -> collect(iterator | iterator),
 			ownedOperation <- x.method,
-			extension <- x.super
+			superClass <- x.super
 			-- role ?
 		)
 }
+
+rule composition {
+	from
+		input_name : SUML!Composition
+	to 
+		output_name : UML!Association (
+			name <- input_name.name,
+			memberEnd <- Set{input_name.target},
+			navigableOwnedEnd <- Set{input_name.source}
+		)
+}
+
+rule reference {
+	from
+		input_name : SUML!Reference
+	to 
+		output_name : UML!Dependency (
+			name <- input_name.name,
+			client <- input_name.source,
+			supplier <- input_name.target
+		)
+}
+
+rule role {
+	from
+		input_name : SUML!Role
+	to 
+		output_name : UML!Property (
+			name <- input_name.name,			
+			upper <- input_name.upperBound,
+			lower <- input_name.lowerBound
+		)
+}
+
 
 rule enumeration {
 	from
@@ -106,8 +170,10 @@ rule package {
 	to 
 		output_name : UML!Package (			
 			name <- input_name.name,
-			ownedElement <- input_name.class.union(input_name.relation)	
+			packagedElement <- input_name.member -> select(iterator | iterator.oclIsKindOf(SUML!Class))
 		)
 }
+
+--todo: mettre ownedOperation et OwnedAttribute sur les primitive types et faire ça avec des lazy rules
 --role, relation, ref, compo, package
 

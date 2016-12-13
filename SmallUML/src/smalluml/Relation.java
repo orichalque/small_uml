@@ -13,9 +13,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link smalluml.Relation#getRole <em>Role</em>}</li>
  *   <li>{@link smalluml.Relation#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link smalluml.Relation#getLowerBound <em>Lower Bound</em>}</li>
+ *   <li>{@link smalluml.Relation#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @see smalluml.SmallumlPackage#getRelation()
@@ -36,7 +36,7 @@ public interface Relation extends NamedElement {
 	 * @return the value of the '<em>Role</em>' reference list.
 	 * @see smalluml.SmallumlPackage#getRelation_Role()
 	 * @see smalluml.Role#getRelation
-	 * @model opposite="relation"
+	 * @model opposite="relation" lower="2"
 	 * @generated
 	 */
 	EList<Role> getRole();

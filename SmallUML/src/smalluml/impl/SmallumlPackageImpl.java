@@ -257,15 +257,6 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getClass_Role() {
-		return (EReference)classEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAttribute() {
 		return attributeEClass;
 	}
@@ -393,7 +384,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * @generated
 	 */
 	public EReference getRelation_Role() {
-		return (EReference)relationEClass.getEStructuralFeatures().get(0);
+		return (EReference)relationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -402,7 +393,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * @generated
 	 */
 	public EAttribute getRelation_UpperBound() {
-		return (EAttribute)relationEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)relationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -411,7 +402,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * @generated
 	 */
 	public EAttribute getRelation_LowerBound() {
-		return (EAttribute)relationEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)relationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -428,8 +419,17 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRole_Relation() {
+	public EReference getRole_Class() {
 		return (EReference)roleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRole_Relation() {
+		return (EReference)roleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -482,26 +482,8 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPackage_Class() {
+	public EReference getPackage_Member() {
 		return (EReference)packageEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPackage_Relation() {
-		return (EReference)packageEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPackage_Package() {
-		return (EReference)packageEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -539,7 +521,6 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		createEReference(classEClass, CLASS__METHOD);
 		createEReference(classEClass, CLASS__ATTRIBUTE);
 		createEReference(classEClass, CLASS__SUPER);
-		createEReference(classEClass, CLASS__ROLE);
 
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEReference(attributeEClass, ATTRIBUTE__TYPE);
@@ -564,11 +545,12 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		createEReference(parameterEClass, PARAMETER__TYPE);
 
 		relationEClass = createEClass(RELATION);
-		createEReference(relationEClass, RELATION__ROLE);
 		createEAttribute(relationEClass, RELATION__UPPER_BOUND);
 		createEAttribute(relationEClass, RELATION__LOWER_BOUND);
+		createEReference(relationEClass, RELATION__ROLE);
 
 		roleEClass = createEClass(ROLE);
+		createEReference(roleEClass, ROLE__CLASS);
 		createEReference(roleEClass, ROLE__RELATION);
 
 		enumerationEClass = createEClass(ENUMERATION);
@@ -579,9 +561,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		referenceEClass = createEClass(REFERENCE);
 
 		packageEClass = createEClass(PACKAGE);
-		createEReference(packageEClass, PACKAGE__CLASS);
-		createEReference(packageEClass, PACKAGE__RELATION);
-		createEReference(packageEClass, PACKAGE__PACKAGE);
+		createEReference(packageEClass, PACKAGE__MEMBER);
 	}
 
 	/**
@@ -636,7 +616,6 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		initEReference(getClass_Method(), this.getMethod(), null, "method", null, 0, -1, smalluml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClass_Attribute(), this.getAttribute(), null, "attribute", null, 0, -1, smalluml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClass_Super(), this.getClass_(), null, "super", null, 0, 1, smalluml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClass_Role(), this.getRole(), null, "role", null, 0, -1, smalluml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttribute_Type(), this.getType(), null, "type", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -661,11 +640,12 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		initEReference(getParameter_Type(), this.getType(), null, "type", null, 1, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationEClass, Relation.class, "Relation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRelation_Role(), this.getRole(), this.getRole_Relation(), "role", null, 0, -1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelation_UpperBound(), ecorePackage.getEInt(), "upperBound", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelation_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelation_Role(), this.getRole(), this.getRole_Relation(), "role", null, 2, -1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRole_Class(), this.getClass_(), null, "class", null, 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRole_Relation(), this.getRelation(), this.getRelation_Role(), "relation", null, 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enumerationEClass, Enumeration.class, "Enumeration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -676,9 +656,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(packageEClass, smalluml.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPackage_Class(), this.getClass_(), null, "class", null, 0, -1, smalluml.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPackage_Relation(), this.getRelation(), null, "relation", null, 0, -1, smalluml.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPackage_Package(), this.getPackage(), null, "package", null, 0, -1, smalluml.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPackage_Member(), this.getNamedElement(), null, "member", null, 0, -1, smalluml.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

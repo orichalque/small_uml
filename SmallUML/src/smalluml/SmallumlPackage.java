@@ -141,22 +141,13 @@ public interface SmallumlPackage extends EPackage {
 	int CLASS__SUPER = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Role</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS__ROLE = NAMED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int CLASS_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Class</em>' class.
@@ -504,22 +495,13 @@ public interface SmallumlPackage extends EPackage {
 	int RELATION__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATION__ROLE = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__UPPER_BOUND = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int RELATION__UPPER_BOUND = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
@@ -528,7 +510,16 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__LOWER_BOUND = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int RELATION__LOWER_BOUND = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__ROLE = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Relation</em>' class.
@@ -568,13 +559,22 @@ public interface SmallumlPackage extends EPackage {
 	int ROLE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__CLASS = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Relation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE__RELATION = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int ROLE__RELATION = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Role</em>' class.
@@ -583,7 +583,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int ROLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Role</em>' class.
@@ -651,15 +651,6 @@ public interface SmallumlPackage extends EPackage {
 	int COMPOSITION__NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITION__ROLE = RELATION__ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -676,6 +667,15 @@ public interface SmallumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITION__LOWER_BOUND = RELATION__LOWER_BOUND;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITION__ROLE = RELATION__ROLE;
 
 	/**
 	 * The number of structural features of the '<em>Composition</em>' class.
@@ -715,15 +715,6 @@ public interface SmallumlPackage extends EPackage {
 	int REFERENCE__NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCE__ROLE = RELATION__ROLE;
-
-	/**
 	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -740,6 +731,15 @@ public interface SmallumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int REFERENCE__LOWER_BOUND = RELATION__LOWER_BOUND;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE__ROLE = RELATION__ROLE;
 
 	/**
 	 * The number of structural features of the '<em>Reference</em>' class.
@@ -781,31 +781,13 @@ public interface SmallumlPackage extends EPackage {
 	int PACKAGE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Member</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE__CLASS = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Relation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__RELATION = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Package</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__PACKAGE = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int PACKAGE__MEMBER = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Package</em>' class.
@@ -814,7 +796,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int PACKAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Package</em>' class.
@@ -890,17 +872,6 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getClass_Super();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link smalluml.Class#getRole <em>Role</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Role</em>'.
-	 * @see smalluml.Class#getRole()
-	 * @see #getClass_()
-	 * @generated
-	 */
-	EReference getClass_Role();
 
 	/**
 	 * Returns the meta object for class '{@link smalluml.Attribute <em>Attribute</em>}'.
@@ -1090,6 +1061,17 @@ public interface SmallumlPackage extends EPackage {
 	EClass getRole();
 
 	/**
+	 * Returns the meta object for the reference '{@link smalluml.Role#getClass_ <em>Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Class</em>'.
+	 * @see smalluml.Role#getClass_()
+	 * @see #getRole()
+	 * @generated
+	 */
+	EReference getRole_Class();
+
+	/**
 	 * Returns the meta object for the reference '{@link smalluml.Role#getRelation <em>Relation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1152,37 +1134,15 @@ public interface SmallumlPackage extends EPackage {
 	EClass getPackage();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link smalluml.Package#getClass_ <em>Class</em>}'.
+	 * Returns the meta object for the containment reference list '{@link smalluml.Package#getMember <em>Member</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Class</em>'.
-	 * @see smalluml.Package#getClass_()
+	 * @return the meta object for the containment reference list '<em>Member</em>'.
+	 * @see smalluml.Package#getMember()
 	 * @see #getPackage()
 	 * @generated
 	 */
-	EReference getPackage_Class();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link smalluml.Package#getRelation <em>Relation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Relation</em>'.
-	 * @see smalluml.Package#getRelation()
-	 * @see #getPackage()
-	 * @generated
-	 */
-	EReference getPackage_Relation();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link smalluml.Package#getPackage <em>Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Package</em>'.
-	 * @see smalluml.Package#getPackage()
-	 * @see #getPackage()
-	 * @generated
-	 */
-	EReference getPackage_Package();
+	EReference getPackage_Member();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1258,14 +1218,6 @@ public interface SmallumlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLASS__SUPER = eINSTANCE.getClass_Super();
-
-		/**
-		 * The meta object literal for the '<em><b>Role</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLASS__ROLE = eINSTANCE.getClass_Role();
 
 		/**
 		 * The meta object literal for the '{@link smalluml.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -1434,6 +1386,14 @@ public interface SmallumlPackage extends EPackage {
 		EClass ROLE = eINSTANCE.getRole();
 
 		/**
+		 * The meta object literal for the '<em><b>Class</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROLE__CLASS = eINSTANCE.getRole_Class();
+
+		/**
 		 * The meta object literal for the '<em><b>Relation</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1490,28 +1450,12 @@ public interface SmallumlPackage extends EPackage {
 		EClass PACKAGE = eINSTANCE.getPackage();
 
 		/**
-		 * The meta object literal for the '<em><b>Class</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Member</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__CLASS = eINSTANCE.getPackage_Class();
-
-		/**
-		 * The meta object literal for the '<em><b>Relation</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PACKAGE__RELATION = eINSTANCE.getPackage_Relation();
-
-		/**
-		 * The meta object literal for the '<em><b>Package</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PACKAGE__PACKAGE = eINSTANCE.getPackage_Package();
+		EReference PACKAGE__MEMBER = eINSTANCE.getPackage_Member();
 
 	}
 

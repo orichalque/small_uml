@@ -31,24 +31,14 @@ import smalluml.SmallumlPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link smalluml.impl.RelationImpl#getRole <em>Role</em>}</li>
  *   <li>{@link smalluml.impl.RelationImpl#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link smalluml.impl.RelationImpl#getLowerBound <em>Lower Bound</em>}</li>
+ *   <li>{@link smalluml.impl.RelationImpl#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class RelationImpl extends NamedElementImpl implements Relation {
-	/**
-	 * The cached value of the '{@link #getRole() <em>Role</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Role> role;
-
 	/**
 	 * The default value of the '{@link #getUpperBound() <em>Upper Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -88,6 +78,16 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	 * @ordered
 	 */
 	protected int lowerBound = LOWER_BOUND_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRole() <em>Role</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRole()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Role> role;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -199,12 +199,12 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SmallumlPackage.RELATION__ROLE:
-				return getRole();
 			case SmallumlPackage.RELATION__UPPER_BOUND:
 				return getUpperBound();
 			case SmallumlPackage.RELATION__LOWER_BOUND:
 				return getLowerBound();
+			case SmallumlPackage.RELATION__ROLE:
+				return getRole();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -218,15 +218,15 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SmallumlPackage.RELATION__ROLE:
-				getRole().clear();
-				getRole().addAll((Collection<? extends Role>)newValue);
-				return;
 			case SmallumlPackage.RELATION__UPPER_BOUND:
 				setUpperBound((Integer)newValue);
 				return;
 			case SmallumlPackage.RELATION__LOWER_BOUND:
 				setLowerBound((Integer)newValue);
+				return;
+			case SmallumlPackage.RELATION__ROLE:
+				getRole().clear();
+				getRole().addAll((Collection<? extends Role>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -240,14 +240,14 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SmallumlPackage.RELATION__ROLE:
-				getRole().clear();
-				return;
 			case SmallumlPackage.RELATION__UPPER_BOUND:
 				setUpperBound(UPPER_BOUND_EDEFAULT);
 				return;
 			case SmallumlPackage.RELATION__LOWER_BOUND:
 				setLowerBound(LOWER_BOUND_EDEFAULT);
+				return;
+			case SmallumlPackage.RELATION__ROLE:
+				getRole().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -261,12 +261,12 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SmallumlPackage.RELATION__ROLE:
-				return role != null && !role.isEmpty();
 			case SmallumlPackage.RELATION__UPPER_BOUND:
 				return upperBound != UPPER_BOUND_EDEFAULT;
 			case SmallumlPackage.RELATION__LOWER_BOUND:
 				return lowerBound != LOWER_BOUND_EDEFAULT;
+			case SmallumlPackage.RELATION__ROLE:
+				return role != null && !role.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -22,12 +22,22 @@ import smalluml.SmallumlPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link smalluml.impl.RoleImpl#getClass_ <em>Class</em>}</li>
  *   <li>{@link smalluml.impl.RoleImpl#getRelation <em>Relation</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RoleImpl extends NamedElementImpl implements Role {
+	/**
+	 * The cached value of the '{@link #getClass_() <em>Class</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClass_()
+	 * @generated
+	 * @ordered
+	 */
+	protected smalluml.Class class_;
 	/**
 	 * The cached value of the '{@link #getRelation() <em>Relation</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -55,6 +65,44 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	@Override
 	protected EClass eStaticClass() {
 		return SmallumlPackage.Literals.ROLE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public smalluml.Class getClass_() {
+		if (class_ != null && class_.eIsProxy()) {
+			InternalEObject oldClass = (InternalEObject)class_;
+			class_ = (smalluml.Class)eResolveProxy(oldClass);
+			if (class_ != oldClass) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SmallumlPackage.ROLE__CLASS, oldClass, class_));
+			}
+		}
+		return class_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public smalluml.Class basicGetClass() {
+		return class_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClass(smalluml.Class newClass) {
+		smalluml.Class oldClass = class_;
+		class_ = newClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.ROLE__CLASS, oldClass, class_));
 	}
 
 	/**
@@ -155,6 +203,9 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case SmallumlPackage.ROLE__CLASS:
+				if (resolve) return getClass_();
+				return basicGetClass();
 			case SmallumlPackage.ROLE__RELATION:
 				if (resolve) return getRelation();
 				return basicGetRelation();
@@ -170,6 +221,9 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case SmallumlPackage.ROLE__CLASS:
+				setClass((smalluml.Class)newValue);
+				return;
 			case SmallumlPackage.ROLE__RELATION:
 				setRelation((Relation)newValue);
 				return;
@@ -185,6 +239,9 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case SmallumlPackage.ROLE__CLASS:
+				setClass((smalluml.Class)null);
+				return;
 			case SmallumlPackage.ROLE__RELATION:
 				setRelation((Relation)null);
 				return;
@@ -200,6 +257,8 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case SmallumlPackage.ROLE__CLASS:
+				return class_ != null;
 			case SmallumlPackage.ROLE__RELATION:
 				return relation != null;
 		}

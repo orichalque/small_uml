@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import smalluml.Attribute;
 import smalluml.Method;
-import smalluml.Role;
 import smalluml.SmallumlPackage;
 
 /**
@@ -29,7 +28,6 @@ import smalluml.SmallumlPackage;
  *   <li>{@link smalluml.impl.ClassImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link smalluml.impl.ClassImpl#getAttribute <em>Attribute</em>}</li>
  *   <li>{@link smalluml.impl.ClassImpl#getSuper <em>Super</em>}</li>
- *   <li>{@link smalluml.impl.ClassImpl#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,16 +62,6 @@ public class ClassImpl extends NamedElementImpl implements smalluml.Class {
 	 * @ordered
 	 */
 	protected smalluml.Class super_;
-
-	/**
-	 * The cached value of the '{@link #getRole() <em>Role</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Role> role;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,18 +149,6 @@ public class ClassImpl extends NamedElementImpl implements smalluml.Class {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Role> getRole() {
-		if (role == null) {
-			role = new EObjectContainmentEList<Role>(Role.class, this, SmallumlPackage.CLASS__ROLE);
-		}
-		return role;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -180,8 +156,6 @@ public class ClassImpl extends NamedElementImpl implements smalluml.Class {
 				return ((InternalEList<?>)getMethod()).basicRemove(otherEnd, msgs);
 			case SmallumlPackage.CLASS__ATTRIBUTE:
 				return ((InternalEList<?>)getAttribute()).basicRemove(otherEnd, msgs);
-			case SmallumlPackage.CLASS__ROLE:
-				return ((InternalEList<?>)getRole()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -201,8 +175,6 @@ public class ClassImpl extends NamedElementImpl implements smalluml.Class {
 			case SmallumlPackage.CLASS__SUPER:
 				if (resolve) return getSuper();
 				return basicGetSuper();
-			case SmallumlPackage.CLASS__ROLE:
-				return getRole();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -227,10 +199,6 @@ public class ClassImpl extends NamedElementImpl implements smalluml.Class {
 			case SmallumlPackage.CLASS__SUPER:
 				setSuper((smalluml.Class)newValue);
 				return;
-			case SmallumlPackage.CLASS__ROLE:
-				getRole().clear();
-				getRole().addAll((Collection<? extends Role>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -252,9 +220,6 @@ public class ClassImpl extends NamedElementImpl implements smalluml.Class {
 			case SmallumlPackage.CLASS__SUPER:
 				setSuper((smalluml.Class)null);
 				return;
-			case SmallumlPackage.CLASS__ROLE:
-				getRole().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -273,8 +238,6 @@ public class ClassImpl extends NamedElementImpl implements smalluml.Class {
 				return attribute != null && !attribute.isEmpty();
 			case SmallumlPackage.CLASS__SUPER:
 				return super_ != null;
-			case SmallumlPackage.CLASS__ROLE:
-				return role != null && !role.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

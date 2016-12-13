@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link smalluml.Class#getMethod <em>Method</em>}</li>
  *   <li>{@link smalluml.Class#getAttribute <em>Attribute</em>}</li>
  *   <li>{@link smalluml.Class#getSuper <em>Super</em>}</li>
- *   <li>{@link smalluml.Class#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @see smalluml.SmallumlPackage#getClass_()
@@ -81,21 +80,5 @@ public interface Class extends NamedElement {
 	 * @generated
 	 */
 	void setSuper(Class value);
-
-	/**
-	 * Returns the value of the '<em><b>Role</b></em>' containment reference list.
-	 * The list contents are of type {@link smalluml.Role}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Role</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Role</em>' containment reference list.
-	 * @see smalluml.SmallumlPackage#getClass_Role()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Role> getRole();
 
 } // Class

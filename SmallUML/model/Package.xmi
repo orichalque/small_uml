@@ -6,5 +6,56 @@
     xmlns:smalluml="http://www.univ-nantes.fr/smalluml"
     xsi:schemaLocation="http://www.univ-nantes.fr/smalluml smalluml.ecore"
     name="dennis">
-  <class name="thibault"/>
+  <member xsi:type="smalluml:Class"
+      name="osef"
+      super="//@member.1">
+    <method
+        name="metode">
+      <parameter
+          name="p">
+        <type
+            xsi:type="smalluml:String"/>
+      </parameter>
+      <returnType
+          xsi:type="smalluml:Bool"/>
+    </method>
+    <attribute
+        name="attr">
+      <type
+          xsi:type="smalluml:String"/>
+    </attribute>
+    <attribute
+        name="attr2">
+      <type
+          xsi:type="smalluml:Integer"/>
+    </attribute>
+  </member>
+  <member xsi:type="smalluml:Class"
+      name="dennis">
+    <attribute>
+      <type
+          xsi:type="smalluml:Integer"/>
+    </attribute>
+    <attribute>
+      <type
+          xsi:type="smalluml:Bool"/>
+    </attribute>
+  </member>
+  <member xsi:type="smalluml:Reference"
+      name="utile"
+      source="//@member.3"
+      target="//@member.4"/>
+  <member xsi:type="smalluml:Role"
+      name="dennis"
+      class="//@member.1"
+      upperBound="1"
+      lowerBound="1"/>
+  <member xsi:type="smalluml:Role"
+      name="osef"
+      class="//@member.0"
+      upperBound="-1"/>
+  <member xsi:type="smalluml:Composition"
+      name="possede"
+      source="//@member.3"
+      target="//@member.4"/>
 </smalluml:Package>
