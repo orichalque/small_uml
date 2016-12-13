@@ -5,34 +5,6 @@ module Small2UML;
 create OUT : UML from IN : SUML;
 
 
---rule abstractType {
---	from
---		x : SUML!Type
---	to 
---		y : UML!Type ()
---}
-
-lazy rule transtypage {
-	from
-		x : SUML!Bool,
-		x : SUML!"smalluml::String",
-		x : SUML!"smalluml::Real",
-		x : SUML!"smalluml::Integer",
-		x : SUML!"smalluml::Real",
-		x : SUML!UnlimitedNatural
-	to 
-		y : UML!PrimitiveType,
-		(y
-				ownedAttribute<- param,
-				if (x.oclIsKindOf(SUML!Bool)) then 
-					name <- 'boolean'
-				else if 
-				
-				
-				endif
-				
-		)
-}
 rule boolean {
 	from
 		x : SUML!Bool
@@ -154,15 +126,23 @@ rule role {
 		)
 }
 
+lazy rule realString{
+	from x : String
+	to y : UML!Property(
+		name <- x
+		)
+}
 
 rule enumeration {
 	from
 		x : SUML!Enumeration
 	to 
 		y : UML!Enumeration (
-			ownedLiteral <- x.value
+			name <- x.name,
+			 ownedAttribute <-    x.values->collect(e | thisModule.realString(e))
 		)
 }
+
 
 rule package {
 	from
@@ -173,7 +153,3 @@ rule package {
 			packagedElement <- input_name.member -> select(iterator | iterator.oclIsKindOf(SUML!Class))
 		)
 }
-
---todo: mettre ownedOperation et OwnedAttribute sur les primitive types et faire ça avec des lazy rules
---role, relation, ref, compo, package
-

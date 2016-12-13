@@ -15,5 +15,7 @@ import org.eclipse.emf.common.util.EList;
 public interface EnumerationValidator {
 	boolean validate();
 
+	boolean validateValues(EList<String> value);
+
 	boolean validateValue(EList<smalluml.String> value);
 }
