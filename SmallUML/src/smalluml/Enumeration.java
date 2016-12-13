@@ -2,6 +2,7 @@
  */
 package smalluml;
 
+import java.lang.String;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -13,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link smalluml.Enumeration#getValue <em>Value</em>}</li>
+ *   <li>{@link smalluml.Enumeration#getValues <em>Values</em>}</li>
  * </ul>
  *
  * @see smalluml.SmallumlPackage#getEnumeration()
@@ -22,19 +23,19 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Enumeration extends Type, NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' containment reference list.
-	 * The list contents are of type {@link smalluml.String}.
+	 * Returns the value of the '<em><b>Values</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Values</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' containment reference list.
-	 * @see smalluml.SmallumlPackage#getEnumeration_Value()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Values</em>' attribute list.
+	 * @see smalluml.SmallumlPackage#getEnumeration_Values()
+	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<smalluml.String> getValue();
+	EList<String> getValues();
 
 } // Enumeration

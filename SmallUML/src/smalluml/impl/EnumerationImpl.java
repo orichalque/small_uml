@@ -6,17 +6,11 @@ import java.lang.String;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import smalluml.Enumeration;
 import smalluml.NamedElement;
 import smalluml.SmallumlPackage;
@@ -30,7 +24,7 @@ import smalluml.SmallumlPackage;
  * </p>
  * <ul>
  *   <li>{@link smalluml.impl.EnumerationImpl#getName <em>Name</em>}</li>
- *   <li>{@link smalluml.impl.EnumerationImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link smalluml.impl.EnumerationImpl#getValues <em>Values</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,15 +49,14 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 	 */
 	protected String name = NAME_EDEFAULT;
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference list.
+	 * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getValues()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<smalluml.String> value;
-
+	protected EList<String> values;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -109,25 +102,11 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<smalluml.String> getValue() {
-		if (value == null) {
-			value = new EObjectContainmentEList<smalluml.String>(smalluml.String.class, this, SmallumlPackage.ENUMERATION__VALUE);
+	public EList<String> getValues() {
+		if (values == null) {
+			values = new EDataTypeUniqueEList<String>(String.class, this, SmallumlPackage.ENUMERATION__VALUES);
 		}
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SmallumlPackage.ENUMERATION__VALUE:
-				return ((InternalEList<?>)getValue()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return values;
 	}
 
 	/**
@@ -140,8 +119,8 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 		switch (featureID) {
 			case SmallumlPackage.ENUMERATION__NAME:
 				return getName();
-			case SmallumlPackage.ENUMERATION__VALUE:
-				return getValue();
+			case SmallumlPackage.ENUMERATION__VALUES:
+				return getValues();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,9 +137,9 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 			case SmallumlPackage.ENUMERATION__NAME:
 				setName((String)newValue);
 				return;
-			case SmallumlPackage.ENUMERATION__VALUE:
-				getValue().clear();
-				getValue().addAll((Collection<? extends smalluml.String>)newValue);
+			case SmallumlPackage.ENUMERATION__VALUES:
+				getValues().clear();
+				getValues().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,8 +156,8 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 			case SmallumlPackage.ENUMERATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SmallumlPackage.ENUMERATION__VALUE:
-				getValue().clear();
+			case SmallumlPackage.ENUMERATION__VALUES:
+				getValues().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -194,8 +173,8 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 		switch (featureID) {
 			case SmallumlPackage.ENUMERATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SmallumlPackage.ENUMERATION__VALUE:
-				return value != null && !value.isEmpty();
+			case SmallumlPackage.ENUMERATION__VALUES:
+				return values != null && !values.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -244,6 +223,8 @@ public class EnumerationImpl extends TypeImpl implements Enumeration {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", values: ");
+		result.append(values);
 		result.append(')');
 		return result.toString();
 	}

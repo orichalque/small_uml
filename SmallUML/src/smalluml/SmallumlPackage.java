@@ -614,13 +614,13 @@ public interface SmallumlPackage extends EPackage {
 	int ENUMERATION__NAME = TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Values</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENUMERATION__VALUE = TYPE_FEATURE_COUNT + 1;
+	int ENUMERATION__VALUES = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Enumeration</em>' class.
@@ -1084,15 +1084,15 @@ public interface SmallumlPackage extends EPackage {
 	EClass getEnumeration();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link smalluml.Enumeration#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute list '{@link smalluml.Enumeration#getValues <em>Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Value</em>'.
-	 * @see smalluml.Enumeration#getValue()
+	 * @return the meta object for the attribute list '<em>Values</em>'.
+	 * @see smalluml.Enumeration#getValues()
 	 * @see #getEnumeration()
 	 * @generated
 	 */
-	EReference getEnumeration_Value();
+	EAttribute getEnumeration_Values();
 
 	/**
 	 * Returns the meta object for class '{@link smalluml.Composition <em>Composition</em>}'.
@@ -1403,12 +1403,12 @@ public interface SmallumlPackage extends EPackage {
 		EClass ENUMERATION = eINSTANCE.getEnumeration();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENUMERATION__VALUE = eINSTANCE.getEnumeration_Value();
+		EAttribute ENUMERATION__VALUES = eINSTANCE.getEnumeration_Values();
 
 		/**
 		 * The meta object literal for the '{@link smalluml.impl.CompositionImpl <em>Composition</em>}' class.

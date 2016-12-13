@@ -446,8 +446,8 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEnumeration_Value() {
-		return (EReference)enumerationEClass.getEStructuralFeatures().get(0);
+	public EAttribute getEnumeration_Values() {
+		return (EAttribute)enumerationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -554,7 +554,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		createEAttribute(roleEClass, ROLE__LOWER_BOUND);
 
 		enumerationEClass = createEClass(ENUMERATION);
-		createEReference(enumerationEClass, ENUMERATION__VALUE);
+		createEAttribute(enumerationEClass, ENUMERATION__VALUES);
 
 		compositionEClass = createEClass(COMPOSITION);
 
@@ -650,7 +650,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		initEAttribute(getRole_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 0, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enumerationEClass, Enumeration.class, "Enumeration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEnumeration_Value(), this.getString(), null, "value", null, 1, -1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEnumeration_Values(), ecorePackage.getEString(), "values", null, 0, -1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(compositionEClass, Composition.class, "Composition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
