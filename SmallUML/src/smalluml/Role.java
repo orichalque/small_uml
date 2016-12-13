@@ -13,7 +13,8 @@ package smalluml;
  * </p>
  * <ul>
  *   <li>{@link smalluml.Role#getClass_ <em>Class</em>}</li>
- *   <li>{@link smalluml.Role#getRelation <em>Relation</em>}</li>
+ *   <li>{@link smalluml.Role#getUpperBound <em>Upper Bound</em>}</li>
+ *   <li>{@link smalluml.Role#getLowerBound <em>Lower Bound</em>}</li>
  * </ul>
  *
  * @see smalluml.SmallumlPackage#getRole()
@@ -48,31 +49,55 @@ public interface Role extends NamedElement {
 	void setClass(smalluml.Class value);
 
 	/**
-	 * Returns the value of the '<em><b>Relation</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link smalluml.Relation#getRole <em>Role</em>}'.
+	 * Returns the value of the '<em><b>Upper Bound</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Relation</em>' reference isn't clear,
+	 * If the meaning of the '<em>Upper Bound</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relation</em>' reference.
-	 * @see #setRelation(Relation)
-	 * @see smalluml.SmallumlPackage#getRole_Relation()
-	 * @see smalluml.Relation#getRole
-	 * @model opposite="role" required="true"
+	 * @return the value of the '<em>Upper Bound</em>' attribute.
+	 * @see #setUpperBound(int)
+	 * @see smalluml.SmallumlPackage#getRole_UpperBound()
+	 * @model
 	 * @generated
 	 */
-	Relation getRelation();
+	int getUpperBound();
 
 	/**
-	 * Sets the value of the '{@link smalluml.Role#getRelation <em>Relation</em>}' reference.
+	 * Sets the value of the '{@link smalluml.Role#getUpperBound <em>Upper Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Relation</em>' reference.
-	 * @see #getRelation()
+	 * @param value the new value of the '<em>Upper Bound</em>' attribute.
+	 * @see #getUpperBound()
 	 * @generated
 	 */
-	void setRelation(Relation value);
+	void setUpperBound(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Lower Bound</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lower Bound</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lower Bound</em>' attribute.
+	 * @see #setLowerBound(int)
+	 * @see smalluml.SmallumlPackage#getRole_LowerBound()
+	 * @model
+	 * @generated
+	 */
+	int getLowerBound();
+
+	/**
+	 * Sets the value of the '{@link smalluml.Role#getLowerBound <em>Lower Bound</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Lower Bound</em>' attribute.
+	 * @see #getLowerBound()
+	 * @generated
+	 */
+	void setLowerBound(int value);
 
 } // Role

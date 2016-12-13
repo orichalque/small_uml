@@ -2,8 +2,6 @@
  */
 package smalluml;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Relation</b></em>'.
@@ -13,9 +11,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link smalluml.Relation#getUpperBound <em>Upper Bound</em>}</li>
- *   <li>{@link smalluml.Relation#getLowerBound <em>Lower Bound</em>}</li>
- *   <li>{@link smalluml.Relation#getRole <em>Role</em>}</li>
+ *   <li>{@link smalluml.Relation#getSource <em>Source</em>}</li>
+ *   <li>{@link smalluml.Relation#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @see smalluml.SmallumlPackage#getRelation()
@@ -24,73 +21,55 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Relation extends NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Role</b></em>' reference list.
-	 * The list contents are of type {@link smalluml.Role}.
-	 * It is bidirectional and its opposite is '{@link smalluml.Role#getRelation <em>Relation</em>}'.
+	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Role</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Source</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Role</em>' reference list.
-	 * @see smalluml.SmallumlPackage#getRelation_Role()
-	 * @see smalluml.Role#getRelation
-	 * @model opposite="relation" lower="2"
+	 * @return the value of the '<em>Source</em>' reference.
+	 * @see #setSource(Role)
+	 * @see smalluml.SmallumlPackage#getRelation_Source()
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<Role> getRole();
+	Role getSource();
 
 	/**
-	 * Returns the value of the '<em><b>Upper Bound</b></em>' attribute.
+	 * Sets the value of the '{@link smalluml.Relation#getSource <em>Source</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Source</em>' reference.
+	 * @see #getSource()
+	 * @generated
+	 */
+	void setSource(Role value);
+
+	/**
+	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Upper Bound</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Target</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Upper Bound</em>' attribute.
-	 * @see #setUpperBound(int)
-	 * @see smalluml.SmallumlPackage#getRelation_UpperBound()
-	 * @model
+	 * @return the value of the '<em>Target</em>' reference.
+	 * @see #setTarget(Role)
+	 * @see smalluml.SmallumlPackage#getRelation_Target()
+	 * @model required="true"
 	 * @generated
 	 */
-	int getUpperBound();
+	Role getTarget();
 
 	/**
-	 * Sets the value of the '{@link smalluml.Relation#getUpperBound <em>Upper Bound</em>}' attribute.
+	 * Sets the value of the '{@link smalluml.Relation#getTarget <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Upper Bound</em>' attribute.
-	 * @see #getUpperBound()
+	 * @param value the new value of the '<em>Target</em>' reference.
+	 * @see #getTarget()
 	 * @generated
 	 */
-	void setUpperBound(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Lower Bound</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lower Bound</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lower Bound</em>' attribute.
-	 * @see #setLowerBound(int)
-	 * @see smalluml.SmallumlPackage#getRelation_LowerBound()
-	 * @model
-	 * @generated
-	 */
-	int getLowerBound();
-
-	/**
-	 * Sets the value of the '{@link smalluml.Relation#getLowerBound <em>Lower Bound</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lower Bound</em>' attribute.
-	 * @see #getLowerBound()
-	 * @generated
-	 */
-	void setLowerBound(int value);
+	void setTarget(Role value);
 
 } // Relation

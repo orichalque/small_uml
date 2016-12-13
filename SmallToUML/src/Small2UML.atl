@@ -12,7 +12,7 @@ create OUT : UML from IN : SUML;
 --		y : UML!Type ()
 --}
 
-lazy rule transtypage(param){
+lazy rule transtypage {
 	from
 		x : SUML!Bool,
 		x : SUML!"smalluml::String",
@@ -22,7 +22,7 @@ lazy rule transtypage(param){
 		x : SUML!UnlimitedNatural
 	to 
 		y : UML!PrimitiveType,
-		(
+		(y
 				ownedAttribute<- param,
 				if (x.oclIsKindOf(SUML!Bool)) then 
 					name <- 'boolean'

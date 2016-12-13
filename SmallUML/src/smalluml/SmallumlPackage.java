@@ -495,31 +495,22 @@ public interface SmallumlPackage extends EPackage {
 	int RELATION__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
+	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__UPPER_BOUND = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int RELATION__SOURCE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
+	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__LOWER_BOUND = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATION__ROLE = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int RELATION__TARGET = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Relation</em>' class.
@@ -528,7 +519,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int RELATION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Relation</em>' class.
@@ -568,13 +559,22 @@ public interface SmallumlPackage extends EPackage {
 	int ROLE__CLASS = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Relation</b></em>' reference.
+	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE__RELATION = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int ROLE__UPPER_BOUND = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__LOWER_BOUND = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Role</em>' class.
@@ -583,7 +583,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int ROLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Role</em>' class.
@@ -651,31 +651,22 @@ public interface SmallumlPackage extends EPackage {
 	int COMPOSITION__NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
+	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION__UPPER_BOUND = RELATION__UPPER_BOUND;
+	int COMPOSITION__SOURCE = RELATION__SOURCE;
 
 	/**
-	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
+	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION__LOWER_BOUND = RELATION__LOWER_BOUND;
-
-	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITION__ROLE = RELATION__ROLE;
+	int COMPOSITION__TARGET = RELATION__TARGET;
 
 	/**
 	 * The number of structural features of the '<em>Composition</em>' class.
@@ -715,31 +706,22 @@ public interface SmallumlPackage extends EPackage {
 	int REFERENCE__NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
+	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REFERENCE__UPPER_BOUND = RELATION__UPPER_BOUND;
+	int REFERENCE__SOURCE = RELATION__SOURCE;
 
 	/**
-	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
+	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REFERENCE__LOWER_BOUND = RELATION__LOWER_BOUND;
-
-	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCE__ROLE = RELATION__ROLE;
+	int REFERENCE__TARGET = RELATION__TARGET;
 
 	/**
 	 * The number of structural features of the '<em>Reference</em>' class.
@@ -1018,37 +1000,26 @@ public interface SmallumlPackage extends EPackage {
 	EClass getRelation();
 
 	/**
-	 * Returns the meta object for the reference list '{@link smalluml.Relation#getRole <em>Role</em>}'.
+	 * Returns the meta object for the reference '{@link smalluml.Relation#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Role</em>'.
-	 * @see smalluml.Relation#getRole()
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see smalluml.Relation#getSource()
 	 * @see #getRelation()
 	 * @generated
 	 */
-	EReference getRelation_Role();
+	EReference getRelation_Source();
 
 	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Relation#getUpperBound <em>Upper Bound</em>}'.
+	 * Returns the meta object for the reference '{@link smalluml.Relation#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Upper Bound</em>'.
-	 * @see smalluml.Relation#getUpperBound()
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see smalluml.Relation#getTarget()
 	 * @see #getRelation()
 	 * @generated
 	 */
-	EAttribute getRelation_UpperBound();
-
-	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Relation#getLowerBound <em>Lower Bound</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Lower Bound</em>'.
-	 * @see smalluml.Relation#getLowerBound()
-	 * @see #getRelation()
-	 * @generated
-	 */
-	EAttribute getRelation_LowerBound();
+	EReference getRelation_Target();
 
 	/**
 	 * Returns the meta object for class '{@link smalluml.Role <em>Role</em>}'.
@@ -1072,15 +1043,26 @@ public interface SmallumlPackage extends EPackage {
 	EReference getRole_Class();
 
 	/**
-	 * Returns the meta object for the reference '{@link smalluml.Role#getRelation <em>Relation</em>}'.
+	 * Returns the meta object for the attribute '{@link smalluml.Role#getUpperBound <em>Upper Bound</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Relation</em>'.
-	 * @see smalluml.Role#getRelation()
+	 * @return the meta object for the attribute '<em>Upper Bound</em>'.
+	 * @see smalluml.Role#getUpperBound()
 	 * @see #getRole()
 	 * @generated
 	 */
-	EReference getRole_Relation();
+	EAttribute getRole_UpperBound();
+
+	/**
+	 * Returns the meta object for the attribute '{@link smalluml.Role#getLowerBound <em>Lower Bound</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lower Bound</em>'.
+	 * @see smalluml.Role#getLowerBound()
+	 * @see #getRole()
+	 * @generated
+	 */
+	EAttribute getRole_LowerBound();
 
 	/**
 	 * Returns the meta object for class '{@link smalluml.Enumeration <em>Enumeration</em>}'.
@@ -1352,28 +1334,20 @@ public interface SmallumlPackage extends EPackage {
 		EClass RELATION = eINSTANCE.getRelation();
 
 		/**
-		 * The meta object literal for the '<em><b>Role</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RELATION__ROLE = eINSTANCE.getRelation_Role();
+		EReference RELATION__SOURCE = eINSTANCE.getRelation_Source();
 
 		/**
-		 * The meta object literal for the '<em><b>Upper Bound</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RELATION__UPPER_BOUND = eINSTANCE.getRelation_UpperBound();
-
-		/**
-		 * The meta object literal for the '<em><b>Lower Bound</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RELATION__LOWER_BOUND = eINSTANCE.getRelation_LowerBound();
+		EReference RELATION__TARGET = eINSTANCE.getRelation_Target();
 
 		/**
 		 * The meta object literal for the '{@link smalluml.impl.RoleImpl <em>Role</em>}' class.
@@ -1394,12 +1368,20 @@ public interface SmallumlPackage extends EPackage {
 		EReference ROLE__CLASS = eINSTANCE.getRole_Class();
 
 		/**
-		 * The meta object literal for the '<em><b>Relation</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Upper Bound</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROLE__RELATION = eINSTANCE.getRole_Relation();
+		EAttribute ROLE__UPPER_BOUND = eINSTANCE.getRole_UpperBound();
+
+		/**
+		 * The meta object literal for the '<em><b>Lower Bound</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROLE__LOWER_BOUND = eINSTANCE.getRole_LowerBound();
 
 		/**
 		 * The meta object literal for the '{@link smalluml.impl.EnumerationImpl <em>Enumeration</em>}' class.

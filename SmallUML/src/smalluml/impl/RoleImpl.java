@@ -2,15 +2,12 @@
  */
 package smalluml.impl;
 
+import java.lang.Integer;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import smalluml.Relation;
 import smalluml.Role;
 import smalluml.SmallumlPackage;
 
@@ -23,7 +20,8 @@ import smalluml.SmallumlPackage;
  * </p>
  * <ul>
  *   <li>{@link smalluml.impl.RoleImpl#getClass_ <em>Class</em>}</li>
- *   <li>{@link smalluml.impl.RoleImpl#getRelation <em>Relation</em>}</li>
+ *   <li>{@link smalluml.impl.RoleImpl#getUpperBound <em>Upper Bound</em>}</li>
+ *   <li>{@link smalluml.impl.RoleImpl#getLowerBound <em>Lower Bound</em>}</li>
  * </ul>
  *
  * @generated
@@ -39,15 +37,41 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	 */
 	protected smalluml.Class class_;
 	/**
-	 * The cached value of the '{@link #getRelation() <em>Relation</em>}' reference.
+	 * The default value of the '{@link #getUpperBound() <em>Upper Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRelation()
+	 * @see #getUpperBound()
 	 * @generated
 	 * @ordered
 	 */
-	protected Relation relation;
-
+	protected static final int UPPER_BOUND_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getUpperBound() <em>Upper Bound</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUpperBound()
+	 * @generated
+	 * @ordered
+	 */
+	protected int upperBound = UPPER_BOUND_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getLowerBound() <em>Lower Bound</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLowerBound()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LOWER_BOUND_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getLowerBound() <em>Lower Bound</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLowerBound()
+	 * @generated
+	 * @ordered
+	 */
+	protected int lowerBound = LOWER_BOUND_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,16 +134,8 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Relation getRelation() {
-		if (relation != null && relation.eIsProxy()) {
-			InternalEObject oldRelation = (InternalEObject)relation;
-			relation = (Relation)eResolveProxy(oldRelation);
-			if (relation != oldRelation) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SmallumlPackage.ROLE__RELATION, oldRelation, relation));
-			}
-		}
-		return relation;
+	public int getUpperBound() {
+		return upperBound;
 	}
 
 	/**
@@ -127,8 +143,11 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Relation basicGetRelation() {
-		return relation;
+	public void setUpperBound(int newUpperBound) {
+		int oldUpperBound = upperBound;
+		upperBound = newUpperBound;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.ROLE__UPPER_BOUND, oldUpperBound, upperBound));
 	}
 
 	/**
@@ -136,14 +155,8 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRelation(Relation newRelation, NotificationChain msgs) {
-		Relation oldRelation = relation;
-		relation = newRelation;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SmallumlPackage.ROLE__RELATION, oldRelation, newRelation);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public int getLowerBound() {
+		return lowerBound;
 	}
 
 	/**
@@ -151,48 +164,11 @@ public class RoleImpl extends NamedElementImpl implements Role {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRelation(Relation newRelation) {
-		if (newRelation != relation) {
-			NotificationChain msgs = null;
-			if (relation != null)
-				msgs = ((InternalEObject)relation).eInverseRemove(this, SmallumlPackage.RELATION__ROLE, Relation.class, msgs);
-			if (newRelation != null)
-				msgs = ((InternalEObject)newRelation).eInverseAdd(this, SmallumlPackage.RELATION__ROLE, Relation.class, msgs);
-			msgs = basicSetRelation(newRelation, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.ROLE__RELATION, newRelation, newRelation));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SmallumlPackage.ROLE__RELATION:
-				if (relation != null)
-					msgs = ((InternalEObject)relation).eInverseRemove(this, SmallumlPackage.RELATION__ROLE, Relation.class, msgs);
-				return basicSetRelation((Relation)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SmallumlPackage.ROLE__RELATION:
-				return basicSetRelation(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setLowerBound(int newLowerBound) {
+		int oldLowerBound = lowerBound;
+		lowerBound = newLowerBound;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.ROLE__LOWER_BOUND, oldLowerBound, lowerBound));
 	}
 
 	/**
@@ -206,9 +182,10 @@ public class RoleImpl extends NamedElementImpl implements Role {
 			case SmallumlPackage.ROLE__CLASS:
 				if (resolve) return getClass_();
 				return basicGetClass();
-			case SmallumlPackage.ROLE__RELATION:
-				if (resolve) return getRelation();
-				return basicGetRelation();
+			case SmallumlPackage.ROLE__UPPER_BOUND:
+				return getUpperBound();
+			case SmallumlPackage.ROLE__LOWER_BOUND:
+				return getLowerBound();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -224,8 +201,11 @@ public class RoleImpl extends NamedElementImpl implements Role {
 			case SmallumlPackage.ROLE__CLASS:
 				setClass((smalluml.Class)newValue);
 				return;
-			case SmallumlPackage.ROLE__RELATION:
-				setRelation((Relation)newValue);
+			case SmallumlPackage.ROLE__UPPER_BOUND:
+				setUpperBound((Integer)newValue);
+				return;
+			case SmallumlPackage.ROLE__LOWER_BOUND:
+				setLowerBound((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -242,8 +222,11 @@ public class RoleImpl extends NamedElementImpl implements Role {
 			case SmallumlPackage.ROLE__CLASS:
 				setClass((smalluml.Class)null);
 				return;
-			case SmallumlPackage.ROLE__RELATION:
-				setRelation((Relation)null);
+			case SmallumlPackage.ROLE__UPPER_BOUND:
+				setUpperBound(UPPER_BOUND_EDEFAULT);
+				return;
+			case SmallumlPackage.ROLE__LOWER_BOUND:
+				setLowerBound(LOWER_BOUND_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -259,10 +242,30 @@ public class RoleImpl extends NamedElementImpl implements Role {
 		switch (featureID) {
 			case SmallumlPackage.ROLE__CLASS:
 				return class_ != null;
-			case SmallumlPackage.ROLE__RELATION:
-				return relation != null;
+			case SmallumlPackage.ROLE__UPPER_BOUND:
+				return upperBound != UPPER_BOUND_EDEFAULT;
+			case SmallumlPackage.ROLE__LOWER_BOUND:
+				return lowerBound != LOWER_BOUND_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (upperBound: ");
+		result.append(upperBound);
+		result.append(", lowerBound: ");
+		result.append(lowerBound);
+		result.append(')');
+		return result.toString();
 	}
 
 } //RoleImpl
