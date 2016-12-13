@@ -3,6 +3,7 @@
 package smalluml.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -27,7 +28,7 @@ import smalluml.SmallumlPackage;
  */
 public abstract class RelationImpl extends NamedElementImpl implements Relation {
 	/**
-	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSource()
@@ -37,7 +38,7 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	protected Role source;
 
 	/**
-	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTarget()
@@ -71,14 +72,6 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	 * @generated
 	 */
 	public Role getSource() {
-		if (source != null && source.eIsProxy()) {
-			InternalEObject oldSource = (InternalEObject)source;
-			source = (Role)eResolveProxy(oldSource);
-			if (source != oldSource) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SmallumlPackage.RELATION__SOURCE, oldSource, source));
-			}
-		}
 		return source;
 	}
 
@@ -87,8 +80,14 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Role basicGetSource() {
-		return source;
+	public NotificationChain basicSetSource(Role newSource, NotificationChain msgs) {
+		Role oldSource = source;
+		source = newSource;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SmallumlPackage.RELATION__SOURCE, oldSource, newSource);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -97,10 +96,17 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	 * @generated
 	 */
 	public void setSource(Role newSource) {
-		Role oldSource = source;
-		source = newSource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.RELATION__SOURCE, oldSource, source));
+		if (newSource != source) {
+			NotificationChain msgs = null;
+			if (source != null)
+				msgs = ((InternalEObject)source).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SmallumlPackage.RELATION__SOURCE, null, msgs);
+			if (newSource != null)
+				msgs = ((InternalEObject)newSource).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SmallumlPackage.RELATION__SOURCE, null, msgs);
+			msgs = basicSetSource(newSource, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.RELATION__SOURCE, newSource, newSource));
 	}
 
 	/**
@@ -109,14 +115,6 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	 * @generated
 	 */
 	public Role getTarget() {
-		if (target != null && target.eIsProxy()) {
-			InternalEObject oldTarget = (InternalEObject)target;
-			target = (Role)eResolveProxy(oldTarget);
-			if (target != oldTarget) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SmallumlPackage.RELATION__TARGET, oldTarget, target));
-			}
-		}
 		return target;
 	}
 
@@ -125,8 +123,14 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Role basicGetTarget() {
-		return target;
+	public NotificationChain basicSetTarget(Role newTarget, NotificationChain msgs) {
+		Role oldTarget = target;
+		target = newTarget;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SmallumlPackage.RELATION__TARGET, oldTarget, newTarget);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -135,10 +139,33 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	 * @generated
 	 */
 	public void setTarget(Role newTarget) {
-		Role oldTarget = target;
-		target = newTarget;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.RELATION__TARGET, oldTarget, target));
+		if (newTarget != target) {
+			NotificationChain msgs = null;
+			if (target != null)
+				msgs = ((InternalEObject)target).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SmallumlPackage.RELATION__TARGET, null, msgs);
+			if (newTarget != null)
+				msgs = ((InternalEObject)newTarget).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SmallumlPackage.RELATION__TARGET, null, msgs);
+			msgs = basicSetTarget(newTarget, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.RELATION__TARGET, newTarget, newTarget));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SmallumlPackage.RELATION__SOURCE:
+				return basicSetSource(null, msgs);
+			case SmallumlPackage.RELATION__TARGET:
+				return basicSetTarget(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -150,11 +177,9 @@ public abstract class RelationImpl extends NamedElementImpl implements Relation 
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SmallumlPackage.RELATION__SOURCE:
-				if (resolve) return getSource();
-				return basicGetSource();
+				return getSource();
 			case SmallumlPackage.RELATION__TARGET:
-				if (resolve) return getTarget();
-				return basicGetTarget();
+				return getTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

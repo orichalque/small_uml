@@ -495,7 +495,7 @@ public interface SmallumlPackage extends EPackage {
 	int RELATION__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * The feature id for the '<em><b>Source</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -504,7 +504,7 @@ public interface SmallumlPackage extends EPackage {
 	int RELATION__SOURCE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * The feature id for the '<em><b>Target</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -651,7 +651,7 @@ public interface SmallumlPackage extends EPackage {
 	int COMPOSITION__NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * The feature id for the '<em><b>Source</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -660,7 +660,7 @@ public interface SmallumlPackage extends EPackage {
 	int COMPOSITION__SOURCE = RELATION__SOURCE;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * The feature id for the '<em><b>Target</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -706,7 +706,7 @@ public interface SmallumlPackage extends EPackage {
 	int REFERENCE__NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * The feature id for the '<em><b>Source</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -715,7 +715,7 @@ public interface SmallumlPackage extends EPackage {
 	int REFERENCE__SOURCE = RELATION__SOURCE;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * The feature id for the '<em><b>Target</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1000,10 +1000,10 @@ public interface SmallumlPackage extends EPackage {
 	EClass getRelation();
 
 	/**
-	 * Returns the meta object for the reference '{@link smalluml.Relation#getSource <em>Source</em>}'.
+	 * Returns the meta object for the containment reference '{@link smalluml.Relation#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @return the meta object for the containment reference '<em>Source</em>'.
 	 * @see smalluml.Relation#getSource()
 	 * @see #getRelation()
 	 * @generated
@@ -1011,10 +1011,10 @@ public interface SmallumlPackage extends EPackage {
 	EReference getRelation_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link smalluml.Relation#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the containment reference '{@link smalluml.Relation#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @return the meta object for the containment reference '<em>Target</em>'.
 	 * @see smalluml.Relation#getTarget()
 	 * @see #getRelation()
 	 * @generated
@@ -1334,7 +1334,7 @@ public interface SmallumlPackage extends EPackage {
 		EClass RELATION = eINSTANCE.getRelation();
 
 		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Source</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1342,7 +1342,7 @@ public interface SmallumlPackage extends EPackage {
 		EReference RELATION__SOURCE = eINSTANCE.getRelation_Source();
 
 		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Target</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
