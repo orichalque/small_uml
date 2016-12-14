@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smalluml:Enumeration
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smalluml="http://www.univ-nantes.fr/smalluml"
+    xsi:schemaLocation="http://www.univ-nantes.fr/smalluml smalluml.ecore"
+    name="Genre">
+  <values>Masculin</values>
+  <values>Feminin</values>
+  <values>Hermaphrodite</values>
+</smalluml:Enumeration>

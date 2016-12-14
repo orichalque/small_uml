@@ -150,6 +150,6 @@ rule package {
 	to 
 		output_name : UML!Package (			
 			name <- input_name.name,
-			packagedElement <- input_name.member -> select(iterator | iterator.oclIsKindOf(SUML!Class))
+			packagedElement <- input_name.member -> select(iterator | iterator.oclIsKindOf(SUML!NamedElement))
 		)
 }

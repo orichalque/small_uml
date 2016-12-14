@@ -279,6 +279,7 @@
 		<constant value="151:3-154:4"/>
 		<constant value="__applypackage"/>
 		<constant value="member"/>
+		<constant value="NamedElement"/>
 		<constant value="J.oclIsKindOf(J):J"/>
 		<constant value="B.not():B"/>
 		<constant value="33"/>
@@ -289,10 +290,10 @@
 		<constant value="153:23-153:33"/>
 		<constant value="153:23-153:40"/>
 		<constant value="153:62-153:70"/>
-		<constant value="153:83-153:93"/>
-		<constant value="153:62-153:94"/>
-		<constant value="153:23-153:95"/>
-		<constant value="153:4-153:95"/>
+		<constant value="153:83-153:100"/>
+		<constant value="153:62-153:101"/>
+		<constant value="153:23-153:102"/>
+		<constant value="153:4-153:102"/>
 	</cp>
 	<field name="1" type="2"/>
 	<field name="3" type="4"/>
@@ -1903,30 +1904,30 @@
 			<iterate/>
 			<store arg="173"/>
 			<load arg="173"/>
-			<push arg="170"/>
+			<push arg="278"/>
 			<push arg="86"/>
 			<findme/>
-			<call arg="278"/>
 			<call arg="279"/>
-			<if arg="280"/>
+			<call arg="280"/>
+			<if arg="281"/>
 			<load arg="173"/>
 			<call arg="174"/>
 			<enditerate/>
 			<call arg="30"/>
-			<set arg="281"/>
+			<set arg="282"/>
 			<pop/>
 		</code>
 		<linenumbertable>
-			<lne id="282" begin="11" end="11"/>
-			<lne id="283" begin="11" end="12"/>
-			<lne id="284" begin="9" end="14"/>
-			<lne id="285" begin="20" end="20"/>
-			<lne id="286" begin="20" end="21"/>
-			<lne id="287" begin="24" end="24"/>
-			<lne id="288" begin="25" end="27"/>
-			<lne id="289" begin="24" end="28"/>
-			<lne id="290" begin="17" end="33"/>
-			<lne id="291" begin="15" end="35"/>
+			<lne id="283" begin="11" end="11"/>
+			<lne id="284" begin="11" end="12"/>
+			<lne id="285" begin="9" end="14"/>
+			<lne id="286" begin="20" end="20"/>
+			<lne id="287" begin="20" end="21"/>
+			<lne id="288" begin="24" end="24"/>
+			<lne id="289" begin="25" end="27"/>
+			<lne id="290" begin="24" end="28"/>
+			<lne id="291" begin="17" end="33"/>
+			<lne id="292" begin="15" end="35"/>
 			<lne id="275" begin="8" end="36"/>
 		</linenumbertable>
 		<localvariabletable>

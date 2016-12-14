@@ -5,52 +5,77 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:smalluml="http://www.univ-nantes.fr/smalluml"
     xsi:schemaLocation="http://www.univ-nantes.fr/smalluml smalluml.ecore"
-    name="dennis">
+    name="Bibliotheque_de_Montaigu">
   <member xsi:type="smalluml:Class"
-      name="osef"
-      super="//@member.1">
+      name="Personne">
     <method
-        name="metode">
+        name="manger">
       <parameter
-          name="p">
+          name="food">
         <type
             xsi:type="smalluml:String"/>
       </parameter>
-      <returnType
-          xsi:type="smalluml:Bool"/>
     </method>
+    <method
+        name="getSize">
+      <returnType
+          xsi:type="smalluml:Integer"/>
+    </method>
+    <method
+        name="getWeigth">
+      <returnType
+          xsi:type="smalluml:Integer"/>
+    </method>
+  </member>
+  <member xsi:type="smalluml:Class"
+      name="Dennis"
+      super="//@member.0">
+    <method
+        name="dormir"/>
+  </member>
+  <member xsi:type="smalluml:Class"
+      name="Bibliotheque"/>
+  <member xsi:type="smalluml:Class"
+      name="Livre">
     <attribute
-        name="attr">
+        name="ISBN">
       <type
           xsi:type="smalluml:String"/>
     </attribute>
     <attribute
-        name="attr2">
+        name="genre">
       <type
-          xsi:type="smalluml:Integer"/>
+          xsi:type="smalluml:Enumeration"
+          name="Type">
+        <values>Roman</values>
+        <values>BD</values>
+        <values>Poesie</values>
+      </type>
     </attribute>
   </member>
-  <member xsi:type="smalluml:Class"
-      name="dennis">
-    <attribute>
-      <type
-          xsi:type="smalluml:Integer"/>
-    </attribute>
-    <attribute>
-      <type
-          xsi:type="smalluml:Bool"/>
-    </attribute>
+  <member xsi:type="smalluml:Composition"
+      name="contient">
+    <source
+        name="source"
+        class="//@member.2"
+        upperBound="1"
+        lowerBound="1"/>
+    <target
+        name="target"
+        class="//@member.3"
+        upperBound="-1"/>
   </member>
   <member xsi:type="smalluml:Reference"
-      name="sexuelle">
+      name="utilise">
     <source
-        name="lolilol"
+        name="source"
         class="//@member.0"
-        upperBound="-1"/>
-    <target
-        name="lol"
-        class="//@member.1"
         upperBound="-1"
+        lowerBound="1"/>
+    <target
+        name="target"
+        class="//@member.2"
+        upperBound="1"
         lowerBound="1"/>
   </member>
 </smalluml:Package>
