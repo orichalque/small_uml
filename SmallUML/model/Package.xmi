@@ -42,20 +42,15 @@
     </attribute>
   </member>
   <member xsi:type="smalluml:Reference"
-      name="utile"
-      source="//@member.3"
-      target="//@member.4"/>
-  <member xsi:type="smalluml:Role"
-      name="dennis"
-      class="//@member.1"
-      upperBound="1"
-      lowerBound="1"/>
-  <member xsi:type="smalluml:Role"
-      name="osef"
-      class="//@member.0"
-      upperBound="-1"/>
-  <member xsi:type="smalluml:Composition"
-      name="possede"
-      source="//@member.3"
-      target="//@member.4"/>
+      name="sexuelle">
+    <source
+        name="lolilol"
+        class="//@member.0"
+        upperBound="-1"/>
+    <target
+        name="lol"
+        class="//@member.1"
+        upperBound="-1"
+        lowerBound="1"/>
+  </member>
 </smalluml:Package>

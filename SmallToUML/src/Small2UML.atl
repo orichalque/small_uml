@@ -1,5 +1,4 @@
 -- @path SUML=/SmallUML/model/smalluml.ecore
--- @path UML=/UML/model/uml.ecore
 
 module Small2UML;
 create OUT : UML from IN : SUML;
@@ -122,7 +121,8 @@ rule role {
 		output_name : UML!Property (
 			name <- input_name.name,			
 			upper <- input_name.upperBound,
-			lower <- input_name.lowerBound
+			lower <- input_name.lowerBound,
+			type <- input_name.class
 		)
 }
 
@@ -139,7 +139,7 @@ rule enumeration {
 	to 
 		y : UML!Enumeration (
 			name <- x.name,
-			 ownedAttribute <-    x.values->collect(e | thisModule.realString(e))
+			ownedAttribute <- x.values->collect(e | thisModule.realString(e))
 		)
 }
 
