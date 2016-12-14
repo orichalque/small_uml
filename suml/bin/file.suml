@@ -2,12 +2,12 @@ Package bibliotheque_de_Montaigu
 	Class Bibliotheque
 	
 	Class Personne
-		+manger()
+		+manger(food: String)
 		+getSize():Integer
 		+getWeight():Integer
 		
 	Class Dennis extends Personne
-		+dormir()		
+		+dormir():Integer		
 	
 	Class Livre
 		+genre:Enum Type [ Roman, BD, Magazine, Poesie]		

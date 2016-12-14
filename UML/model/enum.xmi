@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<uml:Enumeration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" name="Genre">
-  <ownedAttribute name="Masculin"/>
-  <ownedAttribute name="Feminin"/>
-  <ownedAttribute name="Hermaphrodite"/>
-</uml:Enumeration>

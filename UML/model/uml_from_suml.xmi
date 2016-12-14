@@ -1,35 +1,53 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
-  <uml:PrimitiveType name="boolean"/>
-  <uml:PrimitiveType name="boolean"/>
   <uml:PrimitiveType name="string"/>
   <uml:PrimitiveType name="string"/>
   <uml:PrimitiveType name="integer"/>
   <uml:PrimitiveType name="integer"/>
-  <uml:Association name="possede" memberEnd="/8 /6/dennis" navigableOwnedEnd="/6/dennis">
-    <ownedEnd name="dennis" association="/6">
-      <lowerValue xsi:type="uml:LiteralInteger" value="1"/>
-      <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="1"/>
-    </ownedEnd>
-  </uml:Association>
-  <uml:Dependency name="utile" client="/6/dennis" supplier="/8"/>
-  <uml:Property name="osef" association="/6">
+  <uml:Property name="target" type="/8/Livre" association="/8/contient">
     <lowerValue xsi:type="uml:LiteralInteger"/>
     <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
   </uml:Property>
-  <uml:Package name="dennis">
-    <packagedElement xsi:type="uml:Class" name="osef">
-      <generalization general="/9/dennis"/>
-      <ownedAttribute name="attr" type="/3"/>
-      <ownedAttribute name="attr2" type="/4"/>
-      <ownedOperation name="metode">
-        <ownedParameter type="/0" direction="return"/>
-        <ownedParameter name="p" type="/2"/>
+  <uml:Property name="source" type="/8/Personne">
+    <lowerValue xsi:type="uml:LiteralInteger" value="1"/>
+    <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+  </uml:Property>
+  <uml:Property name="target" type="/8/Bibliotheque">
+    <lowerValue xsi:type="uml:LiteralInteger" value="1"/>
+    <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="1"/>
+  </uml:Property>
+  <uml:Enumeration name="Type">
+    <ownedAttribute name="Roman"/>
+    <ownedAttribute name="BD"/>
+    <ownedAttribute name="Poesie"/>
+  </uml:Enumeration>
+  <uml:Package name="Bibliotheque_de_Montaigu">
+    <packagedElement xsi:type="uml:Class" name="Personne">
+      <ownedOperation name="manger">
+        <ownedParameter name="food" type="/0"/>
+      </ownedOperation>
+      <ownedOperation name="getSize">
+        <ownedParameter type="/2" direction="return"/>
+      </ownedOperation>
+      <ownedOperation name="getWeigth">
+        <ownedParameter type="/3" direction="return"/>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xsi:type="uml:Class" name="dennis">
-      <ownedAttribute type="/5"/>
-      <ownedAttribute type="/1"/>
+    <packagedElement xsi:type="uml:Class" name="Dennis">
+      <generalization general="/8/Personne"/>
+      <ownedOperation name="dormir"/>
     </packagedElement>
+    <packagedElement xsi:type="uml:Class" name="Bibliotheque"/>
+    <packagedElement xsi:type="uml:Class" name="Livre">
+      <ownedAttribute name="ISBN" type="/1"/>
+      <ownedAttribute name="genre" type="/7"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" name="contient" memberEnd="/4 /8/contient/source" navigableOwnedEnd="/8/contient/source">
+      <ownedEnd name="source" type="/8/Bibliotheque" association="/8/contient">
+        <lowerValue xsi:type="uml:LiteralInteger" value="1"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Dependency" name="utilise" client="/5" supplier="/6"/>
   </uml:Package>
 </xmi:XMI>
